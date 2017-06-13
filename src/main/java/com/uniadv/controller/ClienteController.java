@@ -65,7 +65,7 @@ public class ClienteController {
 		return "visualizar-cliente";
 	}
 
-	//Redireciona para o form de edição
+	//Redireciona para o form de edição 
 	@GetMapping("/clientes/{id}/update")
 	public String editar(@PathVariable("id") Integer id, Model model) {
 		model.addAttribute("cliente", service.findOne(id));

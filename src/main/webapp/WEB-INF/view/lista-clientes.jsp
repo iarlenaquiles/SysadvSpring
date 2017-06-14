@@ -17,14 +17,14 @@
 		<div class="row">
 			<div class="col-lg-8"></div>
 			<div class="col-lg-4">
-				<a class="btn btn-primary btn-lg"
-					href="/clientes/add"><i class="fa fa-plus"></i>Novo
-					Cliente</a> <a class="btn btn-default btn-lg"
-					href="/"><i
+				<a class="btn btn-primary btn-lg" href="/clientes/add"><i
+					class="fa fa-plus"></i>Novo Cliente</a> <a
+					class="btn btn-default btn-lg" href="/"><i
 					class="fa fa-refresh"></i>Atualizar</a>
 			</div>
 
 		</div>
+		<div class="alert alert-success" id="mensagem">${mensagem}</div>
 
 		<div id="list" class="row">
 			<div class="table-responsive col-md-12">
@@ -42,13 +42,11 @@
 								<td>${cliente.id}</td>
 								<td>${cliente.nome}</td>
 								<td class="actions"><a class="btn btn-success btn-sm"
-									href="/clientes/${cliente.id}/view"><i
-										class="fa fa-eye"></i> Visualizar</a> <a
-									class="btn btn-warning btn-sm"
+									href="/clientes/${cliente.id}/view"><i class="fa fa-eye"></i>
+										Visualizar</a> <a class="btn btn-warning btn-sm"
 									href="/clientes/${cliente.id}/update"><i
 										class="fa fa-pencil"></i> Editar</a> <a
-									class="btn btn-danger btn-sm"
-									href="/clientes/${cliente.id}"><i
+									class="btn btn-danger btn-sm" href="/clientes/${cliente.id}"><i
 										class="fa fa-trash"></i> Remover</a></td>
 							</tr>
 						</c:forEach>
@@ -58,5 +56,10 @@
 		</div>
 	</div>
 	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		console.log("d");
+	});
+	</script>
 </body>
 </html>

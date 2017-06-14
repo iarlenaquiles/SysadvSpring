@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.uniadv.model.Cliente;
 import com.uniadv.service.ClienteService;
@@ -34,11 +35,11 @@ public class ClienteController {
 
 	// Salva o cliente
 	@RequestMapping(value = "/clientes/salvar", method = RequestMethod.POST)
-//	@ResponseBody
-	public String addCliente(@RequestParam(value = "nome") String nome) {
+	public String addCliente(@RequestParam(value = "nome") String nome, RedirectAttributes mensagem) {
 		Cliente novo = new Cliente();
 		novo.setNome(nome);
 		service.save(novo);
+		mensagem.addFlashAttribute("mensagem","Salvo com sucesso!");
 		return "redirect:/";
 	}
 
@@ -54,10 +55,9 @@ public class ClienteController {
 
 	// Exclui um cliente por seu ID
 	@GetMapping("/clientes/{id}")
-	@ResponseBody
 	public String delete(@PathVariable("id") Integer id) {
 		service.delete(id);
-		return "Removido com sucesso";
+		return "redirect:/";
 	}
 
 	// Visualiza o cliente

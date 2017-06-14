@@ -34,15 +34,15 @@ public class ClienteController {
 
 	// Salva o cliente
 	@RequestMapping(value = "/clientes/salvar", method = RequestMethod.POST)
-	@ResponseBody
+//	@ResponseBody
 	public String addCliente(@RequestParam(value = "nome") String nome) {
 		Cliente novo = new Cliente();
 		novo.setNome(nome);
 		service.save(novo);
-		return "Inserido com sucesso";
+		return "redirect:/";
 	}
-	
-	//Atualiza o cliente
+
+	// Atualiza o cliente
 	@RequestMapping(value = "/clientes/editar", method = RequestMethod.POST)
 	@ResponseBody
 	public String updateCliente(@RequestParam(value = "id") Integer id, @RequestParam(value = "nome") String nome) {
@@ -52,26 +52,25 @@ public class ClienteController {
 		return "Atualizado com sucesso";
 	}
 
-	// Exclui um cliente por seu ID 
+	// Exclui um cliente por seu ID
 	@GetMapping("/clientes/{id}")
 	@ResponseBody
 	public String delete(@PathVariable("id") Integer id) {
 		service.delete(id);
 		return "Removido com sucesso";
 	}
-	
-	//Visualiza o cliente
+
+	// Visualiza o cliente
 	@GetMapping("/clientes/{id}/view")
 	public String viwCliente(@PathVariable("id") Integer id, Model model) {
 		model.addAttribute("cliente", service.findOne(id));
 		return "visualizar-cliente";
 	}
 
-	//Redireciona para o form de edição 
+	// Redireciona para o form de edição
 	@GetMapping("/clientes/{id}/update")
 	public String editar(@PathVariable("id") Integer id, Model model) {
 		model.addAttribute("cliente", service.findOne(id));
 		return "editar-cliente";
 	}
-
 }

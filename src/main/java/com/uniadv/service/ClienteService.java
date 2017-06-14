@@ -11,8 +11,6 @@ import com.uniadv.repository.ClienteJpaDao;
 @Service
 public class ClienteService {
 	
-//	@Autowired
-//	private ClienteRepository repository; 
 	@Autowired
 	private ClienteJpaDao repository;
 	

@@ -46,7 +46,9 @@ public class ClienteController {
 	@RequestMapping(value = "/clientes/editar", method = RequestMethod.POST)
 	@ResponseBody
 	public String updateCliente(@RequestParam(value = "id") Integer id, @RequestParam(value = "nome") String nome) {
-		service.save(service.findOne(id));
+		Cliente novo = service.findOne(id);
+		novo.setNome(nome);
+		service.save(novo);
 		return "Atualizado com sucesso";
 	}
 

@@ -48,7 +48,7 @@ public class ClienteController {
 	public String updateCliente(@RequestParam(value = "id") Integer id, @RequestParam(value = "nome") String nome) {
 		Cliente novo = service.findOne(id);
 		novo.setNome(nome);
-		service.save(novo);
+		service.alterar(novo);
 		return "Atualizado com sucesso";
 	}
 

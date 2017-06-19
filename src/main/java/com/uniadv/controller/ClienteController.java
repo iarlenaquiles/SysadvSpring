@@ -3,6 +3,7 @@ package com.uniadv.controller;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -13,13 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.uniadv.model.Cliente;
-import com.uniadv.service.ClienteService;
+import com.uniadv.repository.ClienteRepository;
 
 @Controller
 public class ClienteController {
 
 	@Autowired
-	private ClienteService service; // Injeta a classe de serviços
+	private ClienteRepository clienteRepository; // Injeta a classe repositorio
 
 	// Vai para tela principal do CRUD onde são listados todos os clientes
 	@RequestMapping("/")
@@ -30,7 +31,7 @@ public class ClienteController {
 	// Chama a lista dos clientes
 	@GetMapping("/clientes")
 	public String listaClientes(Model model) {
-		Iterable<Cliente> lista = service.findAll();
+		Iterable<Cliente> lista = clienteRepository.findAll(new Sort(new Sort.Order(Sort.Direction.ASC, "nome")));
 		model.addAttribute("clientes", lista);
 		return "lista-clientes";
 	}
@@ -43,16 +44,16 @@ public class ClienteController {
 		return "inserir-cliente";
 	}
 
-	//Atualizar cliente
+	// Atualizar cliente
 	@RequestMapping("/clientes/{id}/update")
 	public String alteraForm(@PathVariable Integer id, Model model) {
-		Cliente c = service.findOne(id);
+		Cliente c = clienteRepository.findOne(id);
 		model.addAttribute("cliente", c);
 		model.addAttribute("acao", "/clientes");
 		return "editar-cliente";
 	}
 
-	//Salvar cliente no banco
+	// Salvar cliente no banco
 	@PostMapping("/clientes")
 	public String addCliente(@Valid Cliente cliente, BindingResult result, Model model, RedirectAttributes redirect) {
 		if (result.hasErrors()) {
@@ -66,28 +67,28 @@ public class ClienteController {
 		}
 
 		if (cliente.getId() == null) {
-			service.save(cliente);
+			clienteRepository.save(cliente);
 			redirect.addFlashAttribute("mensagem", "Cliente inserido com sucesso!");
 		} else {
-			service.save(cliente);
+			clienteRepository.save(cliente);
 			redirect.addFlashAttribute("mensagem", "Cliente atualizado com sucesso!");
 		}
 		return "redirect:/clientes";
 	}
 
-	//Deletar cliente
+	// Deletar cliente
 	@GetMapping("/clientes/{id}/delete")
 	public String deleteCliente(@PathVariable Integer id, RedirectAttributes redirect) {
 		Cliente cliente = new Cliente(id);
-		service.delete(cliente);
+		clienteRepository.delete(cliente);
 		redirect.addFlashAttribute("mensagem", "Cliente removido com sucesso!");
 		return "redirect:/clientes";
 	}
 
-	//Visualizar cliente
+	// Visualizar cliente
 	@GetMapping("/clientes/{id}/view")
 	public String viewCliente(@PathVariable Integer id, Model model) {
-		Cliente cliente = service.findOne(id);
+		Cliente cliente = clienteRepository.findOne(id);
 		model.addAttribute("cliente", cliente);
 		return "visualizar-cliente";
 	}

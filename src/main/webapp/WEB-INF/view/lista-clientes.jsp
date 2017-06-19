@@ -57,7 +57,9 @@
 										Visualizar</a> <a class="btn btn-warning btn-sm"
 									href="/clientes/${cliente.id}/update"><i
 										class="fa fa-pencil"></i> Editar</a> <a
-									class="btn btn-danger btn-sm" href="/clientes/${cliente.id}" onclick="return confirm('Confirma remoção?')"><i
+									class="btn btn-danger btn-sm"
+									href="/clientes/${cliente.id}/delete"
+									onclick="return confirm('Confirma remoção?')"><i
 										class="fa fa-trash"></i> Remover</a></td>
 							</tr>
 						</c:forEach>

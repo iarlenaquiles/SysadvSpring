@@ -8,22 +8,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Inserir Cliente</title>
 <link href="${url_base}css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="${url_base}font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="${url_base}font-awesome/css/font-awesome.min.css">
 <script src="${url_base}js/jquery.min.js"></script>
 </head>
 <body>
 	<c:import url="header.jsp"></c:import>
 
 	<div class="container">
+		<br>
+		<br>
 		<h2>Inserir Cliente</h2>
-		<form action="/clientes/salvar" method="post">
-			<div class="form-group">
-				<label for="nome">Nome:</label> <input type="text"
-					class="form-control" id="nome" placeholder="Digite o nome"
-					name="nome" required>
-			</div>
-			<button type="submit" class="btn btn-success btn-block">Cadastrar</button>
-		</form>
+		<jsp:include page="form_cliente.jsp" />
 	</div>
 	<script src="${url_base}js/bootstrap.min.js"></script>
 </body>

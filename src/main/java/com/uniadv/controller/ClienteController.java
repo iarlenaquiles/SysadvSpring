@@ -1,13 +1,15 @@
 package com.uniadv.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.uniadv.model.Cliente;
@@ -21,57 +23,73 @@ public class ClienteController {
 
 	// Vai para tela principal do CRUD onde são listados todos os clientes
 	@RequestMapping("/")
-	public String findAll(Model model) {
-		model.addAttribute("clientes", service.findAll());
+	public String home() {
+		return "forward:/clientes";
+	}
+
+	// Chama a lista dos clientes
+	@GetMapping("/clientes")
+	public String listaClientes(Model model) {
+		Iterable<Cliente> lista = service.findAll();
+		model.addAttribute("clientes", lista);
 		return "lista-clientes";
 	}
 
 	// Vai para tela de adição do cliente
 	@GetMapping("/clientes/add")
-	public String add() {
+	public String insereForm(Model model) {
+		model.addAttribute("cliente", new Cliente());
+		model.addAttribute("acao", "/clientes");
 		return "inserir-cliente";
 	}
 
-	// Salva o cliente
-	@RequestMapping(value = "/clientes/salvar", method = RequestMethod.POST)
-	public String addCliente(@RequestParam(value = "nome") String nome, RedirectAttributes mensagem) {
-		Cliente novo = new Cliente();
-		novo.setNome(nome);
-		service.save(novo);
-		mensagem.addFlashAttribute("mensagem", "Cliente salvo com sucesso!");
-		return "redirect:/";
+	//Atualizar cliente
+	@RequestMapping("/clientes/{id}/update")
+	public String alteraForm(@PathVariable Integer id, Model model) {
+		Cliente c = service.findOne(id);
+		model.addAttribute("cliente", c);
+		model.addAttribute("acao", "/clientes");
+		return "editar-cliente";
 	}
 
-	// Atualiza o cliente
-	@RequestMapping(value = "/clientes/editar", method = RequestMethod.POST)
-	public String updateCliente(@RequestParam(value = "id") Integer id, @RequestParam(value = "nome") String nome,
-			RedirectAttributes mensagem) {
-		Cliente novo = service.findOne(id);
-		novo.setNome(nome);
-		service.alterar(novo);
-		mensagem.addFlashAttribute("mensagem", "Cliente atualizado com sucesso!");
-		return "redirect:/";
+	//Salvar cliente no banco
+	@PostMapping("/clientes")
+	public String addCliente(@Valid Cliente cliente, BindingResult result, Model model, RedirectAttributes redirect) {
+		if (result.hasErrors()) {
+			model.addAttribute("cliente", cliente);
+			model.addAttribute("acao", "/clientes");
+			if (cliente.getId() == null) {
+				return "inserir-cliente";
+			} else {
+				return "editar-cliente";
+			}
+		}
+
+		if (cliente.getId() == null) {
+			service.save(cliente);
+			redirect.addFlashAttribute("mensagem", "Cliente inserido com sucesso!");
+		} else {
+			service.save(cliente);
+			redirect.addFlashAttribute("mensagem", "Cliente atualizado com sucesso!");
+		}
+		return "redirect:/clientes";
 	}
 
-	// Exclui um cliente por seu ID
-	@GetMapping("/clientes/{id}")
-	public String delete(@PathVariable("id") Integer id, RedirectAttributes mensagem) {
-		service.delete(id);
-		mensagem.addFlashAttribute("mensagem", "Cliente removido com sucesso!");
-		return "redirect:/";
+	//Deletar cliente
+	@GetMapping("/clientes/{id}/delete")
+	public String deleteCliente(@PathVariable Integer id, RedirectAttributes redirect) {
+		Cliente cliente = new Cliente(id);
+		service.delete(cliente);
+		redirect.addFlashAttribute("mensagem", "Cliente removido com sucesso!");
+		return "redirect:/clientes";
 	}
 
-	// Visualiza o cliente
+	//Visualizar cliente
 	@GetMapping("/clientes/{id}/view")
-	public String viwCliente(@PathVariable("id") Integer id, Model model) {
-		model.addAttribute("cliente", service.findOne(id));
+	public String viewCliente(@PathVariable Integer id, Model model) {
+		Cliente cliente = service.findOne(id);
+		model.addAttribute("cliente", cliente);
 		return "visualizar-cliente";
 	}
 
-	// Redireciona para o form de edição
-	@GetMapping("/clientes/{id}/update")
-	public String editar(@PathVariable("id") Integer id, Model model) {
-		model.addAttribute("cliente", service.findOne(id));
-		return "editar-cliente";
-	}
 }

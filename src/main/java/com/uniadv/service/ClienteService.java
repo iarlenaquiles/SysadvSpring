@@ -6,36 +6,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.uniadv.model.Cliente;
-import com.uniadv.repository.ClienteJpaDao;
+import com.uniadv.repository.ClienteRepository;
 
 @Service
 public class ClienteService {
-	
+
 	@Autowired
-	private ClienteJpaDao repository;
-	
-	//Retorna uma lista com todos clientes inseridos
+	private ClienteRepository repository;
+
+	// Retorna uma lista com todos clientes inseridos
 	public List<Cliente> findAll() {
-		return repository.getLista(); 
+		return repository.findAll();
 	}
-	
-	//Retorno um cliente a partir do ID
+
+	// Retorno um cliente a partir do ID
 	public Cliente findOne(Integer id) {
-		return repository.getCliente(id);
+		return repository.findOne(id);
 	}
-	
-	//Salva ou atualiza um cliente
+
+	// Salva ou atualiza um cliente
 	public void save(Cliente cliente) {
-		repository.adiciona(cliente);
+		repository.saveAndFlush(cliente);
 	}
-	
-	public void alterar(Cliente cliente){
-		repository.altera(cliente);
-	}
-	
-	//Exclui um cliente
-	public void delete(Integer id) {
-		repository.remove(id);
+
+	// Exclui um cliente
+	public void delete(Cliente cliente) {
+		repository.delete(cliente);
 	}
 
 }

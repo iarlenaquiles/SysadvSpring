@@ -39,24 +39,26 @@ public class ClienteController {
 		Cliente novo = new Cliente();
 		novo.setNome(nome);
 		service.save(novo);
-		mensagem.addFlashAttribute("mensagem","Salvo com sucesso!");
+		mensagem.addFlashAttribute("mensagem", "Cliente salvo com sucesso!");
 		return "redirect:/";
 	}
 
 	// Atualiza o cliente
 	@RequestMapping(value = "/clientes/editar", method = RequestMethod.POST)
-	@ResponseBody
-	public String updateCliente(@RequestParam(value = "id") Integer id, @RequestParam(value = "nome") String nome) {
+	public String updateCliente(@RequestParam(value = "id") Integer id, @RequestParam(value = "nome") String nome,
+			RedirectAttributes mensagem) {
 		Cliente novo = service.findOne(id);
 		novo.setNome(nome);
 		service.alterar(novo);
-		return "Atualizado com sucesso";
+		mensagem.addFlashAttribute("mensagem", "Cliente atualizado com sucesso!");
+		return "redirect:/";
 	}
 
 	// Exclui um cliente por seu ID
 	@GetMapping("/clientes/{id}")
-	public String delete(@PathVariable("id") Integer id) {
+	public String delete(@PathVariable("id") Integer id, RedirectAttributes mensagem) {
 		service.delete(id);
+		mensagem.addFlashAttribute("mensagem", "Cliente removido com sucesso!");
 		return "redirect:/";
 	}
 

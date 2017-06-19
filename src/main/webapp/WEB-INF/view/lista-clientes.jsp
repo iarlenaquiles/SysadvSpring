@@ -16,6 +16,15 @@
 	<div class="container">
 		<c:import url="header.jsp"></c:import>
 		<br> <br> <br>
+		<c:if test="${not empty mensagem}">
+			<div class="alert alert-success alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<p>${mensagem}</p>
+			</div>
+		</c:if>
 		<div class="row">
 			<div class="col-lg-8"></div>
 			<div class="col-lg-4">
@@ -26,7 +35,7 @@
 			</div>
 
 		</div>
-		
+
 
 		<div id="list" class="row">
 			<div class="table-responsive col-md-12">

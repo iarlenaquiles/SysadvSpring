@@ -90,6 +90,8 @@ public class Cliente {
 	@NotNull
 	@Size(min = 5, max = 100, message = "O tamanho deve ser entre {min} e {max}")
 	private String email;
+	
+	
 
 	public Integer getId() {
 		return id;

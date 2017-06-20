@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Entity(name = "usuario")
 public abstract class Usuario implements UserDetails {
@@ -74,6 +74,31 @@ public abstract class Usuario implements UserDetails {
 	}
 
 	public void encodePassword() {
-		// this.senha = new Md5PasswordEncoder().
+		this.senha = new BCryptPasswordEncoder().encode(this.senha);
+	}
+	
+	@Override
+	public String getPassword() {
+		return this.senha;
+	}
+	
+	@Override
+	public String getUsername() {
+		return this.email;
+	}
+	
+	@Override
+	public boolean isEnabled() {
+		return true;
+	}
+	
+	@Override
+	public boolean isCredentialsNonExpired() {
+		return true;
+	}
+	
+	@Override
+	public boolean isAccountNonLocked() {
+		return true;
 	}
 }

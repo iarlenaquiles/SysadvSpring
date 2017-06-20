@@ -8,6 +8,4 @@ public interface UsuarioService {
 
 	void alterarSenha(Integer id, String senhaAtual, String novaSenha);
 
-	void recuperarSenha(String email);
-
 }

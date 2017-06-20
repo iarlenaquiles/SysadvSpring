@@ -30,10 +30,4 @@ public class UsuarioServiceImpl implements UsuarioService {
 		usuarioRepository.save(aux);
 	}
 
-	@Override
-	public void recuperarSenha(String email) {
-		// TODO Auto-generated method stub
-
-	}
-
 }

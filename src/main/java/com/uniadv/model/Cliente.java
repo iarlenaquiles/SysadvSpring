@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity(name = "clientes")
@@ -44,34 +45,45 @@ public class Cliente {
 	private Date data;
 
 	@NotNull
+	@NotEmpty
 	private String estadoCivil;
 
 	@NotNull
+	@NotEmpty
 	private String numeroRg;
 
 	@NotNull
+	@NotEmpty
 	private String profissao;
 
 	@NotNull
+	@NotEmpty
 	private String naturalidade;
 
 	@NotNull
+	@NotEmpty
 	private String nacionalidade;
 
 	@NotNull
+	@NotEmpty
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dataExpedicaoRg;
 
 	@NotNull
+	@NotEmpty
 	private String orgaoExpedicaoRg;
 
 	@NotNull
 	@Size(max = 2, message = "Campo deve ter {max} caracteres")
+	@NotEmpty
 	private String estadoExpedicaoRg;
 
 	@NotNull
+	@NotEmpty
 	private String numeroCtps;
 
 	@NotNull
+	@NotEmpty
 	private String serieCtps;
 
 	@NotNull
@@ -79,15 +91,19 @@ public class Cliente {
 	private String estadoExpedicaoCtps;
 
 	@NotNull
+	@NotEmpty
 	private String rua;
 
 	@NotNull
+	@NotEmpty
 	private String numero;
 
 	@NotNull
+	@NotEmpty
 	private String bairro;
 
 	@NotNull
+	@NotEmpty
 	private String complemento;
 
 	@NotNull

@@ -68,6 +68,37 @@
 		</div>
 	</spring:bind>
 	
+	<spring:bind path="dataExpedicaoRg">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="dataExpedicaoRg">Data Expedicão do RG</form:label>
+			<form:input path="dataExpedicaoRg" type="date" cssClass="form-control" />
+			<form:errors path="dataExpedicaoRg" />
+		</div>
+	</spring:bind>
+	
+	<spring:bind path="orgaoExpedicaoRg">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="orgaoExpedicaoRg">Orgão Expedicão RG</form:label>
+			<form:input path="orgaoExpedicaoRg" type="text" cssClass="form-control" />
+			<form:errors path="orgaoExpedicaoRg" />
+		</div>
+	</spring:bind>
+	
+	<spring:bind path="estadoExpedicaoRg">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="estadoExpedicaoRg">Estado Expedicão RG</form:label>
+			<form:input path="estadoExpedicaoRg" type="text" cssClass="form-control" />
+			<form:errors path="estadoExpedicaoRg" />
+		</div>
+	</spring:bind>
+	
+	<spring:bind path="numeroCtps">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="numeroCtps">Número CTPS</form:label>
+			<form:input path="numeroCtps" type="text" cssClass="form-control" />
+			<form:errors path="numeroCtps" />
+		</div>
+	</spring:bind>	
 	
 	<button type="submit" class="btn btn-primary">Salvar</button>
 </form:form>

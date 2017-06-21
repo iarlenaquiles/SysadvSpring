@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity(name = "clientes")
 public class Cliente {
 
@@ -38,6 +40,7 @@ public class Cliente {
 	private String cpf;
 
 	@NotNull
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date data;
 
 	@NotNull

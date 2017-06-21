@@ -65,7 +65,6 @@ public class Cliente {
 	private String nacionalidade;
 
 	@NotNull
-	@NotEmpty
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dataExpedicaoRg;
 
@@ -88,6 +87,7 @@ public class Cliente {
 
 	@NotNull
 	@Size(max = 2, message = "Campo deve ter {max} caracteres")
+	@NotEmpty
 	private String estadoExpedicaoCtps;
 
 	@NotNull
@@ -108,6 +108,7 @@ public class Cliente {
 
 	@NotNull
 	@Size(min = 5, max = 100, message = "O tamanho deve ser entre {min} e {max}")
+	@NotEmpty
 	private String email;
 	
 	

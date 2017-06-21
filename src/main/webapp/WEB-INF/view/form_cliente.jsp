@@ -11,6 +11,14 @@
 			<form:errors path="nome" />
 		</div>
 	</spring:bind>
+	
+	<spring:bind path="email">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="email">E-mail</form:label>
+			<form:input path="email" type="email" cssClass="form-control" />
+			<form:errors path="email" />
+		</div>
+	</spring:bind>
 
 	<spring:bind path="cpf">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
@@ -36,14 +44,6 @@
 		</div>
 	</spring:bind>
 	
-	<spring:bind path="numeroRg">
-		<div class="form-group ${status.error ? 'has-error' : ''}">
-			<form:label path="numeroRg">Número de RG</form:label>
-			<form:input path="numeroRg" type="text" cssClass="form-control" />
-			<form:errors path="numeroRg" />
-		</div>
-	</spring:bind>
-	
 	<spring:bind path="profissao">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="profissao">Profissão</form:label>
@@ -65,6 +65,14 @@
 			<form:label path="nacionalidade">Nacionalidade</form:label>
 			<form:input path="nacionalidade" type="text" cssClass="form-control" />
 			<form:errors path="nacionalidade" />
+		</div>
+	</spring:bind>
+	
+	<spring:bind path="numeroRg">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="numeroRg">Número de RG</form:label>
+			<form:input path="numeroRg" type="text" cssClass="form-control" />
+			<form:errors path="numeroRg" />
 		</div>
 	</spring:bind>
 	
@@ -99,6 +107,54 @@
 			<form:errors path="numeroCtps" />
 		</div>
 	</spring:bind>	
+	
+	<spring:bind path="serieCtps">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="serieCtps">Série CTPS</form:label>
+			<form:input path="serieCtps" type="text" cssClass="form-control" />
+			<form:errors path="serieCtps" />
+		</div>
+	</spring:bind>	
+	
+	<spring:bind path="estadoExpedicaoCtps">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="estadoExpedicaoCtps">Estado Expedicão CTPS</form:label>
+			<form:input path="estadoExpedicaoCtps" type="text" cssClass="form-control" />
+			<form:errors path="estadoExpedicaoCtps" />
+		</div>
+	</spring:bind>
+	
+	<spring:bind path="rua">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="rua">Rua</form:label>
+			<form:input path="rua" type="text" cssClass="form-control" />
+			<form:errors path="rua" />
+		</div>
+	</spring:bind>
+	
+	<spring:bind path="numero">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="numero">Número</form:label>
+			<form:input path="numero" type="text" cssClass="form-control" />
+			<form:errors path="numero" />
+		</div>
+	</spring:bind>
+	
+	<spring:bind path="bairro">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="bairro">Bairro</form:label>
+			<form:input path="bairro" type="text" cssClass="form-control" />
+			<form:errors path="bairro" />
+		</div>
+	</spring:bind>
+	
+	<spring:bind path="complemento">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="complemento">Complemento</form:label>
+			<form:input path="complemento" type="text" cssClass="form-control" />
+			<form:errors path="complemento" />
+		</div>
+	</spring:bind>
 	
 	<button type="submit" class="btn btn-primary">Salvar</button>
 </form:form>

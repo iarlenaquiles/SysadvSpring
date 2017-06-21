@@ -92,6 +92,11 @@ public class Cliente {
 
 	@NotNull
 	@NotEmpty
+	@Size(max = 8, message = "Cep deve ter {max}")
+	private String cep;
+
+	@NotNull
+	@NotEmpty
 	private String rua;
 
 	@NotNull
@@ -107,11 +112,33 @@ public class Cliente {
 	private String complemento;
 
 	@NotNull
+	@NotEmpty
+	private String cidade;
+
+	@NotNull
+	@NotEmpty
+	private String estado;
+	
+	@NotNull
 	@Size(min = 5, max = 100, message = "O tamanho deve ser entre {min} e {max}")
 	@NotEmpty
 	private String email;
-	
-	
+
+	@NotNull
+	@NotEmpty
+	private String nomePai;
+
+	@NotNull
+	@NotEmpty
+	private String nomeMae;
+
+	@NotNull
+	@NotEmpty
+	private String telefone;
+
+	@NotNull
+	@NotEmpty
+	private String observacao;
 
 	public Integer getId() {
 		return id;
@@ -135,6 +162,14 @@ public class Cliente {
 
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
+	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
 	}
 
 	public Date getData() {
@@ -271,6 +306,54 @@ public class Cliente {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getNomePai() {
+		return nomePai;
+	}
+
+	public void setNomePai(String nomePai) {
+		this.nomePai = nomePai;
+	}
+
+	public String getNomeMae() {
+		return nomeMae;
+	}
+
+	public void setNomeMae(String nomeMae) {
+		this.nomeMae = nomeMae;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 
 	@Override

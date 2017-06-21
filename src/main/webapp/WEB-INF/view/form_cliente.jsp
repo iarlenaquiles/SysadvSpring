@@ -36,6 +36,31 @@
 		</div>
 	</spring:bind>
 	
+	<spring:bind path="nomePai">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="nomePai">Nome do pai</form:label>
+			<form:input path="nomePai" type="text" cssClass="form-control" />
+			<form:errors path="nomePai" />
+		</div>
+	</spring:bind>
+	
+	<spring:bind path="nomeMae">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="nomeMae">Nome da mãe</form:label>
+			<form:input path="nomeMae" type="text" cssClass="form-control" />
+			<form:errors path="nomeMae" />
+		</div>
+	</spring:bind>
+	
+	<spring:bind path="telefone">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="telefone">Telefone</form:label>
+			<form:input path="telefone" type="text" cssClass="form-control" />
+			<form:errors path="telefone" />
+		</div>
+	</spring:bind>
+	
+	
 	<spring:bind path="estadoCivil">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="estadoCivil">Estado civil</form:label>
@@ -124,6 +149,14 @@
 		</div>
 	</spring:bind>
 	
+	<spring:bind path="cep">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="cep">CEP</form:label>
+			<form:input path="cep" type="text" cssClass="form-control" />
+			<form:errors path="cep" />
+		</div>
+	</spring:bind>
+	
 	<spring:bind path="rua">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="rua">Rua</form:label>
@@ -153,6 +186,30 @@
 			<form:label path="complemento">Complemento</form:label>
 			<form:input path="complemento" type="text" cssClass="form-control" />
 			<form:errors path="complemento" />
+		</div>
+	</spring:bind>
+	
+	<spring:bind path="cidade">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="cidade">Cidade</form:label>
+			<form:input path="cidade" type="text" cssClass="form-control" />
+			<form:errors path="cidade" />
+		</div>
+	</spring:bind>
+	
+	<spring:bind path="estado">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="estado">Estado</form:label>
+			<form:input path="estado" type="text" cssClass="form-control" />
+			<form:errors path="estado" />
+		</div>
+	</spring:bind>
+	
+	<spring:bind path="observacao">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="observacao">Observação</form:label>
+			<form:textarea path="observacao" rows="5" cssClass="form-control" />
+			<form:errors path="observacao" />
 		</div>
 	</spring:bind>
 	

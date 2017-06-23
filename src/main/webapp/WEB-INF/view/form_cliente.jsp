@@ -152,7 +152,7 @@
 	<spring:bind path="cep">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="cep">CEP</form:label>
-			<form:input path="cep" type="text" cssClass="form-control" />
+			<form:input path="cep" type="text" cssClass="form-control cep" />
 			<form:errors path="cep" />
 		</div>
 	</spring:bind>

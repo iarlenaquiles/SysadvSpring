@@ -19,5 +19,7 @@
 		<jsp:include page="form_cliente.jsp" />
 	</div>
 	<script src="${url_base}js/bootstrap.min.js"></script>
+	<script src="${url_base}js/formzin-1.0.4.js"></script>
+	<script type="text/javascript"> Formzin.iniciar(); </script>
 </body>
 </html>

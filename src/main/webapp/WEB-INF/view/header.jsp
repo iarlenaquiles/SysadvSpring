@@ -5,8 +5,8 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Início</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
+      <li><a href="/clientes">Clientes</a></li>
+      <li><a href="/processos">Processos</a></li>
       <li><a href="#">Page 3</a></li>
     </ul>
   </div>

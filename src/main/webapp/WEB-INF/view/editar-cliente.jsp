@@ -14,8 +14,6 @@
 </head>
 <body>
 	<c:import url="header.jsp"></c:import>
-	<br>
-	<br>
 	<div class="container">
 		<h2>Editar Cliente</h2>
 		<jsp:include page="form_cliente.jsp" />

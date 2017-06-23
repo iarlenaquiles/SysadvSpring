@@ -7,13 +7,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Visualizar Cliente</title>
 <link href="../../css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="../../font-awesome/css/font-awesome.min.css">
 <script src="../../js/jquery.min.js"></script>
 </head>
 <body>
 	<c:import url="header.jsp"></c:import>
-	<br>
-	<br>
 	<div class="container">
 		<h1>Cliente:</h1>
 		<h3>${cliente.id},${cliente.nome}</h3>

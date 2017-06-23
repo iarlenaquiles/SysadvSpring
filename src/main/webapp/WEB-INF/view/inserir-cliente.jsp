@@ -16,8 +16,6 @@
 	<c:import url="header.jsp"></c:import>
 
 	<div class="container">
-		<br>
-		<br>
 		<h2>Inserir Cliente</h2>
 		<jsp:include page="form_cliente.jsp" />
 	</div>

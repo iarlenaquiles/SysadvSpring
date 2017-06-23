@@ -13,9 +13,8 @@
 <script src="${url_base}js/jquery.min.js"></script>
 </head>
 <body>
+	<c:import url="header.jsp"></c:import>
 	<div class="container">
-		<c:import url="header.jsp"></c:import>
-		<br> <br> <br>
 		<c:if test="${not empty mensagem}">
 			<div class="alert alert-success alert-dismissible" role="alert">
 				<button type="button" class="close" data-dismiss="alert"
@@ -26,12 +25,9 @@
 			</div>
 		</c:if>
 		<div class="row">
-			<div class="col-lg-8"></div>
 			<div class="col-lg-4">
 				<a class="btn btn-primary btn-lg" href="/clientes/add"><i
-					class="fa fa-plus"></i>Novo Cliente</a> <a
-					class="btn btn-default btn-lg" href="/"><i
-					class="fa fa-refresh"></i>Atualizar</a>
+					class="fa fa-plus"></i>Novo Cliente</a>
 			</div>
 
 		</div>

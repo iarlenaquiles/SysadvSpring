@@ -16,6 +16,7 @@ public class Processo {
 	private Integer id;
 
 	@NotNull
+	@NotEmpty
 	private String ano_processo;
 
 	@NotNull
@@ -23,9 +24,11 @@ public class Processo {
 	private String numero_processo;
 
 	@NotNull
+	@NotEmpty
 	private String tipo_justica;
 
 	@NotNull
+	@NotEmpty
 	private String tipo_processo;
 
 	@NotNull

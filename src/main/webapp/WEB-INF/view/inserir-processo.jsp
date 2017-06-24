@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Inserir Cliente</title>
+<title>Inserir Processo</title>
 <link href="${url_base}css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="${url_base}font-awesome/css/font-awesome.min.css">

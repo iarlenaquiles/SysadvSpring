@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity(name = "processo")
 public class Processo {
 
@@ -17,10 +19,14 @@ public class Processo {
 	private String ano_processo;
 
 	@NotNull
-	private int id_tipo_justica;
+	@NotEmpty
+	private String numero_processo;
 
 	@NotNull
-	private int id_tipo_processo;
+	private String tipo_justica;
+
+	@NotNull
+	private String tipo_processo;
 
 	@NotNull
 	private int id_acao;
@@ -85,20 +91,20 @@ public class Processo {
 		this.ano_processo = ano_processo;
 	}
 
-	public int getId_tipo_justica() {
-		return id_tipo_justica;
+	public String getTipo_justica() {
+		return tipo_justica;
 	}
 
-	public void setId_tipo_justica(int id_tipo_justica) {
-		this.id_tipo_justica = id_tipo_justica;
+	public void setTipo_justica(String tipo_justica) {
+		this.tipo_justica = tipo_justica;
 	}
 
-	public int getId_tipo_processo() {
-		return id_tipo_processo;
+	public String getTipo_processo() {
+		return tipo_processo;
 	}
 
-	public void setId_tipo_processo(int id_tipo_processo) {
-		this.id_tipo_processo = id_tipo_processo;
+	public void setTipo_processo(String tipo_processo) {
+		this.tipo_processo = tipo_processo;
 	}
 
 	public int getId_acao() {
@@ -203,6 +209,14 @@ public class Processo {
 
 	public void setObservacao(String observacao) {
 		this.observacao = observacao;
+	}
+
+	public String getNumero_processo() {
+		return numero_processo;
+	}
+
+	public void setNumero_processo(String numero_processo) {
+		this.numero_processo = numero_processo;
 	}
 
 }

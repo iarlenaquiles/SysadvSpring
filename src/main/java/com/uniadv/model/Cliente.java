@@ -37,7 +37,7 @@ public class Cliente {
 	private String nome;
 
 	@NotNull
-	@Size(min = 11, max = 11, message = "Campo deve ter {min} números")
+	@Size(min = 11, max = 14, message = "Campo deve ter 14 números")
 	private String cpf;
 
 	@NotNull
@@ -92,7 +92,7 @@ public class Cliente {
 
 	@NotNull
 	@NotEmpty
-	@Size(max = 8, message = "Cep deve ter {max}")
+	@Size(max = 9, message = "Cep deve ter 8")
 	private String cep;
 
 	@NotNull

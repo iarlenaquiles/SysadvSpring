@@ -23,7 +23,7 @@
 	<spring:bind path="cpf">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="cpf">CPF</form:label>
-			<form:input path="cpf" type="text" cssClass="form-control" disabled="true" />
+			<form:input path="cpf" type="text" cssClass="form-control cpf" disabled="true" />
 			<form:errors path="cpf" />
 		</div>
 	</spring:bind>
@@ -55,7 +55,7 @@
 	<spring:bind path="telefone">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="telefone">Telefone</form:label>
-			<form:input path="telefone" type="text" cssClass="form-control" disabled="true" />
+			<form:input path="telefone" type="text" cssClass="form-control telefone" disabled="true" />
 			<form:errors path="telefone" />
 		</div>
 	</spring:bind>

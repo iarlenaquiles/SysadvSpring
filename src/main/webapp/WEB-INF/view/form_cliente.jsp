@@ -55,7 +55,7 @@
 	<spring:bind path="telefone">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="telefone">Telefone</form:label>
-			<form:input path="telefone" type="text" cssClass="form-control" />
+			<form:input path="telefone" type="text" cssClass="form-control telefone" />
 			<form:errors path="telefone" />
 		</div>
 	</spring:bind>
@@ -152,7 +152,7 @@
 	<spring:bind path="cep">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="cep">CEP</form:label>
-			<form:input path="cep" type="text" cssClass="form-control cep" />
+			<form:input path="cep" type="text" cssClass="form-control cep buscar_endereco" data-prefixo="en_"/>
 			<form:errors path="cep" />
 		</div>
 	</spring:bind>
@@ -160,7 +160,7 @@
 	<spring:bind path="rua">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="rua">Rua</form:label>
-			<form:input path="rua" type="text" cssClass="form-control" />
+			<form:input path="rua" type="text" cssClass="form-control en_logradouro" />
 			<form:errors path="rua" />
 		</div>
 	</spring:bind>
@@ -176,7 +176,7 @@
 	<spring:bind path="bairro">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="bairro">Bairro</form:label>
-			<form:input path="bairro" type="text" cssClass="form-control" />
+			<form:input path="bairro" type="text" cssClass="form-control en_bairro" />
 			<form:errors path="bairro" />
 		</div>
 	</spring:bind>
@@ -192,7 +192,7 @@
 	<spring:bind path="cidade">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="cidade">Cidade</form:label>
-			<form:input path="cidade" type="text" cssClass="form-control" />
+			<form:input path="cidade" type="text" cssClass="form-control en_cidade" />
 			<form:errors path="cidade" />
 		</div>
 	</spring:bind>
@@ -200,7 +200,7 @@
 	<spring:bind path="estado">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="estado">Estado</form:label>
-			<form:input path="estado" type="text" cssClass="form-control" />
+			<form:input path="estado" type="text" cssClass="form-control en_uf" />
 			<form:errors path="estado" />
 		</div>
 	</spring:bind>

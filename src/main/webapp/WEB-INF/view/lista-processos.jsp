@@ -26,7 +26,7 @@
 		</c:if>
 		<div class="row">
 			<div class="col-lg-4">
-				<a class="btn btn-primary btn-lg" href="/clientes/add"><i
+				<a class="btn btn-primary btn-lg" href="/processos/add"><i
 					class="fa fa-plus"></i>Novo Processo</a>
 			</div>
 

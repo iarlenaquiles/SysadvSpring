@@ -69,4 +69,13 @@ public class ProcessoController {
 		}
 		return "redirect:/processos";
 	}
+
+	// Deletar processo
+	@GetMapping("/processos/{id}/delete")
+	public String deleteProcesso(@PathVariable Integer id, RedirectAttributes redirect) {
+		Processo processo = new Processo(id);
+		processoRepository.delete(processo);
+		redirect.addFlashAttribute("mensagem", "Processo removido com sucesso!");
+		return "redirect:/processos";
+	}
 }

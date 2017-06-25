@@ -40,9 +40,6 @@ public class Processo {
 	private String acao;
 
 	@NotNull
-	private String tipo_tribunal;
-
-	@NotNull
 	private String numero_processo_justica;
 
 	@NotNull
@@ -117,14 +114,6 @@ public class Processo {
 
 	public void setAcao(String acao) {
 		this.acao = acao;
-	}
-
-	public String getTipo_tribunal() {
-		return tipo_tribunal;
-	}
-
-	public void setTipo_tribunal(String tipo_tribunal) {
-		this.tipo_tribunal = tipo_tribunal;
 	}
 
 	public String getNumero_processo_justica() {

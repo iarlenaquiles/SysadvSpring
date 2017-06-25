@@ -1,5 +1,8 @@
 package com.uniadv.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.uniadv.model.Cliente;
@@ -91,6 +96,24 @@ public class ClienteController {
 		Cliente cliente = clienteRepository.findOne(id);
 		model.addAttribute("cliente", cliente);
 		return "visualizar-cliente";
+	}
+
+	@GetMapping("/getClientes")
+	public @ResponseBody List<Cliente> getClientes(@RequestParam String nome) {
+		return listaClientesResult(nome);
+	}
+
+	private List<Cliente> listaClientesResult(String nome) {
+		List<Cliente> todos = clienteRepository.findAll();
+		List<Cliente> result = new ArrayList<Cliente>();
+		
+		for (Cliente cli : todos) {
+			if(cli.getNome().contains(nome)){
+				result.add(cli);
+			}
+		}
+		
+		return result;
 	}
 
 }

@@ -78,4 +78,12 @@ public class ProcessoController {
 		redirect.addFlashAttribute("mensagem", "Processo removido com sucesso!");
 		return "redirect:/processos";
 	}
+
+	// Visualizar processo
+	@GetMapping("/processos/{id}/view")
+	public String viewProcesso(@PathVariable Integer id, Model model) {
+		Processo processo = processoRepository.findOne(id);
+		model.addAttribute("processo", processo);
+		return "visualizar-processo";
+	}
 }

@@ -39,7 +39,7 @@ public class Cliente {
 	@NotNull
 	@Size(min = 11, max = 14, message = "Campo deve ter 14 números")
 	private String cpf;
-	
+
 	@NotNull
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date data;
@@ -118,7 +118,7 @@ public class Cliente {
 	@NotNull
 	@NotEmpty
 	private String estado;
-	
+
 	@NotNull
 	@Size(min = 5, max = 100, message = "O tamanho deve ser entre {min} e {max}")
 	@NotEmpty

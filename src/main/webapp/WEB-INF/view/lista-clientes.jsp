@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <c:url var="url_base" value="/" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -51,7 +52,8 @@
 							<tr>
 								<td>${cliente.nome}</td>
 								<td>${cliente.cpf}</td>
-								<td>${cliente.data}</td>
+								<td><fmt:formatDate pattern="dd/MM/yyyy"
+										value="${cliente.data}" /></td>
 								<td>${cliente.telefone}</td>
 								<td class="actions"><a class="btn btn-success btn-sm"
 									href="/clientes/${cliente.id}/view"><i class="fa fa-eye"></i>

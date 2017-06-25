@@ -40,9 +40,7 @@ public class Processo {
 	private String acao;
 
 	@NotNull
-	private String numero_processo_justica;
-
-	@NotNull
+	@NotEmpty
 	private int id_estado_comarca;
 
 	@NotNull
@@ -114,14 +112,6 @@ public class Processo {
 
 	public void setAcao(String acao) {
 		this.acao = acao;
-	}
-
-	public String getNumero_processo_justica() {
-		return numero_processo_justica;
-	}
-
-	public void setNumero_processo_justica(String numero_processo_justica) {
-		this.numero_processo_justica = numero_processo_justica;
 	}
 
 	public int getId_estado_comarca() {

@@ -89,6 +89,7 @@ public class ProcessoController {
 	public String viewProcesso(@PathVariable Integer id, Model model) {
 		Processo processo = processoRepository.findOne(id);
 		model.addAttribute("processo", processo);
+		model.addAttribute("cliente", clienteRepository.findOne(processo.getIdCliente()));
 		return "visualizar-processo";
 	}
 }

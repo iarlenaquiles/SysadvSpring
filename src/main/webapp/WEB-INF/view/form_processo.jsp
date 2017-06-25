@@ -9,7 +9,7 @@
 			<form:input path="idCliente" type="hidden" cssClass="form-control"
 				id="idCliente" />
 			<input type="text" id="nomeCliente" class="form-control"
-				name="nomeCliente" />
+				name="nomeCliente" value="${cliente.nome }"/>
 			<form:errors path="idCliente" />
 		</div>
 	</spring:bind>

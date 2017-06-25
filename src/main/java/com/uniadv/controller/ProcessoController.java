@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.uniadv.model.Processo;
+import com.uniadv.repository.ClienteRepository;
 import com.uniadv.repository.ProcessoRepository;
 
 @Controller
@@ -20,6 +21,9 @@ public class ProcessoController {
 
 	@Autowired
 	private ProcessoRepository processoRepository;
+	
+	@Autowired
+	private ClienteRepository clienteRepository;
 
 	// Chama a lista de processos
 	@GetMapping("/processos")
@@ -42,6 +46,7 @@ public class ProcessoController {
 	public String alteraForm(@PathVariable Integer id, Model model) {
 		Processo p = processoRepository.findOne(id);
 		model.addAttribute("processo", p);
+		model.addAttribute("cliente", clienteRepository.findOne(p.getIdCliente()));
 		model.addAttribute("acao", "/processos");
 		return "editar-processo";
 	}

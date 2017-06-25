@@ -36,7 +36,7 @@ public class Processo {
 	private String tipo_processo;
 
 	@NotNull
-	private int id_acao;
+	private String acao;
 
 	@NotNull
 	private String tipo_tribunal;
@@ -110,12 +110,12 @@ public class Processo {
 		this.tipo_processo = tipo_processo;
 	}
 
-	public int getId_acao() {
-		return id_acao;
+	public String getAcao() {
+		return acao;
 	}
 
-	public void setId_acao(int id_acao) {
-		this.id_acao = id_acao;
+	public void setAcao(String acao) {
+		this.acao = acao;
 	}
 
 	public String getTipo_tribunal() {

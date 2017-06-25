@@ -41,7 +41,7 @@ public class Cliente {
 	private String cpf;
 
 	@NotNull
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date data;
 
 	@NotNull

@@ -42,6 +42,7 @@
 							<th>Nome</th>
 							<th>CPF</th>
 							<th>Data de nascimento</th>
+							<th>Telefone</th>
 							<th class="actions">Ações</th>
 						</tr>
 					</thead>
@@ -51,6 +52,7 @@
 								<td>${cliente.nome}</td>
 								<td>${cliente.cpf}</td>
 								<td>${cliente.data}</td>
+								<td>${cliente.telefone}</td>
 								<td class="actions"><a class="btn btn-success btn-sm"
 									href="/clientes/${cliente.id}/view"><i class="fa fa-eye"></i>
 										Visualizar</a> <a class="btn btn-warning btn-sm"

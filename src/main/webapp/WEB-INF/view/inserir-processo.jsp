@@ -11,6 +11,7 @@
 <link rel="stylesheet"
 	href="${url_base}font-awesome/css/font-awesome.min.css">
 <script src="${url_base}js/jquery.min.js"></script>
+<script src="${url_base}js/jquery.autocomplete.min.js"></script>
 </head>
 <body>
 	<c:import url="header.jsp"></c:import>
@@ -21,6 +22,10 @@
 	</div>
 	<script src="${url_base}js/bootstrap.min.js"></script>
 	<script src="${url_base}js/formzin-1.0.4.js"></script>
-	<script type="text/javascript"> Formzin.iniciar(); </script>
+	<script type="text/javascript">
+		Formzin.iniciar();
+	</script>
+
+	
 </body>
 </html>

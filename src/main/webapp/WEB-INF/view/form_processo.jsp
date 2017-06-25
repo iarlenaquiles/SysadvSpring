@@ -4,6 +4,17 @@
 	action="${url_base}${acao}">
 	<form:input path="id" type="hidden" />
 
+	<spring:bind path="idCliente">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="idCliente">Cliente</form:label>
+			<form:input path="idCliente" type="hidden" cssClass="form-control"
+				id="idCliente" />
+				<input path="nomeCliente" type="text" cssClass="form-control"
+		id="nomeCliente" class="form-control" id="nomeCliente"/>
+			<form:errors path="idCliente" />
+		</div>
+	</spring:bind>
+	
 	<spring:bind path="tipo_justica">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="tipo_justica">Tipo Justiça</form:label>

@@ -64,6 +64,9 @@ public class Processo {
 
 	@NotNull
 	private String porcentagem_causa;
+	
+	@NotNull
+	private int idCliente;
 
 	@NotNull
 	private String observacao;
@@ -182,6 +185,14 @@ public class Processo {
 
 	public void setNumero_processo(String numero_processo) {
 		this.numero_processo = numero_processo;
+	}
+
+	public int getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(int idCliente) {
+		this.idCliente = idCliente;
 	}
 
 }

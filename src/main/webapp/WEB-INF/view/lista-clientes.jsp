@@ -11,7 +11,7 @@
 <link rel="stylesheet"
 	href="${url_base}font-awesome/css/font-awesome.min.css">
 <script src="${url_base}js/jquery.min.js"></script>
-<script src="${url_base}js/jquery.autocomplete.min.js"></script>
+
 </head>
 <body>
 	<c:import url="header.jsp"></c:import>
@@ -65,37 +65,6 @@
 			</div>
 		</div>
 	</div>
-	
-	<div>
-	<input type="text"  id="w-input-search" value="">
-	<span>
-	  <button id="button-id" type="button">Search</button>
-	</span>
-  </div>
-   <script>
-  $(document).ready(function() {
-
-	$('#w-input-search').autocomplete({
-		serviceUrl: '/getClientes',
-		paramName: "nome",
-		delimiter: ",",
-	   transformResult: function(response) {
-
-		return {
-		  //must convert json to javascript object before process
-		  suggestions: $.map($.parseJSON(response), function(item) {
-
-		      return { value: item.nome, data: item.id };
-		   })
-
-		 };
-
-            }
-
-	 });
-
-  });
-  </script>
 	<script src="${url_base}js/bootstrap.min.js"></script>
 </body>
 </html>

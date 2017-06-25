@@ -41,7 +41,7 @@ public class Processo {
 
 	@NotNull
 	@NotEmpty
-	private int id_estado_comarca;
+	private String estado_comarca;
 
 	@NotNull
 	private int id_cidade_comarca;
@@ -114,12 +114,12 @@ public class Processo {
 		this.acao = acao;
 	}
 
-	public int getId_estado_comarca() {
-		return id_estado_comarca;
+	public String getEstado_comarca() {
+		return estado_comarca;
 	}
 
-	public void setId_estado_comarca(int id_estado_comarca) {
-		this.id_estado_comarca = id_estado_comarca;
+	public void setEstado_comarca(String estado_comarca) {
+		this.estado_comarca = estado_comarca;
 	}
 
 	public int getId_cidade_comarca() {

@@ -123,12 +123,12 @@ public class Processo {
 		this.estado_comarca = estado_comarca;
 	}
 
-	public int getId_cidade_comarca() {
-		return id_cidade_comarca;
+	public String getCidade_comarca() {
+		return cidade_comarca;
 	}
 
-	public void setId_cidade_comarca(int id_cidade_comarca) {
-		this.id_cidade_comarca = id_cidade_comarca;
+	public void setCidade_comarca(String cidade_comarca) {
+		this.cidade_comarca = cidade_comarca;
 	}
 
 	public int getId_forum() {

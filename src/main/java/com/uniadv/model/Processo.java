@@ -44,7 +44,8 @@ public class Processo {
 	private String estado_comarca;
 
 	@NotNull
-	private int id_cidade_comarca;
+	@NotEmpty
+	private String cidade_comarca;
 
 	@NotNull
 	private int id_forum;

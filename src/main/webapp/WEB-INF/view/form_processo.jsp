@@ -61,7 +61,7 @@
 			<form:errors path="acao" />
 		</div>
 	</spring:bind>
-	
+
 	<spring:bind path="cidade_comarca">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="cidade_comarca">Cidade Comarca</form:label>
@@ -69,12 +69,40 @@
 			<form:errors path="cidade_comarca" />
 		</div>
 	</spring:bind>
-	
+
 	<spring:bind path="estado_comarca">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="estado_comarca">Estado Comarca</form:label>
 			<form:input path="estado_comarca" type="text" cssClass="form-control" />
 			<form:errors path="estado_comarca" />
+		</div>
+	</spring:bind>
+
+	<spring:bind path="forum">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="forum">Forúm</form:label>
+			<form:input path="forum" type="text" cssClass="form-control" />
+			<form:errors path="forum" />
+		</div>
+	</spring:bind>
+
+	<spring:bind path="vara_subsecao">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="vara_subsecao">Vara/Subseção</form:label>
+			<form:select path="vara_subsecao" cssClass="form-control">
+				<form:option value="">Selecione</form:option>
+				<form:option value="1ª">1ª</form:option>
+				<form:option value="1ª">2ª</form:option>
+				<form:option value="1ª">3ª</form:option>
+				<form:option value="1ª">4ª</form:option>
+				<form:option value="1ª">5ª</form:option>
+				<form:option value="1ª">6ª</form:option>
+				<form:option value="1ª">7ª</form:option>
+				<form:option value="1ª">8ª</form:option>
+				<form:option value="1ª">9ª</form:option>
+				<form:option value="1ª">10ª</form:option>
+			</form:select>
+			<form:errors path="vara_subsecao" />
 		</div>
 	</spring:bind>
 

@@ -60,10 +60,10 @@ public class Processo {
 	private String procedimento;
 
 	@NotNull
-	private int honorario;
+	private String honorario;
 
 	@NotNull
-	private int porcentagem_causa;
+	private String porcentagem_causa;
 
 	@NotNull
 	private String observacao;
@@ -144,10 +144,6 @@ public class Processo {
 		this.vara_subsecao = vara_subsecao;
 	}
 
-	public int getHonorario() {
-		return honorario;
-	}
-
 	public String getProcedimento() {
 		return procedimento;
 	}
@@ -156,15 +152,19 @@ public class Processo {
 		this.procedimento = procedimento;
 	}
 
-	public void setHonorario(int honorario) {
+	public String getHonorario() {
+		return honorario;
+	}
+
+	public void setHonorario(String honorario) {
 		this.honorario = honorario;
 	}
 
-	public int getPorcentagem_causa() {
+	public String getPorcentagem_causa() {
 		return porcentagem_causa;
 	}
 
-	public void setPorcentagem_causa(int porcentagem_causa) {
+	public void setPorcentagem_causa(String porcentagem_causa) {
 		this.porcentagem_causa = porcentagem_causa;
 	}
 

@@ -44,17 +44,17 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${clientes}" var="cliente">
+						<c:forEach items="${processos}" var="processo">
 							<tr>
-								<td>${cliente.id}</td>
-								<td>${cliente.nome}</td>
+								<td>${processo.id}</td>
+								<td>${processo.numero_processo}</td>
 								<td class="actions"><a class="btn btn-success btn-sm"
-									href="/clientes/${cliente.id}/view"><i class="fa fa-eye"></i>
+									href="/processos/${processo.id}/view"><i class="fa fa-eye"></i>
 										Visualizar</a> <a class="btn btn-warning btn-sm"
-									href="/clientes/${cliente.id}/update"><i
+									href="/processos/${processo.id}/update"><i
 										class="fa fa-pencil"></i> Editar</a> <a
 									class="btn btn-danger btn-sm"
-									href="/clientes/${cliente.id}/delete"
+									href="/processos/${processo.id}/delete"
 									onclick="return confirm('Confirma remoção?')"><i
 										class="fa fa-trash"></i> Remover</a></td>
 							</tr>

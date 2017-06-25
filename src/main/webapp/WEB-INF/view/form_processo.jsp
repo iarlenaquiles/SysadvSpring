@@ -124,6 +124,23 @@
 		</div>
 	</spring:bind>
 
+	<spring:bind path="honorario">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="honorario">Honorário</form:label>
+			<form:input path="honorario" type="text"
+				cssClass="form-control moeda" data-prefixo="R$ " data-decimal="," />
+			<form:errors path="honorario" />
+		</div>
+	</spring:bind>
+
+	<spring:bind path="porcentagem_causa">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="porcentagem_causa">Porcentagem da causa</form:label>
+			<form:input path="porcentagem_causa" type="text"
+				cssClass="form-control mascara" data-formato="000%" />
+			<form:errors path="porcentagem_causa" />
+		</div>
+	</spring:bind>
 
 	<spring:bind path="observacao">
 		<div class="form-group ${status.error ? 'has-error' : ''}">

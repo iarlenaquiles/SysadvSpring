@@ -36,6 +36,7 @@ public class Processo {
 	private String tipo_processo;
 
 	@NotNull
+	@NotEmpty
 	private String acao;
 
 	@NotNull

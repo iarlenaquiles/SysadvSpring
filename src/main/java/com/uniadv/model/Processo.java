@@ -64,7 +64,7 @@ public class Processo {
 
 	@NotNull
 	private String porcentagem_causa;
-	
+
 	@NotNull
 	private int idCliente;
 

@@ -7,7 +7,7 @@
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="idCliente">Cliente</form:label>
 			<form:input path="idCliente" type="hidden" cssClass="form-control"
-				id="idCliente" />
+				id="idCliente" value="${cliente.id}" />
 			<input type="text" id="nomeCliente" class="form-control"
 				name="nomeCliente" value="${cliente.nome }"/>
 			<form:errors path="idCliente" />

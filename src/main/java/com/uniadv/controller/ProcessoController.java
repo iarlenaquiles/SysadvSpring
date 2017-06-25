@@ -21,6 +21,7 @@ public class ProcessoController {
 	@Autowired
 	private ProcessoRepository processoRepository;
 
+	// Chama a lista de processos
 	@GetMapping("/processos")
 	public String listaProcessos(Model model) {
 		Iterable<Processo> lista = processoRepository.findAll();
@@ -47,7 +48,8 @@ public class ProcessoController {
 
 	// Salvar cliente no banco
 	@PostMapping("/processos")
-	public String addProcesso(@Valid Processo processo, BindingResult result, Model model, RedirectAttributes redirect) {
+	public String addProcesso(@Valid Processo processo, BindingResult result, Model model,
+			RedirectAttributes redirect) {
 		if (result.hasErrors()) {
 			model.addAttribute("processo", processo);
 			model.addAttribute("acao", "/processos");

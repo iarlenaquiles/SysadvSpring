@@ -92,17 +92,35 @@
 			<form:select path="vara_subsecao" cssClass="form-control">
 				<form:option value="">Selecione</form:option>
 				<form:option value="1ª">1ª</form:option>
-				<form:option value="1ª">2ª</form:option>
-				<form:option value="1ª">3ª</form:option>
-				<form:option value="1ª">4ª</form:option>
-				<form:option value="1ª">5ª</form:option>
-				<form:option value="1ª">6ª</form:option>
-				<form:option value="1ª">7ª</form:option>
-				<form:option value="1ª">8ª</form:option>
-				<form:option value="1ª">9ª</form:option>
-				<form:option value="1ª">10ª</form:option>
+				<form:option value="2ª">2ª</form:option>
+				<form:option value="3ª">3ª</form:option>
+				<form:option value="4ª">4ª</form:option>
+				<form:option value="5ª">5ª</form:option>
+				<form:option value="6ª">6ª</form:option>
+				<form:option value="7ª">7ª</form:option>
+				<form:option value="8ª">8ª</form:option>
+				<form:option value="9ª">9ª</form:option>
+				<form:option value="10ª">10ª</form:option>
 			</form:select>
 			<form:errors path="vara_subsecao" />
+		</div>
+	</spring:bind>
+
+	<spring:bind path="procedimento">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="procedimento">Procedimento</form:label>
+			<form:select path="procedimento" cssClass="form-control">
+				<form:option value="">Selecione</form:option>
+				<form:option value="Cautelar">Cautelar</form:option>
+				<form:option value="Conhecimento">Conhecimento</form:option>
+				<form:option value="Execução">Execução</form:option>
+				<form:option value="Jurisdição Contenciosa">Jurisdição Contenciosa</form:option>
+				<form:option value="Jurisdição Voluntária">Jurisdição Voluntária</form:option>
+				<form:option value="Procedimento Especial">Procedimento Especial</form:option>
+				<form:option value="Procedimento Ordinário">Procedimento Ordinário</form:option>
+				<form:option value="Procedimento Sumário">Procedimento Sumário</form:option>
+			</form:select>
+			<form:errors path="procedimento" />
 		</div>
 	</spring:bind>
 

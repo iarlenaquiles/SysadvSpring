@@ -52,16 +52,12 @@ public class Processo {
 	private String forum;
 
 	@NotNull
+	@NotEmpty
 	private String vara_subsecao;
 
 	@NotNull
-	private int id_advogado_analisar;
-
-	@NotNull
-	private int id_procedimento;
-
-	@NotNull
-	private String numero_processo_tribunal;
+	@NotEmpty
+	private String procedimento;
 
 	@NotNull
 	private int honorario;
@@ -148,32 +144,16 @@ public class Processo {
 		this.vara_subsecao = vara_subsecao;
 	}
 
-	public int getId_advogado_analisar() {
-		return id_advogado_analisar;
-	}
-
-	public void setId_advogado_analisar(int id_advogado_analisar) {
-		this.id_advogado_analisar = id_advogado_analisar;
-	}
-
-	public int getId_procedimento() {
-		return id_procedimento;
-	}
-
-	public void setId_procedimento(int id_procedimento) {
-		this.id_procedimento = id_procedimento;
-	}
-
-	public String getNumero_processo_tribunal() {
-		return numero_processo_tribunal;
-	}
-
-	public void setNumero_processo_tribunal(String numero_processo_tribunal) {
-		this.numero_processo_tribunal = numero_processo_tribunal;
-	}
-
 	public int getHonorario() {
 		return honorario;
+	}
+
+	public String getProcedimento() {
+		return procedimento;
+	}
+
+	public void setProcedimento(String procedimento) {
+		this.procedimento = procedimento;
 	}
 
 	public void setHonorario(int honorario) {

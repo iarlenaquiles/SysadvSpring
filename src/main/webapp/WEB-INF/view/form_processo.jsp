@@ -53,6 +53,14 @@
 			<form:errors path="ano_processo" />
 		</div>
 	</spring:bind>
+	
+	<spring:bind path="acao">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="acao">Nome da Ação</form:label>
+			<form:input path="acao" type="text" cssClass="form-control" />
+			<form:errors path="acao" />
+		</div>
+	</spring:bind>
 
 
 	<spring:bind path="observacao">

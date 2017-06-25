@@ -11,6 +11,10 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity(name = "processo")
 public class Processo {
 
+	public Processo() {
+
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -69,10 +73,6 @@ public class Processo {
 
 	@NotNull
 	private String observacao;
-
-	public Processo() {
-
-	}
 
 	public Processo(Integer id) {
 		this.id = id;

@@ -8,10 +8,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Inserir Processo</title>
 <link href="${url_base}css/bootstrap.min.css" rel="stylesheet">
+<link href="${url_base}css/easy-autocomplete.min.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="${url_base}font-awesome/css/font-awesome.min.css">
 <script src="${url_base}js/jquery.min.js"></script>
-<script src="${url_base}js/jquery.autocomplete.min.js"></script>
+<script src="${url_base}js/jquery.easy-autocomplete.min.js"></script>
 </head>
 <body>
 	<c:import url="header.jsp"></c:import>
@@ -25,7 +26,6 @@
 	<script type="text/javascript">
 		Formzin.iniciar();
 	</script>
-
-	
+	<script src="${url_base}js/app.js"></script>
 </body>
 </html>

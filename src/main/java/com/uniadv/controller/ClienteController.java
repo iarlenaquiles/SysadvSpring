@@ -98,7 +98,7 @@ public class ClienteController {
 		return "visualizar-cliente";
 	}
 
-	@GetMapping("/getClientes")
+	@RequestMapping("/getClientes")
 	public @ResponseBody List<Cliente> getClientes(@RequestParam String nome) {
 		return listaClientesResult(nome);
 	}

@@ -8,9 +8,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Editar Cliente</title>
 <link href="${url_base}css/bootstrap.min.css" rel="stylesheet">
+<link href="${url_base}css/easy-autocomplete.min.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="${url_base}font-awesome/css/font-awesome.min.css">
 <script src="${url_base}js/jquery.min.js"></script>
+<script src="${url_base}js/jquery.easy-autocomplete.min.js"></script>
 </head>
 <body>
 	<c:import url="header.jsp"></c:import>
@@ -21,5 +23,6 @@
 	<script src="${url_base}js/bootstrap.min.js"></script>
 	<script src="${url_base}js/formzin-1.0.4.js"></script>
 	<script type="text/javascript"> Formzin.iniciar(); </script>
+	<script src="${url_base}js/app.js"></script>
 </body>
 </html>

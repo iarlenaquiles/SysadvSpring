@@ -48,7 +48,8 @@ public class Processo {
 	private String cidade_comarca;
 
 	@NotNull
-	private int id_forum;
+	@NotEmpty
+	private String forum;
 
 	@NotNull
 	private String vara_subsecao;
@@ -131,12 +132,12 @@ public class Processo {
 		this.cidade_comarca = cidade_comarca;
 	}
 
-	public int getId_forum() {
-		return id_forum;
+	public String getForum() {
+		return forum;
 	}
 
-	public void setId_forum(int id_forum) {
-		this.id_forum = id_forum;
+	public void setForum(String forum) {
+		this.forum = forum;
 	}
 
 	public String getVara_subsecao() {

@@ -40,7 +40,6 @@ public class Cliente {
 	@Size(min = 11, max = 14, message = "Campo deve ter 14 números")
 	private String cpf;
 
-	@NotNull
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date data;
 

@@ -22,5 +22,6 @@
 	<script src="${url_base}js/bootstrap.min.js"></script>
 	<script src="${url_base}js/formzin-1.0.4.js"></script>
 	<script type="text/javascript"> Formzin.iniciar(); </script>
+	<script src="${url_base}js/valida_cpf_cnpj.js"></script>
 </body>
 </html>

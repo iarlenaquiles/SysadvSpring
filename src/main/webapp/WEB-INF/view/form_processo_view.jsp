@@ -4,14 +4,14 @@
 	action="${url_base}${acao}">
 	<form:input path="id" type="hidden" />
 
-	<spring:bind path="idCliente">
+	<spring:bind path="cliente">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
-			<form:label path="idCliente">Cliente</form:label>
-			<form:input path="idCliente" type="hidden" cssClass="form-control"
-				id="idCliente" />
+			<form:label path="cliente">Cliente</form:label>
+			<form:input path="cliente" type="hidden" cssClass="form-control"
+				id="cliente" />
 			<input type="text" id="nomeCliente" class="form-control"
-				name="nomeCliente" value="${cliente.nome }"  disabled="true"/>
-			<form:errors path="idCliente" />
+				name="nomeCliente" value="${processo.cliente.nome }"  disabled="true"/>
+			<form:errors path="cliente" />
 		</div>
 	</spring:bind>
 	<spring:bind path="tipo_justica">

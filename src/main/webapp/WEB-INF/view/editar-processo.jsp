@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Editar Cliente</title>
+<title>Editar Processo</title>
 <link href="${url_base}css/bootstrap.min.css" rel="stylesheet">
 <link href="${url_base}css/easy-autocomplete.min.css" rel="stylesheet">
 <link rel="stylesheet"

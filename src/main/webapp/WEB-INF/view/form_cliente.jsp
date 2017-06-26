@@ -19,11 +19,13 @@
 			<form:errors path="email" />
 		</div>
 	</spring:bind>
-		
+
 	<spring:bind path="cpf">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="cpf">CPF</form:label>
-			<form:input path="cpf" type="text" cssClass="form-control cpf validar-cpf" id="cpf" data-msn_validacao="Preencha um cpf válido." />
+			<form:input path="cpf" type="text"
+				cssClass="form-control cpf validar-cpf" id="cpf"
+				data-msn_validacao="Preencha um cpf válido." />
 			<form:errors path="cpf" />
 		</div>
 	</spring:bind>

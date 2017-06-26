@@ -1,6 +1,5 @@
 package com.uniadv.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -99,21 +97,14 @@ public class ClienteController {
 	}
 
 	@RequestMapping("/getClientes")
-	public @ResponseBody List<Cliente> getClientes(@RequestParam String nome) {
-		return listaClientesResult(nome);
+	public @ResponseBody List<Cliente> getClientes() {
+		return listaClientesResult();
 	}
 
-	private List<Cliente> listaClientesResult(String nome) {
+	private List<Cliente> listaClientesResult() {
 		List<Cliente> todos = clienteRepository.findAll();
-		List<Cliente> result = new ArrayList<Cliente>();
-		
-		for (Cliente cli : todos) {
-			if(cli.getNome().contains(nome)){
-				result.add(cli);
-			}
-		}
-		
-		return result;
+				
+		return todos;
 	}
 
 }

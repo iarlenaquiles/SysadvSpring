@@ -1,5 +1,5 @@
 var options = {
-	url : "/getClientes?nome=" + $("#nomeCliente").val(),
+	url : "/getClientes",
 
 	getValue : "nome",
 

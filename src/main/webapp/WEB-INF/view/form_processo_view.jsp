@@ -8,7 +8,7 @@
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="cliente">Cliente</form:label>
 			<form:input path="cliente" type="hidden" cssClass="form-control"
-				id="cliente" />
+				id="cliente" value="${processo.cliente.id }" />
 			<input type="text" id="nomeCliente" class="form-control"
 				name="nomeCliente" value="${processo.cliente.nome }"  disabled="true"/>
 			<form:errors path="cliente" />

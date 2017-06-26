@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.uniadv.model.Cliente;
 import com.uniadv.model.Processo;
-import com.uniadv.repository.ClienteRepository;
 import com.uniadv.repository.ProcessoRepository;
 
 @Controller
@@ -21,9 +21,6 @@ public class ProcessoController {
 
 	@Autowired
 	private ProcessoRepository processoRepository;
-	
-	@Autowired
-	private ClienteRepository clienteRepository;
 
 	// Chama a lista de processos
 	@GetMapping("/processos")
@@ -37,6 +34,7 @@ public class ProcessoController {
 	@GetMapping("/processos/add")
 	public String insereForm(Model model) {
 		model.addAttribute("processo", new Processo());
+		model.addAttribute("cliente", new Cliente());
 		model.addAttribute("acao", "/processos");
 		return "inserir-processo";
 	}
@@ -46,18 +44,20 @@ public class ProcessoController {
 	public String alteraForm(@PathVariable Integer id, Model model) {
 		Processo p = processoRepository.findOne(id);
 		model.addAttribute("processo", p);
-		model.addAttribute("cliente", clienteRepository.findOne(p.getIdCliente()));
+		// model.addAttribute("cliente",
+		// clienteRepository.findOne(p.getIdCliente()));
 		model.addAttribute("acao", "/processos");
 		return "editar-processo";
 	}
 
-	// Salvar cliente no banco
+	// Salvar processo no banco
 	@PostMapping("/processos")
 	public String addProcesso(@Valid Processo processo, BindingResult result, Model model,
 			RedirectAttributes redirect) {
 		if (result.hasErrors()) {
 			model.addAttribute("processo", processo);
 			model.addAttribute("acao", "/processos");
+			
 			if (processo.getId() == null) {
 				return "inserir-processo";
 			} else {
@@ -89,7 +89,8 @@ public class ProcessoController {
 	public String viewProcesso(@PathVariable Integer id, Model model) {
 		Processo processo = processoRepository.findOne(id);
 		model.addAttribute("processo", processo);
-		model.addAttribute("cliente", clienteRepository.findOne(processo.getIdCliente()));
+		// model.addAttribute("cliente",
+		// clienteRepository.findOne(processo.getIdCliente()));
 		return "visualizar-processo";
 	}
 }

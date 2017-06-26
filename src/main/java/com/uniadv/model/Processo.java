@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -66,10 +67,10 @@ public class Processo {
 	private String porcentagem_causa;
 
 	@NotNull
-	private int idCliente;
-
-	@NotNull
 	private String observacao;
+
+	@ManyToOne
+	private Cliente cliente;
 
 	public Processo(Integer id) {
 		this.id = id;
@@ -187,12 +188,12 @@ public class Processo {
 		this.numero_processo = numero_processo;
 	}
 
-	public int getIdCliente() {
-		return idCliente;
+	public Cliente getCliente() {
+		return cliente;
 	}
 
-	public void setIdCliente(int idCliente) {
-		this.idCliente = idCliente;
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 
 }

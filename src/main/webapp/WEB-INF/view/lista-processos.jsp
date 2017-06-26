@@ -51,7 +51,7 @@
 								<td>${processo.id}</td>
 								<td>${processo.numero_processo}</td>
 								<td>${processo.tipo_processo}</td>
-								<td></td>
+								<td>${processo.cliente.nome}</td>
 								<td class="actions"><a class="btn btn-success btn-sm"
 									href="/processos/${processo.id}/view"><i class="fa fa-eye"></i>
 										Visualizar</a> <a class="btn btn-warning btn-sm"

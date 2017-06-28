@@ -10,17 +10,18 @@
 			<li class="active"><a href="/">Início</a></li>
 			<li><a href="/clientes">Clientes</a></li>
 			<li><a href="/processos">Processos</a></li>
-			<li><a href="#"> <c:if
-						test="${pageContext.request.userPrincipal.name != null}">
-						<form id="logoutForm" method="POST" action="${contextPath}/logout">
-							<input type="hidden" name="${_csrf.parameterName}"
-								value="${_csrf.token}" />
-						</form>
-
-        Welcome ${pageContext.request.userPrincipal.name} | <a
-							onclick="document.forms['logoutForm'].submit()">Logout</a>
-
-					</c:if></a></li>
+			<li><a href="#"></a></li>
+			<li></li>
 		</ul>
+		<div class="navbar-header">
+			<c:if test="${pageContext.request.userPrincipal.name != null}">
+				<form id="logoutForm" method="POST" action="${contextPath}/logout">
+					<input type="hidden" name="${_csrf.parameterName}"
+						value="${_csrf.token}" /> <a class="btn btn-info" role="button"
+						onclick="document.forms['logoutForm'].submit()">Logout</a>
+				</form>
+			</c:if>
+		</div>
 	</div>
+
 </nav>

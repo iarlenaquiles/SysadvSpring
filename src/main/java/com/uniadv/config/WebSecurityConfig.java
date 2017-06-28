@@ -26,8 +26,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests().antMatchers("/").authenticated()
 				.antMatchers("/css/**", "/js/**", "/fonts/**", "/img/**").permitAll().antMatchers("/clientes/**")
 				.hasRole("USER").antMatchers("/processos/**").hasRole("USER").anyRequest().authenticated().and()
-				.formLogin().loginProcessingUrl("/login").loginPage("/login").permitAll().and().logout().and()
-				.exceptionHandling().accessDeniedPage("/403");
+				.formLogin().loginPage("/login").permitAll().and().logout();
 	}
 
 	@Autowired

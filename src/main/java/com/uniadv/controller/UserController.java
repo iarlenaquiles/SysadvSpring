@@ -4,10 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 import com.uniadv.model.User;
 import com.uniadv.service.SecurityService;
 import com.uniadv.service.UserService;
@@ -21,11 +23,12 @@ public class UserController {
 	@Autowired
 	private SecurityService securityService;
 
-	@RequestMapping(value = "/registro", method = RequestMethod.GET)
-	public String registration(Model model) {
-		model.addAttribute("userForm", new User());
-
-		return "registro";
+	// Vai para tela de adição do usuario
+	@GetMapping("/usuarios/add")
+	public String insereForm(Model model) {
+		model.addAttribute("usuario", new User());
+		model.addAttribute("acao", "/usuarios");
+		return "inserir-usuario";
 	}
 
 	@RequestMapping(value = "/registro", method = RequestMethod.POST)

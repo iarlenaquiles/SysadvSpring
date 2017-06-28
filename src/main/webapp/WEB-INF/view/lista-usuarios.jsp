@@ -29,8 +29,8 @@
 		</c:if>
 		<div class="row">
 			<div class="col-lg-4">
-				<a class="btn btn-primary btn-lg" href="/clientes/add"><i
-					class="fa fa-plus"></i>Novo Cliente</a>
+				<a class="btn btn-primary btn-lg" href="/usuarios/add"><i
+					class="fa fa-plus"></i>Novo Usuário</a>
 			</div>
 
 		</div>

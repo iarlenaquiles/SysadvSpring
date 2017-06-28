@@ -103,7 +103,7 @@ public class ClienteController {
 
 	private List<Cliente> listaClientesResult() {
 		List<Cliente> todos = clienteRepository.findAll();
-				
+
 		return todos;
 	}
 

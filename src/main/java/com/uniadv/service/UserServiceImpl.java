@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +35,6 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public List<User> getLista() {
-		return userRepository.findAll();
+		return userRepository.findAll(new Sort(new Sort.Order(Sort.Direction.ASC, "username")));
 	}
 }

@@ -58,7 +58,7 @@ public class UserController {
 
 	@RequestMapping("/usuarios")
 	public String listaUsuarios(Model model) {
-		Iterable<User> lista = userService.findAll();
+		Iterable<User> lista = userService.getLista();
 		model.addAttribute("usuarios", lista);
 		return "lista-usuarios";
 	}

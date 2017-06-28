@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Clientes</title>
+<title>Usuarios</title>
 <link href="${url_base}css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="${url_base}font-awesome/css/font-awesome.min.css">
@@ -41,21 +41,15 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
-							<th>Nome</th>
-							<th>CPF</th>
-							<th>Data de nascimento</th>
-							<th>Telefone</th>
+							<th>Username</th>
 							<th class="actions">Ações</th>
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${clientes}" var="cliente">
+						<c:forEach items="${usuarios}" var="usuario">
 							<tr>
-								<td>${cliente.nome}</td>
-								<td>${cliente.cpf}</td>
-								<td><fmt:formatDate pattern="dd/MM/yyyy"
-										value="${cliente.data}" /></td>
-								<td>${cliente.telefone}</td>
+								<td>${usuario.username}</td>
+								
 								<td class="actions"><a class="btn btn-success btn-sm"
 									href="/clientes/${cliente.id}/view"><i class="fa fa-eye"></i>
 										Visualizar</a> <a class="btn btn-warning btn-sm"

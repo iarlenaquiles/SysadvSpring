@@ -36,7 +36,7 @@
 
 				<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
 			</div>
-<%-- <h4 class="text-center"><a href="${contextPath}/registration">Create an account</a></h4> --%>
+<h4 class="text-center"><a href="${contextPath}/registration">Create an account</a></h4>
 		</form>
 
 	</div>

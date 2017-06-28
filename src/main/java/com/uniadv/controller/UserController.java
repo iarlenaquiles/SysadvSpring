@@ -7,6 +7,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.uniadv.model.User;
 import com.uniadv.service.SecurityService;
@@ -56,6 +57,12 @@ public class UserController {
 	@RequestMapping(value = {"/welcome" }, method = RequestMethod.GET)
 	public String welcome(Model model) {
 		return "welcome";
+	}
+	
+	@RequestMapping("/403")
+	@ResponseBody
+	public String erro(){
+		return "erro";
 	}
 
 }

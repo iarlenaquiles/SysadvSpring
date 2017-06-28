@@ -22,25 +22,25 @@ public class UserController {
 	@Autowired
 	private SecurityService securityService;
 
-	@RequestMapping(value = "/registration", method = RequestMethod.GET)
+	@RequestMapping(value = "/registro", method = RequestMethod.GET)
 	public String registration(Model model) {
 		model.addAttribute("userForm", new User());
 
-		return "registration";
+		return "registro";
 	}
 
-	@RequestMapping(value = "/registration", method = RequestMethod.POST)
+	@RequestMapping(value = "/registro", method = RequestMethod.POST)
 	public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
 
 		if (bindingResult.hasErrors()) {
-			return "registration";
+			return "registro";
 		}
 
 		userService.save(userForm);
 
 		securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
 
-		return "redirect:/registration";
+		return "redirect:/registro";
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -54,14 +54,14 @@ public class UserController {
 		return "login";
 	}
 
-	@RequestMapping(value = {"/welcome" }, method = RequestMethod.GET)
-	public String welcome(Model model) {
-		return "welcome";
+	@RequestMapping("/usuarios")
+	public String listaUsuarios() {
+		return "lista-usuarios";
 	}
-	
+
 	@RequestMapping("/403")
 	@ResponseBody
-	public String erro(){
+	public String erro() {
 		return "erro";
 	}
 

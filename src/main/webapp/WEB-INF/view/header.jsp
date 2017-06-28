@@ -10,7 +10,7 @@
 			<li class="active"><a href="/">Início</a></li>
 			<li><a href="/clientes">Clientes</a></li>
 			<li><a href="/processos">Processos</a></li>
-			<li><a href="#"></a></li>
+			<li><a href="/usuarios">Usuário</a></li>
 			<li></li>
 		</ul>
 		<div class="navbar-header">

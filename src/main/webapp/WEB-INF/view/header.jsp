@@ -10,18 +10,22 @@
 <nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#myNavbar">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
 			<a class="navbar-brand" href="#">Uniadv</a>
 		</div>
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="/">Início</a></li>
-			<li><a href="/clientes">Clientes</a></li>
-			<li><a href="/processos">Processos</a></li>
-			<li><a href="/usuarios">Usuários</a></li>
-			<li><a href="#"></a></li>
-		</ul>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/">Início</a></li>
+				<li><a href="/clientes">Clientes</a></li>
+				<li><a href="/processos">Processos</a></li>
+				<li><a href="/usuarios">Usuários</a></li>
 
-		<div class="top-nav">
-			<ul class="nav pull-right top-menu">
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown"><a data-toggle="dropdown"
 					class="dropdown-toggle" href="#"> <span class="username">${pageContext.request.userPrincipal.name}</span>
 						<b class="caret"></b>

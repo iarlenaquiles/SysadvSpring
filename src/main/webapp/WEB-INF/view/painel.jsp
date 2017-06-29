@@ -24,7 +24,7 @@
 					<i class="fa fa-legal"></i>
 				</div>
 				<div class="value">
-					<h1>${qtd_processo}</h1>
+					<h1 class="count"></h1>
 
 					<p>Processos</p>
 				</div>
@@ -37,7 +37,7 @@
 					<i class="fa fa-user"></i>
 				</div>
 				<div class="value">
-					<h1>${qtd_cliente}</h1>
+					<h1 id="qtd_cliente"></h1>
 					<p>Clientes</p>
 				</div>
 				</section>
@@ -48,5 +48,7 @@
 	</div>
 
 	<script src="${url_base}js/bootstrap.min.js"></script>
+	<script src="${url_base}js/app.js"></script>
+	<script src="${url_base}js/count.js"></script>
 </body>
 </html>

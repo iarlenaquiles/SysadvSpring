@@ -64,6 +64,7 @@
 			</div>
 		</div>
 	</div>
+	<c:import url="footer.jsp"></c:import>
 	<script src="${url_base}js/bootstrap.min.js"></script>
 </body>
 </html>

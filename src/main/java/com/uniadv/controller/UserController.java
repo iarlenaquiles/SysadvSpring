@@ -26,6 +26,13 @@ public class UserController {
 	@Autowired
 	private SecurityService securityService;
 
+	@RequestMapping("/usuarios")
+	public String listaUsuarios(Model model) {
+		Iterable<User> lista = userService.getLista();
+		model.addAttribute("usuarios", lista);
+		return "lista-usuarios";
+	}
+
 	// Vai para tela de adição do usuario
 	@GetMapping("/usuarios/add")
 	public String insereForm(Model model) {
@@ -67,13 +74,6 @@ public class UserController {
 			model.addAttribute("message", "Deslogou");
 
 		return "login";
-	}
-
-	@RequestMapping("/usuarios")
-	public String listaUsuarios(Model model) {
-		Iterable<User> lista = userService.getLista();
-		model.addAttribute("usuarios", lista);
-		return "lista-usuarios";
 	}
 
 	@RequestMapping("/403")

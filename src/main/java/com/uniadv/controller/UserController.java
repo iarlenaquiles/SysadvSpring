@@ -75,6 +75,15 @@ public class UserController {
 		return "redirect:/usuarios";
 	}
 
+	// Atualizar usuario
+	@RequestMapping("/usuarios/{id}/update")
+	public String alteraForm(@PathVariable Integer id, Model model) {
+		User user = userService.findById(id);
+		model.addAttribute("usuario", user);
+		model.addAttribute("acao", "/usuarios");
+		return "editar-usuario";
+	}
+
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Model model, String error, String logout) {
 		if (error != null)

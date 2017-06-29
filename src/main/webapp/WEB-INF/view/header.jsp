@@ -1,3 +1,12 @@
+<style>
+.cor {
+	color: white;
+}
+
+.alinhar {
+	margin-left: 90%;
+}
+</style>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
@@ -14,8 +23,9 @@
 			<li><a href="#"></a></li>
 		</ul>
 
-		<div class="" style="margin-left: 90%">
-			<p>Bem-vindo, ${pageContext.request.userPrincipal.name}</p>
+		<div class="alinhar">
+			<p class="cor">Bem-vindo,
+				${pageContext.request.userPrincipal.name}</p>
 			<c:if test="${pageContext.request.userPrincipal.name != null}">
 				<form id="logoutForm" method="POST" action="${contextPath}/logout">
 					<input type="hidden" name="${_csrf.parameterName}"

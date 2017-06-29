@@ -18,6 +18,10 @@
 		<h1>Cliente</h1>
 		<jsp:include page="form_cliente_view.jsp" />
 	</div>
+	<br>
+	<br>
+	<br>
+	<c:import url="footer.jsp"></c:import>
 	<script src="${url_base}js/bootstrap.min.js"></script>
 	<script src="${url_base}js/formzin-1.0.4.js"></script>
 	<script type="text/javascript"> Formzin.iniciar(); </script>

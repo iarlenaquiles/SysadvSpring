@@ -9,8 +9,6 @@ public class PainelController {
 	
 	@RequestMapping("/")
 	public String home(Model model) {
-		model.addAttribute("qtd_processo", 10);
-		model.addAttribute("qtd_cliente", 10);
 		return "painel";
 	}
 }

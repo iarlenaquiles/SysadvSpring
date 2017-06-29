@@ -95,5 +95,10 @@ public class ClienteController {
 		List<Cliente> todos = clienteRepository.findAll();
 		return todos;
 	}
+	
+	@RequestMapping("/qtdClientes")
+	public @ResponseBody Long qtdClientes(){
+		return clienteRepository.count();
+	}
 
 }

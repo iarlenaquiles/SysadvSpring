@@ -15,7 +15,9 @@
 
 <title>Login Uniadv</title>
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
 <link href="${url_base}css/common.css" rel="stylesheet">
 
 </head>
@@ -36,13 +38,13 @@
 
 				<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
 			</div>
-<h4 class="text-center"><a href="${contextPath}/registration">Create an account</a></h4>
 		</form>
 
 	</div>
 	<!-- /container -->
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

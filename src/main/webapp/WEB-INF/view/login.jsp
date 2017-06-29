@@ -41,7 +41,17 @@
 				</c:if>
 				<input name="username" type="text" class="form-control"
 					placeholder="Username" autofocus="true" /> <input name="password"
-					type="password" class="form-control" placeholder="Password" /> <span>${error}</span>
+					type="password" class="form-control" placeholder="Password" />
+
+				<c:if test="${not empty error}">
+					<div class="alert alert-danger alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<p>${error}</p>
+					</div>
+				</c:if>
 				<input type="hidden" name="${_csrf.parameterName}"
 					value="${_csrf.token}" />
 
@@ -50,7 +60,7 @@
 		</form>
 
 	</div>
-	
+
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script

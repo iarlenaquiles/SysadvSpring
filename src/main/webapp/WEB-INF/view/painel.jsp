@@ -9,13 +9,43 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Painel</title>
 <link href="${url_base}css/bootstrap.min.css" rel="stylesheet">
+<link href="${url_base}css/style.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="${url_base}font-awesome/css/font-awesome.min.css">
 <script src="${url_base}js/jquery.min.js"></script>
 </head>
 <body>
 	<c:import url="header.jsp"></c:import>
+	<div class="row state-overview">
+		<a href="/processos">
+			<div class="col-lg-6 col-sm-6">
+				<section class="panel">
+				<div class="symbol red">
+					<i class="fa fa-legal"></i>
+				</div>
+				<div class="value">
+					<h1></h1>
 
+					<p>Processos</p>
+				</div>
+				</section>
+			</div>
+		</a> <a href="/clientes">
+			<div class="col-lg-6 col-sm-6">
+				<section class="panel">
+				<div class="symbol green">
+					<i class="fa fa-user"></i>
+				</div>
+				<div class="value">
+					<h1></h1>
+					<p>Clientes</p>
+				</div>
+				</section>
+			</div>
+		</a>
+
+
+	</div>
 
 	<script src="${url_base}js/bootstrap.min.js"></script>
 </body>

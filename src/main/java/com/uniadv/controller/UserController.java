@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.uniadv.model.Cliente;
 import com.uniadv.model.User;
 import com.uniadv.service.SecurityService;
 import com.uniadv.service.UserService;
@@ -71,9 +70,9 @@ public class UserController {
 	@GetMapping("/usuarios/{id}/delete")
 	public String deleteUsuario(@PathVariable Integer id, RedirectAttributes redirect) {
 		User user = new User(id);
-		userService.
+		userService.delete(user);
 		redirect.addFlashAttribute("mensagem", "Usuário removido com sucesso!");
-		return "redirect:/clientes";
+		return "redirect:/usuarios";
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)

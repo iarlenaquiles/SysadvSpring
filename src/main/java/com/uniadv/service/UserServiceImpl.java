@@ -37,4 +37,9 @@ public class UserServiceImpl implements UserService {
 	public List<User> getLista() {
 		return userRepository.findAll(new Sort(new Sort.Order(Sort.Direction.ASC, "username")));
 	}
+
+	@Override
+	public void delete(User user) {
+		userRepository.delete(user.getId());
+	}
 }

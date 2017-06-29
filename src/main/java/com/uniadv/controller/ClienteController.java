@@ -25,12 +25,6 @@ public class ClienteController {
 	@Autowired
 	private ClienteRepository clienteRepository; // Injeta a classe repositorio
 
-	// Vai para tela principal do CRUD onde são listados todos os clientes
-	@RequestMapping("/")
-	public String home() {
-		return "forward:/clientes";
-	}
-
 	// Chama a lista dos clientes
 	@GetMapping("/clientes")
 	public String listaClientes(Model model) {

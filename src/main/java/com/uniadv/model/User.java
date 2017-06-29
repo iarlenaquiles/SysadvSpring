@@ -14,6 +14,10 @@ public class User {
 	@ManyToMany
 	private Set<Role> roles;
 
+	public User(Integer id) {
+		this.id = id;
+	}
+
 	public Integer getId() {
 		return id;
 	}

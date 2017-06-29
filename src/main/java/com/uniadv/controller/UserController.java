@@ -71,8 +71,8 @@ public class UserController {
 	@GetMapping("/usuarios/{id}/delete")
 	public String deleteUsuario(@PathVariable Integer id, RedirectAttributes redirect) {
 		User user = new User(id);
-		clienteRepository.delete(cliente);
-		redirect.addFlashAttribute("mensagem", "Cliente removido com sucesso!");
+		userService.
+		redirect.addFlashAttribute("mensagem", "Usuário removido com sucesso!");
 		return "redirect:/clientes";
 	}
 

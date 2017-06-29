@@ -24,7 +24,7 @@
 					<i class="fa fa-legal"></i>
 				</div>
 				<div class="value">
-					<h1></h1>
+					<h1>${qtd_processo}</h1>
 
 					<p>Processos</p>
 				</div>
@@ -37,7 +37,7 @@
 					<i class="fa fa-user"></i>
 				</div>
 				<div class="value">
-					<h1></h1>
+					<h1>${qtd_cliente}</h1>
 					<p>Clientes</p>
 				</div>
 				</section>

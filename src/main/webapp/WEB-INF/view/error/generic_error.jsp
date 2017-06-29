@@ -7,6 +7,6 @@
 <title>Ocorreu um erro</title>
 </head>
 <body>
-
+${erro}
 </body>
 </html>

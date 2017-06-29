@@ -98,12 +98,7 @@ public class ClienteController {
 
 	@RequestMapping("/getClientes")
 	public @ResponseBody List<Cliente> getClientes() {
-		return listaClientesResult();
-	}
-
-	private List<Cliente> listaClientesResult() {
 		List<Cliente> todos = clienteRepository.findAll();
-
 		return todos;
 	}
 

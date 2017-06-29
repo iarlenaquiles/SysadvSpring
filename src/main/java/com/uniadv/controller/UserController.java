@@ -59,20 +59,6 @@ public class UserController {
 		return "redirect:/usuarios";
 	}
 
-	@RequestMapping(value = "/registro", method = RequestMethod.POST)
-	public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
-
-		if (bindingResult.hasErrors()) {
-			return "registro";
-		}
-
-		userService.save(userForm);
-
-		securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
-
-		return "redirect:/registro";
-	}
-
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Model model, String error, String logout) {
 		if (error != null)

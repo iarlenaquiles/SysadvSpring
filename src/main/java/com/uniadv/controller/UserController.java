@@ -87,7 +87,7 @@ public class UserController {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Model model, String error, String logout) {
 		if (error != null)
-			model.addAttribute("error", "Usuário ou senha estão inváligos.");
+			model.addAttribute("error", "Usuário ou senha estão inválidos.");
 
 		if (logout != null)
 			model.addAttribute("message", "Deslogou");

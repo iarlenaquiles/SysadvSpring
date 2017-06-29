@@ -1,3 +1,9 @@
+<style>
+.dropdown {
+	background-color: #fff;
+	color: white;
+}
+</style>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
@@ -14,7 +20,7 @@
 			<li><a href="#"></a></li>
 		</ul>
 
-		<div class="top-nav ">
+		<div class="top-nav">
 			<ul class="nav pull-right top-menu">
 				<li class="dropdown"><a data-toggle="dropdown"
 					class="dropdown-toggle" href="#"> <span class="username">${pageContext.request.userPrincipal.name}</span>

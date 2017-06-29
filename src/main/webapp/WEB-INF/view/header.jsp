@@ -11,7 +11,7 @@
 			<li><a href="/clientes">Clientes</a></li>
 			<li><a href="/processos">Processos</a></li>
 			<li><a href="/usuarios">Usuários</a></li>
-			<li></li>
+			<li><a href="#">Bem-vindo, ${pageContext.request.userPrincipal.name}</a></li>
 		</ul>
 		<div class="navbar-header">
 			<c:if test="${pageContext.request.userPrincipal.name != null}">

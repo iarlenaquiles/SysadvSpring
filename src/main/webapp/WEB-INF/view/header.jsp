@@ -11,11 +11,11 @@
 			<li><a href="/clientes">Clientes</a></li>
 			<li><a href="/processos">Processos</a></li>
 			<li><a href="/usuarios">Usuários</a></li>
-			<li><a href="#">Bem-vindo,
-					${pageContext.request.userPrincipal.name}</a></li>
+			<li><a href="#"></a></li>
 		</ul>
 
-		<div class="" style="margin-left: 95%">
+		<div class="" style="margin-left: 90%">
+			<p>Bem-vindo, ${pageContext.request.userPrincipal.name}</p>
 			<c:if test="${pageContext.request.userPrincipal.name != null}">
 				<form id="logoutForm" method="POST" action="${contextPath}/logout">
 					<input type="hidden" name="${_csrf.parameterName}"

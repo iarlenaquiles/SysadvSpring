@@ -7,12 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.uniadv.model.Cliente;
 import com.uniadv.model.User;
 import com.uniadv.service.SecurityService;
 import com.uniadv.service.UserService;
@@ -63,6 +65,15 @@ public class UserController {
 			redirect.addFlashAttribute("mensagem", "Usuário atualizado com sucesso!");
 		}
 		return "redirect:/usuarios";
+	}
+
+	// Deletar Usuario
+	@GetMapping("/usuarios/{id}/delete")
+	public String deleteUsuario(@PathVariable Integer id, RedirectAttributes redirect) {
+		User user = new User(id);
+		clienteRepository.delete(cliente);
+		redirect.addFlashAttribute("mensagem", "Cliente removido com sucesso!");
+		return "redirect:/clientes";
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)

@@ -1,12 +1,3 @@
-<style>
-.cor {
-	color: white;
-}
-
-.alinhar {
-	margin-left: 90%;
-}
-</style>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
@@ -23,18 +14,24 @@
 			<li><a href="#"></a></li>
 		</ul>
 
-		<div class="alinhar">
-			<p class="cor">Bem-vindo,
-				${pageContext.request.userPrincipal.name}</p>
-			<c:if test="${pageContext.request.userPrincipal.name != null}">
-				<form id="logoutForm" method="POST" action="${contextPath}/logout">
-					<input type="hidden" name="${_csrf.parameterName}"
-						value="${_csrf.token}" /> <a class="btn btn-info" role="button"
-						onclick="document.forms['logoutForm'].submit()">Logout</a>
-				</form>
-			</c:if>
+		<div class="top-nav ">
+			<ul class="nav pull-right top-menu">
+				<li class="dropdown"><a data-toggle="dropdown"
+					class="dropdown-toggle" href="#"> <span class="username">${pageContext.request.userPrincipal.name}</span>
+						<b class="caret"></b>
+				</a>
+					<ul class="dropdown-menu extended logout">
+						<li><c:if
+								test="${pageContext.request.userPrincipal.name != null}">
+								<form id="logoutForm" method="POST"
+									action="${contextPath}/logout">
+									<input type="hidden" name="${_csrf.parameterName}"
+										value="${_csrf.token}" /> <a class="btn btn-info"
+										role="button" onclick="document.forms['logoutForm'].submit()">Sair</a>
+								</form>
+							</c:if></li>
+					</ul></li>
+			</ul>
 		</div>
 	</div>
-
-
 </nav>

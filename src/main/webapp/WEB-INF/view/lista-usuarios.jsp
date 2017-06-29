@@ -49,10 +49,8 @@
 						<c:forEach items="${usuarios}" var="usuario">
 							<tr>
 								<td>${usuario.username}</td>
-								
-								<td class="actions"><a class="btn btn-success btn-sm"
-									href="/usuarios/${usuario.id}/view"><i class="fa fa-eye"></i>
-										Visualizar</a> <a class="btn btn-warning btn-sm"
+
+								<td class="actions"><a class="btn btn-warning btn-sm"
 									href="/usuarios/${usuario.id}/update"><i
 										class="fa fa-pencil"></i> Editar</a> <a
 									class="btn btn-danger btn-sm"

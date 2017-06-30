@@ -7,7 +7,7 @@ public class UniadvException extends Exception {
 	private String message;
 
 	public UniadvException(String message) {
-		this.message = message;
+		super(message);
 	}
 	
 	@Override

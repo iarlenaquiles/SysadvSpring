@@ -16,8 +16,67 @@
 </head>
 <body>
 	<c:import url="header-uniadv.jsp"></c:import>
-	<div class="container">
+	<header id="myCarousel" class="carousel slide"> <!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+		<li data-target="#myCarousel" data-slide-to="3"></li>
+		<li data-target="#myCarousel" data-slide-to="4"></li>
+	</ol>
 
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner">
+		<div class="item active">
+			<div class="fill">
+				<img src="img/item1.jpg" />
+			</div>
+			<div class="carousel-caption">
+				<h2>Tenha todas as informações no dia no julgamento.</h2>
+			</div>
+		</div>
+		<div class="item">
+			<div class="fill">
+				<img src="img/item2.jpg" />
+			</div>
+			<div class="carousel-caption">
+				<h2>Tenha as informações na mão.</h2>
+			</div>
+		</div>
+		<div class="item">
+			<div class="fill">
+				<img src="img/item3.jpg" />
+			</div>
+			<div class="carousel-caption">
+				<h2>Feche mais negócios.</h2>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="fill">
+				<img src="img/item4.jpg" />
+			</div>
+			<div class="carousel-caption">
+				<h2>Você sempre na frente.</h2>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="fill">
+				<img src="img/item5.jpg" />
+			</div>
+			<div class="carousel-caption">
+				<h2>Veja os resultados.</h2>
+			</div>
+		</div>
+	</div>
+
+	<!-- Controls --> <a class="left carousel-control" href="#myCarousel"
+		data-slide="prev"> <span class="icon-prev"></span>
+	</a> <a class="right carousel-control" href="#myCarousel" data-slide="next">
+		<span class="icon-next"></span>
+	</a> </header>
+	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Bem-vindo à Uniadv</h1>
@@ -85,23 +144,21 @@
 					src="img/usuarios.png" alt="">
 				</a>
 			</div>
-			
+
 		</div>
 		<!-- /.row -->
 
 		<!-- Features Section -->
 		<div class="row">
 			<div class="col-lg-12">
-				<h2 class="page-header">Modern Business Features</h2>
+				<h2 class="page-header">Tenha um escritório moderno</h2>
 			</div>
 			<div class="col-md-6">
-				<p>The Modern Business template by Start Bootstrap includes:</p>
+				<p>O sistema Uniadv possui:</p>
 				<ul>
 					<li><strong>Bootstrap v3.3.7</strong></li>
 					<li>jQuery v1.11.1</li>
 					<li>Font Awesome v4.2.0</li>
-					<li>Working PHP contact form with validation</li>
-					<li>Unstyled page elements for easy customization</li>
 					<li>17 HTML pages</li>
 				</ul>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -110,7 +167,7 @@
 					quia dolorum ducimus unde.</p>
 			</div>
 			<div class="col-md-6">
-				<img class="img-responsive" src="http://placehold.it/700x450" alt="">
+				<img class="img-responsive" src="img/gestao.jpg" alt="">
 			</div>
 		</div>
 		<!-- /.row -->

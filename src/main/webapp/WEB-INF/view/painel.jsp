@@ -17,36 +17,47 @@
 <body>
 	<c:import url="header.jsp"></c:import>
 	<div class="container">
-	<div class="row state-overview">
-		<a href="/processos">
-			<div class="col-lg-4 col-sm-6">
-				<section class="panel">
-				<div class="symbol red">
-					<i class="fa fa-legal"></i>
-				</div>
-				<div class="value">
-					<h1>${qtd_processo}</h1>
+		<div class="row state-overview">
+			<a href="/processos">
+				<div class="col-lg-4 col-sm-6">
+					<section class="panel">
+					<div class="symbol red">
+						<i class="fa fa-legal"></i>
+					</div>
+					<div class="value">
+						<h1>${qtd_processo}</h1>
 
-					<p>Processos</p>
+						<p>Processos</p>
+					</div>
+					</section>
 				</div>
-				</section>
-			</div>
-		</a> <a href="/clientes">
-			<div class="col-lg-4 col-sm-6">
-				<section class="panel">
-				<div class="symbol green">
-					<i class="fa fa-user"></i>
+			</a> <a href="/clientes">
+				<div class="col-lg-4 col-sm-6">
+					<section class="panel">
+					<div class="symbol green">
+						<i class="fa fa-user"></i>
+					</div>
+					<div class="value">
+						<h1>${qtd_cliente}</h1>
+						<p>Clientes</p>
+					</div>
+					</section>
 				</div>
-				<div class="value">
-					<h1>${qtd_cliente}</h1>
-					<p>Clientes</p>
+			</a> <a href="/usuarios">
+				<div class="col-lg-4 col-sm-6">
+					<section class="panel">
+					<div class="symbol blue">
+						<i class="fa fa-users"></i>
+					</div>
+					<div class="value">
+						<h1>${qtd_user}</h1>
+						<p>Usuários</p>
+					</div>
+					</section>
 				</div>
-				</section>
-			</div>
-		</a>
+			</a>
 
-
-	</div>
+		</div>
 	</div>
 	<c:import url="footer.jsp"></c:import>
 	<script src="${url_base}js/bootstrap.min.js"></script>

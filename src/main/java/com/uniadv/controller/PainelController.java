@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.uniadv.repository.ClienteRepository;
 import com.uniadv.repository.ProcessoRepository;
+import com.uniadv.repository.UserRepository;
 
 @Controller
 public class PainelController {
@@ -15,11 +16,15 @@ public class PainelController {
 	
 	@Autowired
 	ProcessoRepository processoRepository;
+	
+	@Autowired
+	UserRepository userRepository;
 
 	@RequestMapping("/")
 	public String home(Model model) {
 		model.addAttribute("qtd_cliente", clienteRepository.count());
 		model.addAttribute("qtd_processo", processoRepository.count());
+		model.addAttribute("qtd_user", userRepository.count());
 		return "painel";
 	}
 }

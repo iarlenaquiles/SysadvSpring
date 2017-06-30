@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.uniadv.model.Cliente;
@@ -55,7 +56,7 @@ public class ProcessoController {
 		if (result.hasErrors()) {
 			model.addAttribute("processo", processo);
 			model.addAttribute("acao", "/processos");
-			
+
 			if (processo.getId() == null) {
 				return "inserir-processo";
 			} else {
@@ -88,5 +89,10 @@ public class ProcessoController {
 		Processo processo = processoRepository.findOne(id);
 		model.addAttribute("processo", processo);
 		return "visualizar-processo";
+	}
+
+	@RequestMapping("/qtdProcessos")
+	public @ResponseBody Long qtdClientes() {
+		return processoRepository.count();
 	}
 }

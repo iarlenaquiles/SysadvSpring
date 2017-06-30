@@ -16,6 +16,7 @@
 </head>
 <body>
 	<c:import url="header.jsp"></c:import>
+	<div class="container">
 	<div class="row state-overview">
 		<a href="/processos">
 			<div class="col-lg-4 col-sm-6">
@@ -45,6 +46,7 @@
 		</a>
 
 
+	</div>
 	</div>
 	<c:import url="footer.jsp"></c:import>
 	<script src="${url_base}js/bootstrap.min.js"></script>

@@ -10,4 +10,9 @@ public class UniadvController {
 	public String uniadv(){
 		return "uniadv";
 	}
+	
+	@RequestMapping("/uniadv/sobre")
+	public String sobre(){
+		return "sobre";
+	}
 }

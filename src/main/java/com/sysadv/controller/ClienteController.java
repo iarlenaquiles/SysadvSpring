@@ -1,4 +1,4 @@
-package com.uniadv.controller;
+package com.sysadv.controller;
 
 import java.util.List;
 
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.uniadv.model.Cliente;
-import com.uniadv.repository.ClienteRepository;
+import com.sysadv.model.Cliente;
+import com.sysadv.repository.ClienteRepository;
 
 @Controller
 public class ClienteController {

@@ -1,4 +1,4 @@
-package com.uniadv.service;
+package com.sysadv.service;
 
 import java.util.HashSet;
 import java.util.List;
@@ -8,9 +8,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.uniadv.model.User;
-import com.uniadv.repository.RoleRepository;
-import com.uniadv.repository.UserRepository;
+import com.sysadv.model.User;
+import com.sysadv.repository.RoleRepository;
+import com.sysadv.repository.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService {

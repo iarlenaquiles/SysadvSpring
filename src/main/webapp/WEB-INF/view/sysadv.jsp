@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Uniadv</title>
+<title>Sysadv</title>
 <link href="${url_base}css/bootstrap.min.css" rel="stylesheet">
 <link href="${url_base}css/modern-business.css" rel="stylesheet">
 <link rel="stylesheet"
@@ -15,7 +15,7 @@
 <script src="https://use.fontawesome.com/d91313ced9.js"></script>
 </head>
 <body>
-	<c:import url="header-uniadv.jsp"></c:import>
+	<c:import url="header-sysadv.jsp"></c:import>
 	<header id="myCarousel" class="carousel slide"> <!-- Indicators -->
 	<ol class="carousel-indicators">
 		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -79,7 +79,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Bem-vindo à Uniadv</h1>
+				<h1 class="page-header">Bem-vindo ao Sysadv</h1>
 			</div>
 			<div class="col-md-6">
 				<div class="panel panel-default">
@@ -89,7 +89,7 @@
 						</h4>
 					</div>
 					<div class="panel-body">
-						<p>Uniadv é um sistema criado para que o advogado possa
+						<p>Sysadv é um sistema criado para que o advogado possa
 							cadastrar clientes, processos e usuários.</p>
 						<a href="#" class="btn btn-default">Saiba mais</a>
 					</div>
@@ -154,7 +154,7 @@
 				<h2 class="page-header">Tenha um escritório moderno</h2>
 			</div>
 			<div class="col-md-6">
-				<p>O sistema Uniadv possui:</p>
+				<p>O sistema Sysadv possui:</p>
 				<ul>
 					<li><strong>Bootstrap v3.3.7</strong></li>
 					<li>jQuery v1.11.1</li>
@@ -174,7 +174,7 @@
 
 		<hr>
 
-		<c:import url="footer-uniadv.jsp"></c:import>
+		<c:import url="footer-sysadv.jsp"></c:import>
 
 	</div>
 	<script src="${url_base}js/bootstrap.min.js"></script>

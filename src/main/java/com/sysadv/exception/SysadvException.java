@@ -1,12 +1,12 @@
-package com.uniadv.exception;
+package com.sysadv.exception;
 
-public class UniadvException extends Exception {
+public class SysadvException extends Exception {
 
 	private static final long serialVersionUID = 1L;
 
 	private String message;
 
-	public UniadvException(String message) {
+	public SysadvException(String message) {
 		super(message);
 	}
 	

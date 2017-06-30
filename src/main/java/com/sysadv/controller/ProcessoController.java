@@ -1,4 +1,4 @@
-package com.uniadv.controller;
+package com.sysadv.controller;
 
 import javax.validation.Valid;
 
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.uniadv.model.Cliente;
-import com.uniadv.model.Processo;
-import com.uniadv.repository.ProcessoRepository;
+import com.sysadv.model.Cliente;
+import com.sysadv.model.Processo;
+import com.sysadv.repository.ProcessoRepository;
 
 @Controller
 public class ProcessoController {

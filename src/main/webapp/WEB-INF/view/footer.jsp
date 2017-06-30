@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="navbar-collapse collapse" id="footer-body">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Uniadv</a></li>
+					<li><a href="#">Sysadv</a></li>
 					<li><a href="#">Sobre nós</a></li>
 					<li><a href="#">Contato</a></li>
 					<li><a href="#">Termos &amp; condições</a></li>

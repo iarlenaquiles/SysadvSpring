@@ -1,9 +1,9 @@
-package com.uniadv.repository;
+package com.sysadv.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.uniadv.model.Role;
+import com.sysadv.model.Role;
 
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Integer> {

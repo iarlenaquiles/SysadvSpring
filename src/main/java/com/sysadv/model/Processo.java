@@ -1,4 +1,4 @@
-package com.uniadv.model;
+package com.sysadv.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

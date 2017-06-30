@@ -1,17 +1,17 @@
-package com.uniadv.controller;
+package com.sysadv.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class UniadvController {
+public class SysadvController {
 
-	@RequestMapping("/uniadv")
+	@RequestMapping("/sysadv")
 	public String uniadv(){
-		return "uniadv";
+		return "sysadv";
 	}
 	
-	@RequestMapping("/uniadv/sobre")
+	@RequestMapping("/sysadv/sobre")
 	public String sobre(){
 		return "sobre";
 	}

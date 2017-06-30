@@ -1,4 +1,4 @@
-package com.uniadv.service;
+package com.sysadv.service;
 
 public interface SecurityService {
     String findLoggedInUsername();

@@ -1,4 +1,4 @@
-package com.uniadv.controller;
+package com.sysadv.controller;
 
 import javax.validation.Valid;
 
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.uniadv.model.User;
-import com.uniadv.service.SecurityService;
-import com.uniadv.service.UserService;
+import com.sysadv.model.User;
+import com.sysadv.service.SecurityService;
+import com.sysadv.service.UserService;
 
 @Controller
 public class UserController {

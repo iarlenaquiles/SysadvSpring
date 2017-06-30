@@ -1,8 +1,8 @@
-package com.uniadv.service;
+package com.sysadv.service;
 
 import java.util.List;
 
-import com.uniadv.model.User;
+import com.sysadv.model.User;
 
 public interface UserService {
 	void save(User user);

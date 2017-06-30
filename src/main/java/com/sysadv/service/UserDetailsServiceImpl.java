@@ -1,4 +1,4 @@
-package com.uniadv.service;
+package com.sysadv.service;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -12,9 +12,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.uniadv.model.Role;
-import com.uniadv.model.User;
-import com.uniadv.repository.UserRepository;
+import com.sysadv.model.Role;
+import com.sysadv.model.User;
+import com.sysadv.repository.UserRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

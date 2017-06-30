@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.uniadv.model.User;
@@ -92,6 +93,11 @@ public class UserController {
 			model.addAttribute("message", "Deslogou");
 
 		return "login";
+	}
+	
+	@RequestMapping("/qtdUsuarios")
+	public @ResponseBody Long qtdClientes() {
+		return userService.count();
 	}
 
 }

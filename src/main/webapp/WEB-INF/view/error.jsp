@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Ocorreu um erro! Entre em contato com o Administrador do
-		sistebjhjma!</h1>
+		sistema!</h1>
 	<h2>${erro}</h2>
 </body>
 </html>

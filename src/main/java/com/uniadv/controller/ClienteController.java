@@ -98,7 +98,7 @@ public class ClienteController {
 	}
 
 	@RequestMapping("/qtdClientes")
-	public Long qtdClientes() {
+	public @ResponseBody Long qtdClientes() {
 		return clienteRepository.count();
 	}
 }

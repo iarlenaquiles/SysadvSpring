@@ -94,7 +94,7 @@ public class UserController {
 
 		return "login";
 	}
-	
+
 	@RequestMapping("/qtdUsuarios")
 	public @ResponseBody Long qtdClientes() {
 		return userService.count();

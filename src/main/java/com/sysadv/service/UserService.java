@@ -14,6 +14,7 @@ public interface UserService {
 	void delete(User user);
 
 	User findById(Integer id);
-	
+
 	Long count();
+
 }

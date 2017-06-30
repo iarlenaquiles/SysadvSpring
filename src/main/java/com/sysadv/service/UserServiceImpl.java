@@ -52,4 +52,5 @@ public class UserServiceImpl implements UserService {
 	public Long count() {
 		return userRepository.count();
 	}
+
 }

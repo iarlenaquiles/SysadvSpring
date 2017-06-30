@@ -18,26 +18,26 @@
 	<c:import url="header.jsp"></c:import>
 	<div class="row state-overview">
 		<a href="/processos">
-			<div class="col-lg-6 col-sm-6">
+			<div class="col-lg-4 col-sm-6">
 				<section class="panel">
 				<div class="symbol red">
 					<i class="fa fa-legal"></i>
 				</div>
 				<div class="value">
-					<h1 class="count"></h1>
+					<h1>${qtd_processo}</h1>
 
 					<p>Processos</p>
 				</div>
 				</section>
 			</div>
 		</a> <a href="/clientes">
-			<div class="col-lg-6 col-sm-6">
+			<div class="col-lg-4 col-sm-6">
 				<section class="panel">
 				<div class="symbol green">
 					<i class="fa fa-user"></i>
 				</div>
 				<div class="value">
-					<h1 id="qtd_cliente"></h1>
+					<h1>${qtd_cliente}</h1>
 					<p>Clientes</p>
 				</div>
 				</section>

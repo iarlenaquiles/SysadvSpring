@@ -12,6 +12,7 @@
 <link rel="stylesheet"
 	href="${url_base}font-awesome/css/font-awesome.min.css">
 <script src="${url_base}js/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/d91313ced9.js"></script>
 </head>
 <body>
 	<c:import url="header-uniadv.jsp"></c:import>
@@ -25,7 +26,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4>
-							<i class="fa fa-fw fa-check"></i> Bootstrap v3.3.7
+							<i class="fa fa-check"></i> Bootstrap v3.3.7
 						</h4>
 					</div>
 					<div class="panel-body">

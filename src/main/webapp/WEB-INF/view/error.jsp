@@ -7,6 +7,7 @@
 <title>Ocorreu um erro</title>
 </head>
 <body>
-<h1>Ocorreu um erro! Entre em contato com o Administrador do sistema!</h1>
+<h1>Ocorreu um erro! Entre em contato com o Administrador do sistebjhjma!</h1>
+<h2>${erro}</h2>
 </body>
 </html>

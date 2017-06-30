@@ -14,14 +14,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.uniadv.model.Cliente;
 import com.uniadv.repository.ClienteRepository;
 
 @Controller
-@RestController
 public class ClienteController {
 
 	@Autowired
@@ -49,6 +47,7 @@ public class ClienteController {
 		Cliente c = clienteRepository.findOne(id);
 		model.addAttribute("cliente", c);
 		model.addAttribute("acao", "/clientes");
+
 		return "editar-cliente";
 	}
 
@@ -97,9 +96,9 @@ public class ClienteController {
 		List<Cliente> todos = clienteRepository.findAll();
 		return todos;
 	}
-	
+
 	@RequestMapping("/qtdClientes")
-	public Long qtdClientes(){
+	public Long qtdClientes() {
 		return clienteRepository.count();
 	}
 }

@@ -11,8 +11,22 @@ var options = {
 	}
 };
 
-$("#nomeCliente").easyAutocomplete(options);
+$.get("/qtdClientes", function(responseText) {
 
-$(document).ready(function () {
-    
+	$("#qtd_cliente").text(responseText);
+
 });
+
+$.get("/qtdProcessos", function(responseText) {
+
+	$("#qtd_processo").text(responseText);
+
+});
+
+$.get("/qtdUsuarios", function(responseText) {
+
+	$("#qtd_usuario").text(responseText);
+
+});
+
+$("#nomeCliente").easyAutocomplete(options);

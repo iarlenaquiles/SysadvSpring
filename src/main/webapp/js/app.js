@@ -14,5 +14,5 @@ var options = {
 $("#nomeCliente").easyAutocomplete(options);
 
 $(document).ready(function () {
-    countUp("1");
+    
 });

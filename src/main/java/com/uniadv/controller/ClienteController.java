@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.uniadv.exception.GenericException;
@@ -22,6 +23,7 @@ import com.uniadv.model.Cliente;
 import com.uniadv.repository.ClienteRepository;
 
 @Controller
+@RestController
 public class ClienteController {
 
 	@Autowired
@@ -99,7 +101,7 @@ public class ClienteController {
 	}
 	
 	@RequestMapping("/qtdClientes")
-	public @ResponseBody Long qtdClientes(){
+	public Long qtdClientes(){
 		return clienteRepository.count();
 	}
 	

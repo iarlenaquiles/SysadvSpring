@@ -62,6 +62,5 @@
 	<c:import url="footer.jsp"></c:import>
 	<script src="${url_base}js/bootstrap.min.js"></script>
 	<script src="${url_base}js/app.js"></script>
-	<script src="${url_base}js/count.js"></script>
 </body>
 </html>

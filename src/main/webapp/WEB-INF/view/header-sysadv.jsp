@@ -15,7 +15,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/uniadv/sobre">Sobre</a></li>
 				<li><a href="services.html">Services</a></li>
-				<li><a href="contact.html">Contato</a></li>
+				<li><a href="/sysadv/contato">Contato</a></li>
 
 
 				<li class="dropdown"><a href="#" class="dropdown-toggle"

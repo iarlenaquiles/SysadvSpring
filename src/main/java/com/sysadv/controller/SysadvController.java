@@ -15,5 +15,10 @@ public class SysadvController {
 	public String sobre(){
 		return "sobre";
 	}
+	
+	@RequestMapping("/sysadv/contato")
+	public String contato(){
+		return "contato";
+	}
 }
  

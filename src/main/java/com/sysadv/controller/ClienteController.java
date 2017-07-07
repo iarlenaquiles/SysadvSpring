@@ -30,7 +30,7 @@ public class ClienteController {
 	public String listaClientes(Model model) {
 		Iterable<Cliente> lista = clienteRepository.findAll(new Sort(new Sort.Order(Sort.Direction.ASC, "nome")));
 		model.addAttribute("clientes", lista);
-		return "lista-clientes";
+		return "lista-clientes"; 
 	}
 
 	// Vai para tela de adição do cliente

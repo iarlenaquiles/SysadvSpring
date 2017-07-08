@@ -40,8 +40,8 @@
 					</div>
 				</c:if>
 				<input name="username" type="text" class="form-control"
-					placeholder="Username" autofocus="true" /> <input name="password"
-					type="password" class="form-control" placeholder="Password" />
+					placeholder="Usuário" autofocus="true" /> <input name="password"
+					type="password" class="form-control" placeholder="Senha" />
 
 				<c:if test="${not empty error}">
 					<div class="alert alert-danger alert-dismissible" role="alert">

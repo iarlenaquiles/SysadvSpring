@@ -17,6 +17,7 @@
 				<li><a href="/clientes">Clientes</a></li>
 				<li><a href="/processos">Processos</a></li>
 				<li><a href="/usuarios">Usuários</a></li>
+				<li><a href="/contatos">Contatos</a></li>
 
 			</ul>
 			<ul class="nav navbar-nav navbar-right">

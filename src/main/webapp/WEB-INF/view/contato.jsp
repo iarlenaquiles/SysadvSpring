@@ -57,8 +57,8 @@
 						href="mailto:name@example.com">aquiles@sysadv.com</a>
 				</p>
 				<p>
-					<i class="fa fa-clock-o"></i> <abbr title="Hours">H</abbr>: Monday
-					- Friday: 9:00 AM to 5:00 PM
+					<i class="fa fa-clock-o"></i> <abbr title="Hours"></abbr>: Segunda
+					- Sexta: 8:00 às 17:00
 				</p>
 				<ul class="list-unstyled list-inline list-social-icons">
 					<li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
@@ -78,7 +78,7 @@
 		<!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
 		<div class="row">
 			<div class="col-md-8">
-				<h3>Send us a Message</h3>
+				<h3>Envie a sua mensagem</h3>
 				<form name="sentMessage" id="contactForm" novalidate>
 					<div class="control-group form-group">
 						<div class="controls">

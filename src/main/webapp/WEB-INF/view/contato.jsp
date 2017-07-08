@@ -82,29 +82,28 @@
 				<form name="sentMessage" id="contactForm" novalidate>
 					<div class="control-group form-group">
 						<div class="controls">
-							<label>Full Name:</label> <input type="text" class="form-control"
-								id="name" required
-								data-validation-required-message="Please enter your name.">
+							<label>Nome:</label> <input type="text" class="form-control"
+								id="name" required>
 							<p class="help-block"></p>
 						</div>
 					</div>
 					<div class="control-group form-group">
 						<div class="controls">
-							<label>Phone Number:</label> <input type="tel"
+							<label>Telefone:</label> <input type="tel"
 								class="form-control" id="phone" required
 								data-validation-required-message="Please enter your phone number.">
 						</div>
 					</div>
 					<div class="control-group form-group">
 						<div class="controls">
-							<label>Email Address:</label> <input type="email"
+							<label>Email:</label> <input type="email"
 								class="form-control" id="email" required
 								data-validation-required-message="Please enter your email address.">
 						</div>
 					</div>
 					<div class="control-group form-group">
 						<div class="controls">
-							<label>Message:</label>
+							<label>Mensagem:</label>
 							<textarea rows="10" cols="100" class="form-control" id="message"
 								required
 								data-validation-required-message="Please enter your message"
@@ -113,7 +112,7 @@
 					</div>
 					<div id="success"></div>
 					<!-- For success/fail messages -->
-					<button type="submit" class="btn btn-primary">Send Message</button>
+					<button type="submit" class="btn btn-primary">Enviar Mensagem</button>
 				</form>
 			</div>
 

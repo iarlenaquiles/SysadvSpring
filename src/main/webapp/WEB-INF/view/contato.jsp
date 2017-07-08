@@ -53,7 +53,7 @@
 					1111-1111
 				</p>
 				<p>
-					<i class="fa fa-envelope-o"></i> <abbr title="Email">E</abbr>: <a
+					<i class="fa fa-envelope-o"></i> <abbr title="Email"></abbr>: <a
 						href="mailto:name@example.com">aquiles@sysadv.com</a>
 				</p>
 				<p>

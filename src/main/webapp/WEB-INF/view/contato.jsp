@@ -54,7 +54,7 @@
 				</p>
 				<p>
 					<i class="fa fa-envelope-o"></i> <abbr title="Email">E</abbr>: <a
-						href="mailto:name@example.com">name@example.com</a>
+						href="mailto:name@example.com">aquiles@sysadv.com</a>
 				</p>
 				<p>
 					<i class="fa fa-clock-o"></i> <abbr title="Hours">H</abbr>: Monday

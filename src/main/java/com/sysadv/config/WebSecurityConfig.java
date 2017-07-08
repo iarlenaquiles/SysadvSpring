@@ -24,10 +24,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests().antMatchers("/").authenticated()
-				.antMatchers("/css/**", "/js/**", "/fonts/**", "/img/**","/sysadv/**").permitAll().antMatchers("/clientes/**")
-				.hasRole("USER").antMatchers("/processos/**").hasRole("USER").antMatchers("/usuarios/**")
-				.hasRole("USER").anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll().and()
-				.logout().permitAll();
+				.antMatchers("/css/**", "/js/**", "/fonts/**", "/img/**", "/sysadv/**", "/contatos").permitAll()
+				.antMatchers("/clientes/**").hasRole("USER").antMatchers("/processos/**").hasRole("USER")
+				.antMatchers("/usuarios/**").hasRole("USER").anyRequest().authenticated().and().formLogin()
+				.loginPage("/login").permitAll().and().logout().permitAll();
 	}
 
 	@Autowired

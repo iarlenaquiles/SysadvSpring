@@ -29,7 +29,7 @@
 		</div>
 	</spring:bind>
 
-	<spring:bind path="observacao">
+	<spring:bind path="mensagem">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="observacao">Observação</form:label>
 			<form:textarea path="observacao" rows="5" cssClass="form-control" />

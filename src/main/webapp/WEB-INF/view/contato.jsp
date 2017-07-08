@@ -46,11 +46,11 @@
 			<div class="col-md-4">
 				<h3>Detalhes do contato</h3>
 				<p>
-					3481 Melrose Place<br>Beverly Hills, CA 90210<br>
+					Travessa José Viana<br>Quixadá, CE<br>
 				</p>
 				<p>
-					<i class="fa fa-phone"></i> <abbr title="Phone">P</abbr>: (123)
-					456-7890
+					<i class="fa fa-phone"></i> <abbr title="Phone"></abbr>: (85)
+					1111-1111
 				</p>
 				<p>
 					<i class="fa fa-envelope-o"></i> <abbr title="Email">E</abbr>: <a

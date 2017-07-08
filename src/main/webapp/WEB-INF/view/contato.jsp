@@ -21,9 +21,7 @@
 		<!-- Page Heading/Breadcrumbs -->
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">
-					Contato
-				</h1>
+				<h1 class="page-header">Contato</h1>
 				<ol class="breadcrumb">
 					<li><a href="/sysadv">Home</a></li>
 					<li class="active">Contato</li>
@@ -72,12 +70,21 @@
 				</ul>
 			</div>
 		</div>
-		
-		
+
+
 		<div class="row">
 			<div class="col-md-8">
 				<h3>Envie a sua mensagem</h3>
-				<c:import url="form-contato.jsp"></c:import>
+				<c:if test="${not empty mensagem}">
+					<div class="alert alert-success alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<p>${mensagem}</p>
+					</div>
+				</c:if>
+				<c:import url="form_contato.jsp"></c:import>
 			</div>
 
 		</div>

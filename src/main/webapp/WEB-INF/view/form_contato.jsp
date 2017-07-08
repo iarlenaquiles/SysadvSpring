@@ -1,6 +1,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<form:form method="post" modelAttribute="cliente"
+<form:form method="post" modelAttribute="contato"
 	action="${url_base}${acao}">
 	<form:input path="id" type="hidden" />
 
@@ -31,9 +31,9 @@
 
 	<spring:bind path="mensagem">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
-			<form:label path="observacao">Observação</form:label>
-			<form:textarea path="observacao" rows="5" cssClass="form-control" />
-			<form:errors path="observacao" />
+			<form:label path="mensagem">Mensagem</form:label>
+			<form:textarea path="mensagem" rows="5" cssClass="form-control" />
+			<form:errors path="mensagem" />
 		</div>
 	</spring:bind>
 

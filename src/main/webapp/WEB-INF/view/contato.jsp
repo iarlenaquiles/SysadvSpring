@@ -77,7 +77,7 @@
 		<div class="row">
 			<div class="col-md-8">
 				<h3>Envie a sua mensagem</h3>
-				
+				<c:import url="form-contato.jsp"></c:import>
 			</div>
 
 		</div>

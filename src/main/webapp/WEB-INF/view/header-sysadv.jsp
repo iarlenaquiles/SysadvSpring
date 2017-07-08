@@ -14,6 +14,7 @@
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/sysadv/contato">Contato</a></li>
+				<li><a href="/">Acessar o sistema</a></li>
 			</ul>
 		</div>
 

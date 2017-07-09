@@ -63,11 +63,18 @@
 		</div>
 	</spring:bind>
 
-
 	<spring:bind path="estadoCivil">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="estadoCivil">Estado civil</form:label>
-			<form:input path="estadoCivil" type="text" cssClass="form-control" />
+			<form:select path="estadoCivil" cssClass="form-control">
+				<form:option value="">Selecione</form:option>
+				<form:option value="Solteiro">Solteiro</form:option>
+				<form:option value="Casado">Casado</form:option>
+				<form:option value="Separado">Separado</form:option>
+				<form:option value="Divorciado">Divorciado</form:option>
+				<form:option value="Viúvo">Viúvo</form:option>
+				<form:option value="União Estável">União Estável</form:option>
+			</form:select>
 			<form:errors path="estadoCivil" />
 		</div>
 	</spring:bind>
@@ -99,7 +106,8 @@
 	<spring:bind path="numeroRg">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="numeroRg">Número de RG</form:label>
-			<form:input path="numeroRg" type="text" cssClass="form-control inteiro" />
+			<form:input path="numeroRg" type="text"
+				cssClass="form-control inteiro" />
 			<form:errors path="numeroRg" />
 		</div>
 	</spring:bind>
@@ -134,7 +142,8 @@
 	<spring:bind path="numeroCtps">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="numeroCtps">Número CTPS</form:label>
-			<form:input path="numeroCtps" type="text" cssClass="form-control inteiro" />
+			<form:input path="numeroCtps" type="text"
+				cssClass="form-control inteiro" />
 			<form:errors path="numeroCtps" />
 		</div>
 	</spring:bind>

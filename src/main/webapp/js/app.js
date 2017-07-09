@@ -30,17 +30,55 @@ $.get("/qtdUsuarios", function(responseText) {
 });
 
 function mostra_estado(estado, idCampo) {
-	
-	for (var i in estado) {
+
+	for ( var i in estado) {
 		var e = estado[i]
-		$(idCampo).append("<option value='" + e.id + "'>" + e.nome + "</option>");
+		$(idCampo).append(
+				"<option value='" + e.id + "'>" + e.nome + "</option>");
+	}
+}
+
+function mostra_cidade(cidade) {
+
+	for ( var i in cidade) {
+		var c = cidade[i]
+		$("#cidade").append(
+				"<option value='" + c.id + "'>" + c.nome + "</option>");
 	}
 }
 
 $.get("/getEstado", function(response) {
-	mostra_estado(response,"#estadoExpedicaoRg");
-	mostra_estado(response,"#estadoExpedicaoCtps");
-	mostra_estado(response,"#estado");
+	mostra_estado(response, "#estadoExpedicaoRg");
+	mostra_estado(response, "#estadoExpedicaoCtps");
+	mostra_estado(response, "#estado");
 });
+
+$.get("/getCidade", function(response) {
+	mostra_cidade(response);
+});
+
+function getCidades(idEstado) {
+	$("#cidade").html("");
+	if (idEstado != '') {
+		$.ajax('/', {
+			data : {
+				idEstado : idEstado
+			},
+			dataType : "json",
+			success : function(data) {
+				$.each(data, function(i, item) {
+					$("#cidades").append(
+							'<option value="' + item.id + '" >' + item.nome
+									+ '</option>');
+				});
+
+			},
+			error : function() {
+				console.log('Erro ao buscar cidades.');
+			}
+		});
+	}
+
+}
 
 $("#nomeCliente").easyAutocomplete(options);

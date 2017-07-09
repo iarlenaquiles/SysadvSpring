@@ -61,9 +61,11 @@ public class Processo {
 	private String procedimento;
 
 	@NotNull
+	@NotEmpty
 	private String honorario;
 
 	@NotNull
+	@NotEmpty
 	private String porcentagem_causa;
 
 	@NotNull

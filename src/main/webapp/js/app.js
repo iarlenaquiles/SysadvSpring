@@ -58,11 +58,10 @@ $.get("/getCidade", function(response) {
 });
 
 function getCidades(idEstado) {
-	$("#cidade").html("");
 	if (idEstado != '') {
 		$.ajax('/', {
 			data : {
-				idEstado : idEstado
+				id : idEstado
 			},
 			dataType : "json",
 			success : function(data) {

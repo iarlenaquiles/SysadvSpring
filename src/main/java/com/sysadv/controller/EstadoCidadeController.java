@@ -32,11 +32,5 @@ public class EstadoCidadeController {
 		List<Cidade> lista = cidadeRepository.findAll(new Sort(new Sort.Order(Sort.Direction.ASC, "nome")));
 		return lista;
 	}
-	
-	@RequestMapping("/getCidadeByEstado/{id}")
-	public List<Cidade> getCidadeById(int idEstado){
-		List<Cidade> lista = cidadeRepository.findAll();
-		return null;
-	}
 
 }

@@ -115,8 +115,8 @@ public class Cliente {
 	private String cidade;
 
 	@NotNull
-	@NotEmpty
-	private String estado;
+	@OneToOne
+	private Estado estado;
 
 	@NotNull
 	@Size(min = 5, max = 100, message = "O tamanho deve ser entre {min} e {max}")
@@ -347,11 +347,11 @@ public class Cliente {
 		this.cidade = cidade;
 	}
 
-	public String getEstado() {
+	public Estado getEstado() {
 		return estado;
 	}
 
-	public void setEstado(String estado) {
+	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
 

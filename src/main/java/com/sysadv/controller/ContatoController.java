@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.sysadv.model.Contato;
@@ -52,5 +53,10 @@ public class ContatoController {
 		contatoRepository.delete(contato);
 		redirect.addFlashAttribute("mensagem", "Contato removido com sucesso!");
 		return "redirect:/contatos";
+	}
+
+	@RequestMapping("/qtdContatos")
+	public @ResponseBody Long qtdContatos() {
+		return contatoRepository.count();
 	}
 }

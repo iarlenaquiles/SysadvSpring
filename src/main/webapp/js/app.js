@@ -17,6 +17,12 @@ $.get("/qtdClientes", function(responseText) {
 
 });
 
+$.get("/qtdContatos", function(responseText) {
+
+	$("#qtd_contato").text(responseText);
+
+});
+
 $.get("/qtdProcessos", function(responseText) {
 
 	$("#qtd_processo").text(responseText);

@@ -228,33 +228,26 @@
             var cep = jQuery(this);
             jQuery.getJSON("https://viacep.com.br/ws/" + cep.val() + "/json/",
                 function (data) {
-                    if (data.logradouro) {
                         jQuery("." + cep.attr("data-prefixo") + "bairro").val(data.bairro);
-                        jQuery("." + cep.attr("data-prefixo") + "cidade").val(data.localidade);
+                        $.get("/getCidade", function(response){
+                        	for(var i in response){
+                        		var e = response[i];
+                        		if(e.nome==data.localidade){
+                        			jQuery("." + cep.attr("data-prefixo") + "cidade").val(e.id);
+                        		}
+                        	}
+                        	
+                        });
                         jQuery("." + cep.attr("data-prefixo") + "logradouro").val(data.logradouro);
-                        jQuery("." + cep.attr("data-prefixo") + "uf").val(data.uf);
+                        $.get("/getEstado", function(response){
+                        	for(var i in response){
+                        		var e = response[i];
+                        		if(e.uf==data.uf){
+                            		jQuery("." + cep.attr("data-prefixo") + "uf").val(e.id);
+                            	}
+                        	}
+                    	});
                         jQuery("." + cep.attr("data-prefixo") + "ibge").val(data.ibge);
-
-                        if (cep.attr("data-readonly")) {
-                            jQuery("." + cep.attr("data-prefixo") + "bairro").attr("readonly", true);
-                            jQuery("." + cep.attr("data-prefixo") + "cidade").attr("readonly", true);
-                            jQuery("." + cep.attr("data-prefixo") + "logradouro").attr("readonly", true);
-                            jQuery("." + cep.attr("data-prefixo") + "uf").attr("readonly", true);
-                            jQuery("." + cep.attr("data-prefixo") + "ibge").attr("readonly", true);
-                        } else {
-                            jQuery("." + cep.attr("data-prefixo") + "bairro").attr("readonly", false);
-                            jQuery("." + cep.attr("data-prefixo") + "cidade").attr("readonly", false);
-                            jQuery("." + cep.attr("data-prefixo") + "logradouro").attr("readonly", false);
-                            jQuery("." + cep.attr("data-prefixo") + "ibge").attr("readonly", false);
-                        }
-                    } else {
-                        jQuery("." + cep.attr("data-prefixo") + "cidade").val(data.localidade);
-                        jQuery("." + cep.attr("data-prefixo") + "uf").val(data.uf);
-                        jQuery("." + cep.attr("data-prefixo") + "bairro").attr("readonly", false);
-                        jQuery("." + cep.attr("data-prefixo") + "cidade").attr("readonly", false);
-                        jQuery("." + cep.attr("data-prefixo") + "logradouro").attr("readonly", false);
-                        jQuery("." + cep.attr("data-prefixo") + "uf").attr("readonly", false);
-                    }
                 });
         });
     };

@@ -157,7 +157,7 @@
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="porcentagem_causa">Porcentagem da causa</form:label>
 			<form:input path="porcentagem_causa" type="text"
-				cssClass="form-control mascara" data-formato="000%" disabled="true" />
+				cssClass="form-control mascara" data-formato="00%" disabled="true" />
 			<form:errors path="porcentagem_causa" />
 		</div>
 	</spring:bind>

@@ -133,8 +133,10 @@
 	<spring:bind path="estadoExpedicaoRg">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="estadoExpedicaoRg">Estado Expedicão RG</form:label>
-			<form:input path="estadoExpedicaoRg" type="text"
-				cssClass="form-control" />
+			<form:select path="estadoExpedicaoRg" cssClass="form-control"
+				id="estadoExpedicaoRg">
+				<form:option value="${cliente.estadoExpedicaoRg.id}">${cliente.estadoExpedicaoRg.nome}</form:option>
+			</form:select>
 			<form:errors path="estadoExpedicaoRg" />
 		</div>
 	</spring:bind>

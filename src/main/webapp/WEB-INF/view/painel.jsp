@@ -19,7 +19,7 @@
 	<div class="container">
 		<div class="row state-overview">
 			<a href="/processos">
-				<div class="col-lg-4 col-sm-6">
+				<div class="col-lg-3 col-sm-6">
 					<section class="panel">
 					<div class="symbol red">
 						<i class="fa fa-legal"></i>
@@ -32,7 +32,7 @@
 					</section>
 				</div>
 			</a> <a href="/clientes">
-				<div class="col-lg-4 col-sm-6">
+				<div class="col-lg-3 col-sm-6">
 					<section class="panel">
 					<div class="symbol green">
 						<i class="fa fa-user"></i>
@@ -44,7 +44,7 @@
 					</section>
 				</div>
 			</a> <a href="/usuarios">
-				<div class="col-lg-4 col-sm-6">
+				<div class="col-lg-3 col-sm-6">
 					<section class="panel">
 					<div class="symbol blue">
 						<i class="fa fa-users"></i>
@@ -52,6 +52,20 @@
 					<div class="value">
 						<h1 id="qtd_usuario"></h1>
 						<p>Usuários</p>
+					</div>
+					</section>
+				</div>
+			</a>
+			
+			<a href="/contatos">
+				<div class="col-lg-3 col-sm-6">
+					<section class="panel">
+					<div class="symbol yellow">
+						<i class="fa fa-address-book"></i>
+					</div>
+					<div class="value">
+						<h1 id="qtd_contato"></h1>
+						<p>Contatos</p>
 					</div>
 					</section>
 				</div>

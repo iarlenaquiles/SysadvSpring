@@ -192,7 +192,7 @@
 	<spring:bind path="cidade">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="cidade">Cidade</form:label>
-			<form:input path="cidade" type="text" cssClass="form-control" disabled="true" />
+			<form:input path="cidade" type="text" value="${cliente.cidade.nome}" cssClass="form-control" disabled="true" />
 			<form:errors path="cidade" />
 		</div>
 	</spring:bind>
@@ -200,7 +200,7 @@
 	<spring:bind path="estado">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="estado">Estado</form:label>
-			<form:input path="estado" type="text" cssClass="form-control" disabled="true" />
+			<form:input path="estado" type="text" cssClass="form-control" value="${cliente.estado.nome}" disabled="true" />
 			<form:errors path="estado" />
 		</div>
 	</spring:bind>

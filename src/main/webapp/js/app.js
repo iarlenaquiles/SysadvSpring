@@ -29,4 +29,16 @@ $.get("/qtdUsuarios", function(responseText) {
 
 });
 
+function mostra_estado(estado) {
+	
+	for (var i in estado) {
+		var e = estado[i]
+		$("#estadoExpedicaoRg").append("<option value='" + e.id + "'>" + e.nome + "</option>");
+	}
+}
+
+$.get("/getEstado", function(response) {
+	mostra_estado(response);
+});
+
 $("#nomeCliente").easyAutocomplete(options);

@@ -219,7 +219,7 @@
 			<form:input path="cidade" type="hidden" cssClass="form-control"
 				id="idcidade" />
 				<input type="text" id="cidade" class="form-control en_cidade"
-				name="cidade" value="${cliente.cidade.nome}"/>
+				name="cidade" value="${cliente.cidade.nome}" disabled="true" />
 			<form:errors path="cidade" />
 		</div>
 	</spring:bind>
@@ -230,7 +230,7 @@
 			<form:input path="estado" type="hidden" cssClass="form-control"
 				id="idestado" />
 				<input type="text" id="estado" class="form-control en_uf"
-				name="estado" value="${cliente.estado.nome}"/>
+				name="estado" value="${cliente.estado.nome}" disabled="true" />
 			<form:errors path="estado" />
 		</div>
 	</spring:bind>

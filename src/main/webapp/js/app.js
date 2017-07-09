@@ -82,6 +82,19 @@ var options5 = {
 		}
 	}
 };
+
+var options6 = {
+	url : "/getCidade",
+
+	getValue : "nome",
+
+	list : {
+		match : {
+			enabled : true
+		}
+	}
+};
+
 $.get("/qtdClientes", function(responseText) {
 
 	$("#qtd_cliente").text(responseText);
@@ -128,6 +141,7 @@ $.get("/getCidade", function(response) {
 	mostra_cidade(response);
 });
 
+$("#naturalidade").easyAutocomplete(options6);
 $("#cidade").easyAutocomplete(options5);
 $("#estado").easyAutocomplete(options4);
 $("#estadoExpedicaoRg").easyAutocomplete(options2);

@@ -91,7 +91,7 @@
 	<spring:bind path="naturalidade">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="naturalidade">Naturalidade</form:label>
-			<form:input path="naturalidade" type="text" cssClass="form-control" />
+			<form:input path="naturalidade" type="text" cssClass="form-control" id="naturalidade" />
 			<form:errors path="naturalidade" />
 		</div>
 	</spring:bind>

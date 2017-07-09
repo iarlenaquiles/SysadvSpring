@@ -33,22 +33,55 @@ var options2 = {
 };
 
 var options3 = {
-		url : "/getEstado",
+	url : "/getEstado",
 
-		getValue : "nome",
+	getValue : "nome",
 
-		list : {
-			match : {
-				enabled : true
-			},
+	list : {
+		match : {
+			enabled : true
+		},
 
-			onSelectItemEvent : function() {
-				var value = $("#estadoExpedicaoCtps").getSelectedItemData().id;
-				$("#idEstadoExpedicaoCtps").val(value).trigger("change");
-			}
+		onSelectItemEvent : function() {
+			var value = $("#estadoExpedicaoCtps").getSelectedItemData().id;
+			$("#idEstadoExpedicaoCtps").val(value).trigger("change");
 		}
-	};
+	}
+};
 
+var options4 = {
+	url : "/getEstado",
+
+	getValue : "nome",
+
+	list : {
+		match : {
+			enabled : true
+		},
+
+		onSelectItemEvent : function() {
+			var value = $("#estado").getSelectedItemData().id;
+			$("#idestado").val(value).trigger("change");
+		}
+	}
+};
+
+var options5 = {
+	url : "/getCidade",
+
+	getValue : "nome",
+
+	list : {
+		match : {
+			enabled : true
+		},
+
+		onSelectItemEvent : function() {
+			var value = $("#estado").getSelectedItemData().id;
+			$("#idestado").val(value).trigger("change");
+		}
+	}
+};
 $.get("/qtdClientes", function(responseText) {
 
 	$("#qtd_cliente").text(responseText);
@@ -95,6 +128,7 @@ $.get("/getCidade", function(response) {
 	mostra_cidade(response);
 });
 
+$("#estado").easyAutocomplete(options4);
 $("#estadoExpedicaoRg").easyAutocomplete(options2);
 $("#estadoExpedicaoCtps").easyAutocomplete(options3);
 $("#nomeCliente").easyAutocomplete(options);

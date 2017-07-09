@@ -218,7 +218,7 @@
 			<form:label path="cidade">Cidade</form:label>
 			<form:input path="cidade" type="hidden" cssClass="form-control"
 				id="idcidade" />
-				<input type="text" id="cidade" class="form-control"
+				<input type="text" id="cidade" class="form-control en_cidade"
 				name="cidade" value="${cliente.cidade.nome}"/>
 			<form:errors path="cidade" />
 		</div>
@@ -229,7 +229,7 @@
 			<form:label path="estado">Estado</form:label>
 			<form:input path="estado" type="hidden" cssClass="form-control"
 				id="idestado" />
-				<input type="text" id="estado" class="form-control"
+				<input type="text" id="estado" class="form-control en_uf"
 				name="estado" value="${cliente.estado.nome}"/>
 			<form:errors path="estado" />
 		</div>

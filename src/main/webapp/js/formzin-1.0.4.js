@@ -233,7 +233,8 @@
                         	for(var i in response){
                         		var e = response[i];
                         		if(e.nome==data.localidade){
-                        			jQuery("." + cep.attr("data-prefixo") + "cidade").val(e.id);
+                        			jQuery("." + cep.attr("data-prefixo") + "cidade").val(e.nome);
+                        			$("#idcidade").val(e.id);
                         		}
                         	}
                         	
@@ -243,7 +244,8 @@
                         	for(var i in response){
                         		var e = response[i];
                         		if(e.uf==data.uf){
-                            		jQuery("." + cep.attr("data-prefixo") + "uf").val(e.id);
+                            		jQuery("." + cep.attr("data-prefixo") + "uf").val(e.nome);
+                            		$("#idestado").val(e.id);
                             	}
                         	}
                     	});

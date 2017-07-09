@@ -40,6 +40,7 @@ function mostra_estado(estado, idCampo) {
 $.get("/getEstado", function(response) {
 	mostra_estado(response,"#estadoExpedicaoRg");
 	mostra_estado(response,"#estadoExpedicaoCtps");
+	mostra_estado(response,"#estado");
 });
 
 $("#nomeCliente").easyAutocomplete(options);

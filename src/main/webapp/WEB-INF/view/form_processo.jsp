@@ -9,7 +9,7 @@
 			<form:input path="cliente" type="hidden" cssClass="form-control"
 				id="idCliente" />
 			<input type="text" id="nomeCliente" class="form-control"
-				name="nomeCliente" value="${processo.cliente.nome}"/>
+				name="nomeCliente" value="${processo.cliente.nome}" />
 			<form:errors path="cliente" />
 		</div>
 	</spring:bind>
@@ -50,7 +50,7 @@
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="numero_processo">Número do Processo</form:label>
 			<form:input path="numero_processo" type="text"
-				cssClass="form-control" />
+				cssClass="form-control inteiro" />
 			<form:errors path="numero_processo" />
 		</div>
 	</spring:bind>
@@ -59,7 +59,7 @@
 	<spring:bind path="ano_processo">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="ano_processo">Ano do Processo</form:label>
-			<form:input path="ano_processo" type="text" cssClass="form-control" />
+			<form:input path="ano_processo" type="text" cssClass="form-control inteiro" />
 			<form:errors path="ano_processo" />
 		</div>
 	</spring:bind>

@@ -77,8 +77,8 @@ var options5 = {
 		},
 
 		onSelectItemEvent : function() {
-			var value = $("#estado").getSelectedItemData().id;
-			$("#idestado").val(value).trigger("change");
+			var value = $("#cidade").getSelectedItemData().id;
+			$("#idcidade").val(value).trigger("change");
 		}
 	}
 };
@@ -128,6 +128,7 @@ $.get("/getCidade", function(response) {
 	mostra_cidade(response);
 });
 
+$("#cidade").easyAutocomplete(options5);
 $("#estado").easyAutocomplete(options4);
 $("#estadoExpedicaoRg").easyAutocomplete(options2);
 $("#estadoExpedicaoCtps").easyAutocomplete(options3);

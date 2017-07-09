@@ -216,13 +216,10 @@
 	<spring:bind path="cidade">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="cidade">Cidade</form:label>
-			<form:select path="cidade" cssClass="form-control en_cidade"
-				id="cidade">
-				<form:option value="">Selecione</form:option>
-				<c:if test="not empty {cliente.cidade.id}">
-					<form:option value="${cliente.cidade.id}">${cliente.cidade.nome}</form:option>
-				</c:if>
-			</form:select>
+			<form:input path="cidade" type="hidden" cssClass="form-control"
+				id="idcidade" />
+				<input type="text" id="cidade" class="form-control"
+				name="cidade" value="${cliente.cidade.nome}"/>
 			<form:errors path="cidade" />
 		</div>
 	</spring:bind>

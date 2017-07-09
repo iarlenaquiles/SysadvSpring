@@ -111,8 +111,8 @@ public class Cliente {
 	private String complemento;
 
 	@NotNull
-	@NotEmpty
-	private String cidade;
+	@OneToOne
+	private Cidade cidade;
 
 	@NotNull
 	@OneToOne
@@ -339,11 +339,11 @@ public class Cliente {
 		this.observacao = observacao;
 	}
 
-	public String getCidade() {
+	public Cidade getCidade() {
 		return cidade;
 	}
 
-	public void setCidade(String cidade) {
+	public void setCidade(Cidade cidade) {
 		this.cidade = cidade;
 	}
 

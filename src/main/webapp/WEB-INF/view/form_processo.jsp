@@ -59,7 +59,8 @@
 	<spring:bind path="ano_processo">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="ano_processo">Ano do Processo</form:label>
-			<form:input path="ano_processo" type="text" cssClass="form-control inteiro" />
+			<form:input path="ano_processo" type="text"
+				cssClass="form-control inteiro" />
 			<form:errors path="ano_processo" />
 		</div>
 	</spring:bind>
@@ -75,7 +76,8 @@
 	<spring:bind path="cidade_comarca">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="cidade_comarca">Cidade Comarca</form:label>
-			<form:input path="cidade_comarca" type="text" cssClass="form-control" />
+			<form:input path="cidade_comarca" type="text" cssClass="form-control"
+				id="cidade_comarca" />
 			<form:errors path="cidade_comarca" />
 		</div>
 	</spring:bind>
@@ -83,7 +85,7 @@
 	<spring:bind path="estado_comarca">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="estado_comarca">Estado Comarca</form:label>
-			<form:input path="estado_comarca" type="text" cssClass="form-control" />
+			<form:input path="estado_comarca" type="text" cssClass="form-control" id="estado_comarca" />
 			<form:errors path="estado_comarca" />
 		</div>
 	</spring:bind>

@@ -95,6 +95,23 @@ var options6 = {
 	}
 };
 
+var options7 = {
+	url : "/getCidade",
+
+	getValue : "nome",
+
+	list : {
+		match : {
+			enabled : true
+		},
+		onSelectItemEvent : function() {
+			var value = $("#cidade_comarca").getSelectedItemData().estado.nome;
+
+			$("#estado_comarca").val(value).trigger("change");
+		}
+	}
+};
+
 $.get("/qtdClientes", function(responseText) {
 
 	$("#qtd_cliente").text(responseText);
@@ -141,6 +158,7 @@ $.get("/getCidade", function(response) {
 	mostra_cidade(response);
 });
 
+$("#cidade_comarca").easyAutocomplete(options7);
 $("#naturalidade").easyAutocomplete(options6);
 $("#cidade").easyAutocomplete(options5);
 $("#estado").easyAutocomplete(options4);

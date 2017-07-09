@@ -1,5 +1,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <form:form method="post" modelAttribute="cliente"
 	action="${url_base}${acao}">
 	<form:input path="id" type="hidden" />
@@ -135,7 +136,10 @@
 			<form:label path="estadoExpedicaoRg">Estado Expedicão RG</form:label>
 			<form:select path="estadoExpedicaoRg" cssClass="form-control"
 				id="estadoExpedicaoRg">
-				<form:option value="${cliente.estadoExpedicaoRg.id}">${cliente.estadoExpedicaoRg.nome}</form:option>
+				<form:option value="">Selecione</form:option>
+				<c:if test="not empty {cliente.estadoExpedicaoRg.id}">
+					<form:option value="${cliente.estadoExpedicaoRg.id}">${cliente.estadoExpedicaoRg.nome}</form:option>
+				</c:if>
 			</form:select>
 			<form:errors path="estadoExpedicaoRg" />
 		</div>
@@ -163,7 +167,10 @@
 			<form:label path="estadoExpedicaoCtps">Estado Expedicão CTPS</form:label>
 			<form:select path="estadoExpedicaoCtps" cssClass="form-control"
 				id="estadoExpedicaoCtps">
-				<form:option value="${cliente.estadoExpedicaoCtps.id}">${cliente.estadoExpedicaoCtps.nome}</form:option>
+				<form:option value="">Selecione</form:option>
+				<c:if test="not empty {cliente.estadoExpedicaoCtps.id}">
+					<form:option value="${cliente.estadoExpedicaoCtps.id}">${cliente.estadoExpedicaoCtps.nome}</form:option>
+				</c:if>
 			</form:select>
 			<form:errors path="estadoExpedicaoCtps" />
 		</div>

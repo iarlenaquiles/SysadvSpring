@@ -219,29 +219,30 @@
 		</div>
 	</spring:bind>
 
-	<spring:bind path="estado">
-		<div class="form-group ${status.error ? 'has-error' : ''}">
-			<form:label path="estado">Estado</form:label>
-			<form:select path="estado" cssClass="form-control en_uf" id="estado">
-				<form:option value="">Selecione</form:option>
-				<c:if test="not empty {cliente.estado.id}">
-					<form:option value="${cliente.estado.id}">${cliente.estado.nome}</form:option>
-				</c:if>
-			</form:select>
-			<form:errors path="estado" />
-		</div>
-	</spring:bind>
-
 	<spring:bind path="cidade">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="cidade">Cidade</form:label>
-			<form:select path="cidade" cssClass="form-control en_cidade" id="cidade">
+			<form:select path="cidade" cssClass="form-control en_cidade"
+				id="cidade" disabled="true" >
 				<form:option value="">Selecione</form:option>
 				<c:if test="not empty {cliente.cidade.id}">
 					<form:option value="${cliente.cidade.id}">${cliente.cidade.nome}</form:option>
 				</c:if>
 			</form:select>
 			<form:errors path="cidade" />
+		</div>
+	</spring:bind>
+
+	<spring:bind path="estado">
+		<div class="form-group ${status.error ? 'has-error' : ''}">
+			<form:label path="estado">Estado</form:label>
+			<form:select path="estado" cssClass="form-control en_uf" id="estado" disabled="true" >
+				<form:option value="">Selecione</form:option>
+				<c:if test="not empty {cliente.estado.id}">
+					<form:option value="${cliente.estado.id}">${cliente.estado.nome}</form:option>
+				</c:if>
+			</form:select>
+			<form:errors path="estado" />
 		</div>
 	</spring:bind>
 

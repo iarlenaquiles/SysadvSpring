@@ -74,6 +74,7 @@ public class Cliente {
 	private String orgaoExpedicaoRg;
 
 	@OneToOne
+	@NotNull
 	private Estado estadoExpedicaoRg;
 
 	@NotNull
@@ -84,10 +85,9 @@ public class Cliente {
 	@NotEmpty
 	private String serieCtps;
 
+	@OneToOne
 	@NotNull
-	@Size(max = 2, message = "Campo deve ter {max} caracteres")
-	@NotEmpty
-	private String estadoExpedicaoCtps;
+	private Estado estadoExpedicaoCtps;
 
 	@NotNull
 	@NotEmpty
@@ -259,11 +259,11 @@ public class Cliente {
 		this.serieCtps = serieCtps;
 	}
 
-	public String getEstadoExpedicaoCtps() {
+	public Estado getEstadoExpedicaoCtps() {
 		return estadoExpedicaoCtps;
 	}
 
-	public void setEstadoExpedicaoCtps(String estadoExpedicaoCtps) {
+	public void setEstadoExpedicaoCtps(Estado estadoExpedicaoCtps) {
 		this.estadoExpedicaoCtps = estadoExpedicaoCtps;
 	}
 

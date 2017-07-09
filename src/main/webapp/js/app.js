@@ -4,9 +4,30 @@ var options = {
 	getValue : "nome",
 
 	list : {
+		match : {
+			enabled : true
+		},
+
 		onSelectItemEvent : function() {
 			var value = $("#nomeCliente").getSelectedItemData().id;
 			$("#idCliente").val(value).trigger("change");
+		}
+	}
+};
+
+var options2 = {
+	url : "/getEstado",
+
+	getValue : "nome",
+
+	list : {
+		match : {
+			enabled : true
+		},
+
+		onSelectItemEvent : function() {
+			var value = $("#estadoExpedicaoRg").getSelectedItemData().id;
+			$("#idEstadoExpedicaoRg").val(value).trigger("change");
 		}
 	}
 };
@@ -35,11 +56,11 @@ $.get("/qtdUsuarios", function(responseText) {
 
 });
 
-function mostra_estado(estado, idCampo) {
+function mostra_estado(estado) {
 
 	for ( var i in estado) {
 		var e = estado[i]
-		$(idCampo).append(
+		$("#estadoExpedicaoRg").append(
 				"<option value='" + e.id + "'>" + e.nome + "</option>");
 	}
 }
@@ -54,36 +75,13 @@ function mostra_cidade(cidade) {
 }
 
 $.get("/getEstado", function(response) {
-	mostra_estado(response, "#estadoExpedicaoRg");
-	mostra_estado(response, "#estadoExpedicaoCtps");
-	mostra_estado(response, "#estado");
+	mostra_estado(response);
+	// mostra_estado(response, "#estadoExpedicaoCtps");
+	// mostra_estado(response, "#estado");
 });
 
 $.get("/getCidade", function(response) {
 	mostra_cidade(response);
 });
-
-function getCidades(idEstado) {
-	if (idEstado != '') {
-		$.ajax('/', {
-			data : {
-				id : idEstado
-			},
-			dataType : "json",
-			success : function(data) {
-				$.each(data, function(i, item) {
-					$("#cidades").append(
-							'<option value="' + item.id + '" >' + item.nome
-									+ '</option>');
-				});
-
-			},
-			error : function() {
-				console.log('Erro ao buscar cidades.');
-			}
-		});
-	}
-
-}
-
+$("#estadoExpedicaoRg").easyAutocomplete(options2);
 $("#nomeCliente").easyAutocomplete(options);

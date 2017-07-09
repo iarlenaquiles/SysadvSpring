@@ -11,6 +11,8 @@
 <link rel="stylesheet"
 	href="${url_base}font-awesome/css/font-awesome.min.css">
 <script src="${url_base}js/jquery.min.js"></script>
+<script src="${url_base}js/jquery.easy-autocomplete.min.js"></script>
+<link href="${url_base}css/easy-autocomplete.min.css" rel="stylesheet">
 </head>
 <body>
 	<c:import url="header.jsp"></c:import>

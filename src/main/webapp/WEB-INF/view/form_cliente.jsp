@@ -231,7 +231,13 @@
 	<spring:bind path="estado">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="estado">Estado</form:label>
-			<form:input path="estado" type="text" cssClass="form-control en_uf" />
+			<form:select path="estado" cssClass="form-control en_uf"
+				id="estado">
+				<form:option value="">Selecione</form:option>
+				<c:if test="not empty {cliente.estado.id}">
+					<form:option value="${cliente.estado.id}">${cliente.estado.nome}</form:option>
+				</c:if>
+			</form:select>
 			<form:errors path="estado" />
 		</div>
 	</spring:bind>

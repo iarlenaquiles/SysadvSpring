@@ -94,6 +94,7 @@ function mostra_cidade(cidade) {
 $.get("/getCidade", function(response) {
 	mostra_cidade(response);
 });
+
 $("#estadoExpedicaoRg").easyAutocomplete(options2);
 $("#estadoExpedicaoCtps").easyAutocomplete(options3);
 $("#nomeCliente").easyAutocomplete(options);

@@ -162,13 +162,10 @@
 	<spring:bind path="estadoExpedicaoCtps">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="estadoExpedicaoCtps">Estado Expedicão CTPS</form:label>
-			<form:select path="estadoExpedicaoCtps" cssClass="form-control"
-				id="estadoExpedicaoCtps">
-				<form:option value="">Selecione</form:option>
-				<c:if test="not empty {cliente.estadoExpedicaoCtps.id}">
-					<form:option value="${cliente.estadoExpedicaoCtps.id}">${cliente.estadoExpedicaoCtps.nome}</form:option>
-				</c:if>
-			</form:select>
+			<form:input path="estadoExpedicaoCtps" type="hidden" cssClass="form-control idestado"
+				id="idEstadoExpedicaoCtps" />
+				<input type="text" id="estadoExpedicaoCtps" class="form-control estado"
+				name="estadoExpedicaoCtps" value="${cliente.estadoExpedicaoCtps.nome}"/>
 			<form:errors path="estadoExpedicaoCtps" />
 		</div>
 	</spring:bind>

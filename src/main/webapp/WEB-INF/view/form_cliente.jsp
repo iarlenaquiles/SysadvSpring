@@ -162,9 +162,9 @@
 	<spring:bind path="estadoExpedicaoCtps">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="estadoExpedicaoCtps">Estado Expedicão CTPS</form:label>
-			<form:input path="estadoExpedicaoCtps" type="hidden" cssClass="form-control idestado"
+			<form:input path="estadoExpedicaoCtps" type="hidden" cssClass="form-control"
 				id="idEstadoExpedicaoCtps" />
-				<input type="text" id="estadoExpedicaoCtps" class="form-control estado"
+				<input type="text" id="estadoExpedicaoCtps" class="form-control"
 				name="estadoExpedicaoCtps" value="${cliente.estadoExpedicaoCtps.nome}"/>
 			<form:errors path="estadoExpedicaoCtps" />
 		</div>

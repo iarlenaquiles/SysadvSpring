@@ -32,6 +32,23 @@ var options2 = {
 	}
 };
 
+var options3 = {
+		url : "/getEstado",
+
+		getValue : "nome",
+
+		list : {
+			match : {
+				enabled : true
+			},
+
+			onSelectItemEvent : function() {
+				var value = $("#estadoExpedicaoCtps").getSelectedItemData().id;
+				$("#idEstadoExpedicaoCtps").val(value).trigger("change");
+			}
+		}
+	};
+
 $.get("/qtdClientes", function(responseText) {
 
 	$("#qtd_cliente").text(responseText);
@@ -74,14 +91,9 @@ function mostra_cidade(cidade) {
 	}
 }
 
-$.get("/getEstado", function(response) {
-	mostra_estado(response);
-	// mostra_estado(response, "#estadoExpedicaoCtps");
-	// mostra_estado(response, "#estado");
-});
-
 $.get("/getCidade", function(response) {
 	mostra_cidade(response);
 });
 $("#estadoExpedicaoRg").easyAutocomplete(options2);
+$("#estadoExpedicaoCtps").easyAutocomplete(options3);
 $("#nomeCliente").easyAutocomplete(options);

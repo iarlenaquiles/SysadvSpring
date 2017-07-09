@@ -29,16 +29,17 @@ $.get("/qtdUsuarios", function(responseText) {
 
 });
 
-function mostra_estado(estado) {
+function mostra_estado(estado, idCampo) {
 	
 	for (var i in estado) {
 		var e = estado[i]
-		$("#estadoExpedicaoRg").append("<option value='" + e.id + "'>" + e.nome + "</option>");
+		$(idCampo).append("<option value='" + e.id + "'>" + e.nome + "</option>");
 	}
 }
 
 $.get("/getEstado", function(response) {
-	mostra_estado(response);
+	mostra_estado(response,"#estadoExpedicaoRg");
+	mostra_estado(response,"#estadoExpedicaoCtps");
 });
 
 $("#nomeCliente").easyAutocomplete(options);

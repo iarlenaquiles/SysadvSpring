@@ -76,6 +76,12 @@
 	</a> <a class="right carousel-control" href="#myCarousel" data-slide="next">
 		<span class="icon-next"></span>
 	</a> </header>
+<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12"><a href="/sysadv/contato" class="btn btn-primary btn-block">Comece hoje mesmo à gerenciar o seu escritório!</a></div>
+		</div>
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">

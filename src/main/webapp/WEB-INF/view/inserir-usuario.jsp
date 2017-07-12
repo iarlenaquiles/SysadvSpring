@@ -8,8 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Inserir Usuário</title>
 <link href="${url_base}css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet"
-	href="${url_base}font-awesome/css/font-awesome.min.css">
+<script src="https://use.fontawesome.com/d91313ced9.js"></script>
 <script src="${url_base}js/jquery.min.js"></script>
 </head>
 <body>

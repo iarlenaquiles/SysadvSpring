@@ -1,33 +1,29 @@
 package com.sysadv.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.util.List;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotEmpty;
 
-@Entity(name="contato")
 public class Contato {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	
+	private ObjectId idMongo;
+
 	@NotNull
 	@Size(min = 2, max = 50, message = "O tamanho deve ser entre {min} e {max}")
 	private String nome;
-	
+
 	@NotNull
 	@NotEmpty
-	private String telefone;
-	
+	private List<String> telefone;
+
 	@NotNull
 	@NotEmpty
 	private String email;
-	
+
 	@NotNull
 	@NotEmpty
 	private String mensagem;
@@ -35,16 +31,12 @@ public class Contato {
 	public Contato() {
 	}
 
-	public Contato(Integer id) {
-		this.id = id;
+	public ObjectId getIdMongo() {
+		return idMongo;
 	}
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdMongo(ObjectId idMongo) {
+		this.idMongo = idMongo;
 	}
 
 	public String getNome() {
@@ -55,11 +47,11 @@ public class Contato {
 		this.nome = nome;
 	}
 
-	public String getTelefone() {
+	public List<String> getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(String telefone) {
+	public void setTelefone(List<String> telefone) {
 		this.telefone = telefone;
 	}
 

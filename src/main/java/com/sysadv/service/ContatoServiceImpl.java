@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.bson.Document;
+import org.bson.types.ObjectId;
 import org.springframework.stereotype.Service;
 
 import com.mongodb.MongoClient;
@@ -44,6 +45,11 @@ public class ContatoServiceImpl implements ContatoService {
 			contatos.add(contato);
 		}
 		return contatos;
+	}
+
+	@Override
+	public void remove(String id) {
+		collectionContato.deleteOne(new Document("_id", new ObjectId(id)));		
 	}
 
 }

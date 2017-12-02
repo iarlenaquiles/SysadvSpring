@@ -1,5 +1,6 @@
 package com.sysadv.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.bson.Document;
@@ -30,8 +31,19 @@ public class ContatoServiceImpl implements ContatoService {
 
 	@Override
 	public List<Contato> getLista() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Contato> contatos = new ArrayList<Contato>();
+		List<String> telefones = new ArrayList<String>();
+		for (Document doc : collectionContato.find()) {
+			Contato contato = new Contato();
+			contato.setNome(doc.getString("nome"));
+			contato.setEmail(doc.getString("email"));
+			contato.setMensagem(doc.getString("mensagem"));
+			contato.setIdMongo(doc.getObjectId("_id"));
+			telefones = (List<String>) doc.get("telefones");
+			contato.setTelefone(telefones);
+			contatos.add(contato);
+		}
+		return contatos;
 	}
 
 }

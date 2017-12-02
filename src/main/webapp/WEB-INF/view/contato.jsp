@@ -12,6 +12,7 @@
 <script src="${url_base}js/jquery.min.js"></script>
 <script src="https://use.fontawesome.com/d91313ced9.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="${url_base}css/bootstrap-tagsinput.css" rel="stylesheet">
 <title>Contato - Sysadv</title>
 </head>
 <body>
@@ -92,6 +93,7 @@
 		<c:import url="footer-sysadv.jsp"></c:import>
 		<script src="${url_base}js/bootstrap.min.js"></script>
 		<script src="${url_base}js/formzin-1.0.4.js"></script>
+		<script src="${url_base}js/bootstrap-tagsinput.js"></script>
 		<script type="text/javascript">
 			Formzin.iniciar();
 		</script>

@@ -16,7 +16,7 @@
 		<div class="form-group ${status.error ? 'has-error' : ''}">
 			<form:label path="telefone">Telefones</form:label>
 			<form:input path="telefone" type="text"
-				cssClass="form-control telefone bootstrap-tagsinput input-lg" data-role="tagsinput" />
+				cssClass="form-control bootstrap-tagsinput telefone" data-role="tagsinput" />
 			<form:errors path="telefone" />
 		</div>
 	</spring:bind>

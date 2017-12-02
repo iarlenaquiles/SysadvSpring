@@ -49,9 +49,8 @@ public class ContatoController {
 
 	// Deletar contato
 	@GetMapping("/contatos/{id}/delete")
-	public String deleteContato(@PathVariable Integer id, RedirectAttributes redirect) {
-		//Contato contato = new Contato(id);
-		//contatoRepository.delete(contato);
+	public String deleteContato(@PathVariable String id, RedirectAttributes redirect) {
+		contatoRepository.remove(id);
 		redirect.addFlashAttribute("mensagem", "Contato removido com sucesso!");
 		return "redirect:/contatos";
 	}

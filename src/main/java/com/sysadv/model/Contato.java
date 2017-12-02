@@ -31,6 +31,14 @@ public class Contato {
 	public Contato() {
 	}
 
+	public Contato(ObjectId idMongo, String nome, List<String> telefone, String email, String mensagem) {
+		this.idMongo = idMongo;
+		this.nome = nome;
+		this.telefone = telefone;
+		this.email = email;
+		this.mensagem = mensagem;
+	}
+
 	public ObjectId getIdMongo() {
 		return idMongo;
 	}
@@ -53,6 +61,10 @@ public class Contato {
 
 	public void setTelefone(List<String> telefone) {
 		this.telefone = telefone;
+	}
+	
+	public void addTelefone(String tel){
+		this.telefone.add(tel);
 	}
 
 	public String getEmail() {

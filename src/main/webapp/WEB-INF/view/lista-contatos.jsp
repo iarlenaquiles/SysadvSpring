@@ -46,7 +46,7 @@
 								<td>${contato.email}</td>
 								<td>${contato.mensagem}</td>
 								<td class="actions"><a class="btn btn-danger btn-sm"
-									href="/contatos/${contato.id}/delete"
+									href="/contatos/${contato.idMongo}/delete"
 									onclick="return confirm('Confirma remoção?')"><i
 										class="fa fa-trash"></i> Remover</a></td>
 							</tr>

@@ -15,13 +15,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.sysadv.model.Contato;
-import com.sysadv.repository.ContatoRepository;
+import com.sysadv.service.ContatoService;
 
 @Controller
 public class ContatoController {
 
 	@Autowired
-	private ContatoRepository contatoRepository;
+	private ContatoService contatoRepository;
 
 	@PostMapping("/contatos")
 	public String addContato(@Valid Contato contato, BindingResult result, Model model, RedirectAttributes redirect) {
@@ -31,7 +31,7 @@ public class ContatoController {
 			return "contato";
 		}
 
-		if (contato.getId() == null) {
+		if (contato.getIdMongo() == null) {
 			contatoRepository.save(contato);
 			redirect.addFlashAttribute("mensagem", "Mensagem enviada com sucesso!");
 		}
@@ -41,22 +41,23 @@ public class ContatoController {
 
 	@RequestMapping("/contatos")
 	public String viewContatos(Model model) {
-		Iterable<Contato> lista = contatoRepository.findAll(new Sort(new Sort.Order(Sort.Direction.ASC, "nome")));
-		model.addAttribute("contatos", lista);
+		
+		model.addAttribute("contatos", "");
 		return "lista-contatos";
 	}
 
 	// Deletar contato
 	@GetMapping("/contatos/{id}/delete")
 	public String deleteContato(@PathVariable Integer id, RedirectAttributes redirect) {
-		Contato contato = new Contato(id);
-		contatoRepository.delete(contato);
+		//Contato contato = new Contato(id);
+		//contatoRepository.delete(contato);
 		redirect.addFlashAttribute("mensagem", "Contato removido com sucesso!");
 		return "redirect:/contatos";
 	}
 
 	@RequestMapping("/qtdContatos")
 	public @ResponseBody Long qtdContatos() {
-		return contatoRepository.count();
+		//return contatoRepository.count();
+		return null;
 	}
 }

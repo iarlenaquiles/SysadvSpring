@@ -14,7 +14,7 @@
 
 	<spring:bind path="telefone">
 		<div class="form-group ${status.error ? 'has-error' : ''}">
-			<form:label path="telefone">Telefone</form:label>
+			<form:label path="telefone">Telefones</form:label>
 			<form:input path="telefone" type="text"
 				cssClass="form-control telefone" data-role="tagsinput" />
 			<form:errors path="telefone" />

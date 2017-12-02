@@ -57,7 +57,6 @@ public class ContatoController {
 
 	@RequestMapping("/qtdContatos")
 	public @ResponseBody Long qtdContatos() {
-		//return contatoRepository.count();
-		return null;
+		return contatoRepository.count();
 	}
 }

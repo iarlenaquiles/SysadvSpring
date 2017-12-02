@@ -10,4 +10,6 @@ public interface ContatoService {
 	List<Contato> getLista();
 	
 	void remove(String id);
+	
+	Long count();
 }

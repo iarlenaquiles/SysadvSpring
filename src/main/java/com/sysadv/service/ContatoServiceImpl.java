@@ -52,4 +52,9 @@ public class ContatoServiceImpl implements ContatoService {
 		collectionContato.deleteOne(new Document("_id", new ObjectId(id)));		
 	}
 
+	@Override
+	public Long count() {
+		return (long) 1;
+	}
+
 }

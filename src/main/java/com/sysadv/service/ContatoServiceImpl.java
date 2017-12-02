@@ -42,6 +42,7 @@ public class ContatoServiceImpl implements ContatoService {
 			contato.setIdMongo(doc.getObjectId("_id"));
 			telefones = (List<String>) doc.get("telefones");
 			contato.setTelefone(telefones);
+			contato.setId_departamento(doc.getDouble("id_departamento"));
 			contatos.add(contato);
 		}
 		return contatos;
@@ -49,12 +50,12 @@ public class ContatoServiceImpl implements ContatoService {
 
 	@Override
 	public void remove(String id) {
-		collectionContato.deleteOne(new Document("_id", new ObjectId(id)));		
+		collectionContato.deleteOne(new Document("_id", new ObjectId(id)));
 	}
 
 	@Override
 	public Long count() {
-		return (long) 1;
+		return collectionContato.count();
 	}
 
 }

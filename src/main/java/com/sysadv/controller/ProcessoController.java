@@ -97,6 +97,6 @@ public class ProcessoController {
 
 	@RequestMapping("/qtdProcessos")
 	public @ResponseBody Long qtdClientes() {
-		return processoRepository.count();
+		return processoCache.qtdProcessos();
 	}
 }

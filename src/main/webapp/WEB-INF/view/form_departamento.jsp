@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <form:form method="post" modelAttribute="departamento"
 	action="${url_base}${acao}">
-	
+	<form:input path="idMongo" type="hidden" />
 
 	<spring:bind path="nome">
 		<div class="form-group ${status.error ? 'has-error' : ''}">

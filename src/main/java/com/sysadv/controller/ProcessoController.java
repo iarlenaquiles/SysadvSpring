@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.sysadv.cache.ProcessoCache;
 import com.sysadv.model.Cliente;
 import com.sysadv.model.Processo;
 import com.sysadv.repository.ProcessoRepository;
@@ -22,11 +23,14 @@ public class ProcessoController {
 
 	@Autowired
 	private ProcessoRepository processoRepository;
+	
+	@Autowired
+	private ProcessoCache processoCache;
 
 	// Chama a lista de processos
 	@GetMapping("/processos")
 	public String listaProcessos(Model model) {
-		Iterable<Processo> lista = processoRepository.findAll();
+		Iterable<Processo> lista = processoCache.getAll();
 		model.addAttribute("processos", lista);
 		return "lista-processos";
 	}

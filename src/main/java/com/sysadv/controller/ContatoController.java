@@ -16,19 +16,25 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.sysadv.model.Contato;
+import com.sysadv.model.Departamento;
 import com.sysadv.service.ContatoService;
+import com.sysadv.service.DepartamentoService;
 
 @Controller
 public class ContatoController {
 
 	@Autowired
 	private ContatoService contatoRepository;
+	@Autowired
+	private DepartamentoService departamentoRepository;
 
 	@PostMapping("/contatos")
 	public String addContato(@Valid Contato contato, BindingResult result, Model model, RedirectAttributes redirect) {
 		if (result.hasErrors()) {
 			model.addAttribute("contato", contato);
+			List<Departamento> depts = departamentoRepository.getLista();
 			model.addAttribute("acao", "/contatos");
+			model.addAttribute("departamentos", depts);
 			return "contato";
 		}
 

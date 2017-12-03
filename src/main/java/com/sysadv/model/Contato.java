@@ -28,27 +28,39 @@ public class Contato {
 	@NotEmpty
 	private String mensagem;
 
-	public Double getId_departamento() {
-		return id_departamento;
+	@NotNull
+	private ObjectId idDepartamento;
+
+	private String nomeDept;
+
+	public String getNomeDept() {
+		return nomeDept;
 	}
 
-	public void setId_departamento(Double id_departamento) {
-		this.id_departamento = id_departamento;
+	public void setNomeDept(String nomeDept) {
+		this.nomeDept = nomeDept;
 	}
 
-	private Double id_departamento;
+	public ObjectId getIdDepartamento() {
+		return idDepartamento;
+	}
+
+	public void setIdDepartamento(ObjectId idDepartamento) {
+		this.idDepartamento = idDepartamento;
+	}
 
 	public Contato() {
 	}
 
 	public Contato(ObjectId idMongo, String nome, List<String> telefone, String email, String mensagem,
-			Double id_departamento) {
+			ObjectId idDepartamento, String nomeDept) {
 		this.idMongo = idMongo;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.email = email;
 		this.mensagem = mensagem;
-		this.id_departamento = id_departamento;
+		this.idDepartamento = idDepartamento;
+		this.nomeDept = nomeDept;
 	}
 
 	public ObjectId getIdMongo() {

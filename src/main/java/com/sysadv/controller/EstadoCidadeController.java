@@ -3,6 +3,7 @@ package com.sysadv.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +23,7 @@ public class EstadoCidadeController {
 	private CidadeRepository cidadeRepository;
 
 	@RequestMapping("/getEstado")
+	@Cacheable("Estados")
 	public List<Estado> getEstado() {
 		List<Estado> lista = estadoRepository.findAll(new Sort(new Sort.Order(Sort.Direction.ASC, "nome")));
 		return lista;

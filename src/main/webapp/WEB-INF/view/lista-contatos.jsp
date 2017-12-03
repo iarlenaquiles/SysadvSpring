@@ -35,6 +35,7 @@
 							<th>Telefone</th>
 							<th>E-mail</th>
 							<th>Mensagem</th>
+							<th>Departamento</th>
 							<th class="actions">Ação</th>
 						</tr>
 					</thead>
@@ -45,6 +46,7 @@
 								<td>${contato.telefone}</td>
 								<td>${contato.email}</td>
 								<td>${contato.mensagem}</td>
+								<td>${contato.nomeDept}</td>
 								<td class="actions"><a class="btn btn-danger btn-sm"
 									href="/contatos/${contato.idMongo}/delete"
 									onclick="return confirm('Confirma remoção?')"><i

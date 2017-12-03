@@ -47,7 +47,7 @@ public class ProcessoController {
 	// Atualizar Processo
 	@RequestMapping("/processos/{id}/update")
 	public String alteraForm(@PathVariable Integer id, Model model) {
-		Processo p = processoRepository.findOne(id);
+		Processo p = processoCache.getProcesso(id);
 		model.addAttribute("processo", p);
 		model.addAttribute("acao", "/processos");
 		return "editar-processo";

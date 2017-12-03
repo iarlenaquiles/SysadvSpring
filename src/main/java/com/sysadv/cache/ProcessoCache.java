@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
-import com.sysadv.model.Cliente;
 import com.sysadv.model.Processo;
 import com.sysadv.repository.ProcessoRepository;
 
@@ -29,6 +28,12 @@ public class ProcessoCache {
 	public Processo getProcesso(Integer id) {
 		logger.info("[CACHE] Realizando consulta pelo processo com id: " + id);
 		return processoRepository.findOne(id);
+	}
+	
+	@Cacheable(value = "qtdProcessos")
+	public Long qtdProcessos() {
+		logger.info("[CACHE] Quantidade de processos");
+		return processoRepository.count();
 	}
 
 }

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
 import com.sysadv.model.Departamento;
 
 @Service
@@ -52,7 +53,7 @@ public class DepartamentoServiceImpl implements DepartamentoService {
 	}
 
 	@Override
-	public Departamento findOnde(String id) {
+	public Departamento findOne(String id) {
 		Document filter = Document.parse("{_id:ObjectId('" + id + "')}");
 		Departamento dept = new Departamento();
 
@@ -61,6 +62,17 @@ public class DepartamentoServiceImpl implements DepartamentoService {
 			dept.setNome(doc.getString("nome"));
 		}
 		return dept;
+	}
+
+	@Override
+	public void update(Departamento departamento) {
+		// System.out.println(this.findOne(departamento.getIdMongo().toString()).getIdMongo());
+		Object id = this.findOne(departamento.getIdMongo().toString()).getIdMongo();
+
+		Document updateQuery = new Document("_id", id);
+		collectionDepartamento.updateOne(updateQuery,
+				new Document("$set", new Document("nome", departamento.getNome())));
+
 	}
 
 }

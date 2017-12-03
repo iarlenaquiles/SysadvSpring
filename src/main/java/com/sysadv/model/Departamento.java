@@ -4,6 +4,11 @@ import org.bson.types.ObjectId;
 
 public class Departamento {
 
+	@Override
+	public String toString() {
+		return "Departamento [idMongo=" + idMongo + ", nome=" + nome + "]";
+	}
+
 	private ObjectId idMongo;
 	private String nome;
 

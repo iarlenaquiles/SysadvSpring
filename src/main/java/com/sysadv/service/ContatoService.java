@@ -8,8 +8,10 @@ public interface ContatoService {
 	void save(Contato contato);
 
 	List<Contato> getLista();
-	
+
 	void remove(String id);
-	
+
 	Long count();
+
+	String getNodeDepartamento(String id);
 }

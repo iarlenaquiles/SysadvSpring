@@ -19,7 +19,7 @@ public class ClienteCache {
 
 	static final Logger logger = Logger.getLogger(ClienteCache.class);
 
-	@Cacheable(value = "clienteCache")
+	@Cacheable(value = "clienteCache", key = "#id")
 	public Cliente getCliente(Integer id) {
 		logger.info("[CACHE] Realizando consulta pelo cliente com id: " + id);
 		return clienteRepository.findOne(id);

@@ -90,7 +90,7 @@ public class ProcessoController {
 	// Visualizar processo
 	@GetMapping("/processos/{id}/view")
 	public String viewProcesso(@PathVariable Integer id, Model model) {
-		Processo processo = processoRepository.findOne(id);
+		Processo processo = processoCache.getProcesso(id);
 		model.addAttribute("processo", processo);
 		return "visualizar-processo";
 	}

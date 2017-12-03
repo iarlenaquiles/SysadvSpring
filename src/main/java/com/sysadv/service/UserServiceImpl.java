@@ -8,6 +8,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.sysadv.cache.UsuarioCache;
 import com.sysadv.model.User;
 import com.sysadv.repository.RoleRepository;
 import com.sysadv.repository.UserRepository;
@@ -20,6 +21,8 @@ public class UserServiceImpl implements UserService {
 	private RoleRepository roleRepository;
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	@Autowired
+	private UsuarioCache usuarioCache;
 
 	@Override
 	public void save(User user) {
@@ -30,7 +33,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User findByUsername(String username) {
-		return userRepository.findByUsername(username);
+		return usuarioCache.getUsuario(username);
 	}
 
 	@Override

@@ -1,5 +1,7 @@
 package com.sysadv.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +12,9 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity(name = "processo")
-public class Processo {
+public class Processo implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	public Processo() {
 

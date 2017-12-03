@@ -5,7 +5,6 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.sysadv.cache.ClienteCache;
 import com.sysadv.model.Cliente;
 import com.sysadv.repository.ClienteRepository;
 
@@ -24,11 +24,14 @@ public class ClienteController {
 
 	@Autowired
 	private ClienteRepository clienteRepository; // Injeta a classe repositorio
+	
+	@Autowired
+	private ClienteCache clienteCache;
 
 	// Chama a lista dos clientes
 	@GetMapping("/clientes")
 	public String listaClientes(Model model) {
-		Iterable<Cliente> lista = clienteRepository.findAll(new Sort(new Sort.Order(Sort.Direction.ASC, "nome")));
+		Iterable<Cliente> lista = clienteCache.getAllClientes();
 		model.addAttribute("clientes", lista);
 		return "lista-clientes"; 
 	}
@@ -44,7 +47,7 @@ public class ClienteController {
 	// Atualizar cliente
 	@RequestMapping("/clientes/{id}/update")
 	public String alteraForm(@PathVariable Integer id, Model model) {
-		Cliente c = clienteRepository.findOne(id);
+		Cliente c = clienteCache.getCliente(id);
 		model.addAttribute("cliente", c);
 		model.addAttribute("acao", "/clientes");
 		return "editar-cliente";
@@ -85,19 +88,20 @@ public class ClienteController {
 	// Visualizar cliente
 	@GetMapping("/clientes/{id}/view")
 	public String viewCliente(@PathVariable Integer id, Model model) {
-		Cliente cliente = clienteRepository.findOne(id);
+		Cliente cliente = clienteCache.getCliente(id);
 		model.addAttribute("cliente", cliente);
 		return "visualizar-cliente";
 	}
 
 	@RequestMapping("/getClientes")
 	public @ResponseBody List<Cliente> getClientes() {
-		List<Cliente> todos = clienteRepository.findAll();
+		List<Cliente> todos = clienteCache.getAllClientes();
 		return todos;
 	}
 
 	@RequestMapping("/qtdClientes")
 	public @ResponseBody Long qtdClientes() {
-		return clienteRepository.count();
+		//return clienteRepository.count();
+		return clienteCache.qtdClientes();
 	}
 }

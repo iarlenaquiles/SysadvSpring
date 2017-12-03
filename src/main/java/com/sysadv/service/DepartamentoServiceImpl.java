@@ -51,4 +51,16 @@ public class DepartamentoServiceImpl implements DepartamentoService {
 		return collectionDepartamento.count();
 	}
 
+	@Override
+	public Departamento findOnde(String id) {
+		Document filter = Document.parse("{_id:ObjectId('" + id + "')}");
+		Departamento dept = new Departamento();
+
+		for (Document doc : collectionDepartamento.find(filter)) {
+			dept.setIdMongo(doc.getObjectId("_id"));
+			dept.setNome(doc.getString("nome"));
+		}
+		return dept;
+	}
+
 }

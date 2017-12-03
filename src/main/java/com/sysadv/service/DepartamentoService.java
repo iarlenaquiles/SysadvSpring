@@ -13,4 +13,5 @@ public interface DepartamentoService {
 	
 	Long count();
 
+	Departamento findOnde(String id);
 }

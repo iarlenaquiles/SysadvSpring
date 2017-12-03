@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.sysadv.model.Cliente;
 import com.sysadv.model.Departamento;
 import com.sysadv.service.DepartamentoService;
 
@@ -40,7 +41,7 @@ public class DepartamentoController {
 			model.addAttribute("acao", "/departamentos");
 			if (departamento.getIdMongo() == null) {
 				return "inserir-departamento";
-			}else{
+			} else {
 				return "editar-departamento";
 			}
 		}
@@ -66,6 +67,15 @@ public class DepartamentoController {
 		departamentoRepository.remove(id);
 		redirect.addFlashAttribute("mensagem", "Departamento removido com sucesso!");
 		return "redirect:/departamentos";
+	}
+
+	// Atualizar departamento
+	@RequestMapping("/departamentos/{id}/update")
+	public String alteraForm(@PathVariable String id, Model model) {
+		Departamento dept = departamentoRepository.findOne(id);
+		model.addAttribute("departamento", dept);
+		model.addAttribute("acao", "/departamentos");
+		return "editar-departamento";
 	}
 
 	@RequestMapping("/qtdDepartamentos")

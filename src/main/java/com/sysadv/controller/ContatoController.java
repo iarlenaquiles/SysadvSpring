@@ -22,7 +22,7 @@ import com.sysadv.service.DepartamentoService;
 
 @Controller
 public class ContatoController {
-
+	
 	@Autowired
 	private ContatoService contatoRepository;
 	@Autowired

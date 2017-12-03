@@ -49,6 +49,9 @@ public class DepartamentoController {
 		if (departamento.getIdMongo() == null) {
 			departamentoRepository.save(departamento);
 			redirect.addFlashAttribute("mensagem", "Departamento cadastrado com sucesso!");
+		}else{
+			departamentoRepository.update(departamento);
+			redirect.addFlashAttribute("mensagem", "Departamento atualizado com sucesso!");
 		}
 
 		return "redirect:/departamentos";

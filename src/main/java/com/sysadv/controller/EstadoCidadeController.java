@@ -7,23 +7,23 @@ import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sysadv.cache.EstadoCache;
 import com.sysadv.model.Cidade;
 import com.sysadv.model.Estado;
 import com.sysadv.repository.CidadeRepository;
-import com.sysadv.repository.EstadoRepository;
 
 @RestController
 public class EstadoCidadeController {
 
 	@Autowired
-	private EstadoRepository estadoRepository;
-
-	@Autowired
 	private CidadeRepository cidadeRepository;
+	
+	@Autowired
+	private EstadoCache estadoCache;
 
 	@RequestMapping("/getEstado")
 	public List<Estado> getEstado() {
-		List<Estado> lista = estadoRepository.findAll(new Sort(new Sort.Order(Sort.Direction.ASC, "nome")));
+		List<Estado> lista = estadoCache.getAllEstados();
 		return lista;
 	}
 

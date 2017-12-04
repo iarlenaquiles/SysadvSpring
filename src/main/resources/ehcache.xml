@@ -6,84 +6,84 @@
 
 	<cache name="clienteCache" maxEntriesLocalHeap="10000"
 		maxEntriesLocalDisk="1000" eternal="false" diskSpoolBufferSizeMB="20"
-		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		timeToIdleSeconds="3000" timeToLiveSeconds="6000"
 		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
 		<persistence strategy="localTempSwap" />
 	</cache>
 
 	<cache name="ClientesCache" maxEntriesLocalHeap="10000"
 		maxEntriesLocalDisk="1000" eternal="false" diskSpoolBufferSizeMB="20"
-		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		timeToIdleSeconds="3000" timeToLiveSeconds="6000"
 		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
 		<persistence strategy="localTempSwap" />
 	</cache>
 
 	<cache name="qtdClientes" maxEntriesLocalHeap="10000"
 		maxEntriesLocalDisk="1000" eternal="false" diskSpoolBufferSizeMB="20"
-		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		timeToIdleSeconds="3000" timeToLiveSeconds="6000"
 		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
 		<persistence strategy="localTempSwap" />
 	</cache>
 
 	<cache name="processoCache" maxEntriesLocalHeap="10000"
 		maxEntriesLocalDisk="1000" eternal="false" diskSpoolBufferSizeMB="20"
-		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		timeToIdleSeconds="3000" timeToLiveSeconds="6000"
 		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
 		<persistence strategy="localTempSwap" />
 	</cache>
 
 	<cache name="processoUpCache" maxEntriesLocalHeap="10000"
 		maxEntriesLocalDisk="1000" eternal="false" diskSpoolBufferSizeMB="20"
-		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		timeToIdleSeconds="3000" timeToLiveSeconds="6000"
 		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
 		<persistence strategy="localTempSwap" />
 	</cache>
 
 	<cache name="qtdProcessos" maxEntriesLocalHeap="10000"
 		maxEntriesLocalDisk="1000" eternal="false" diskSpoolBufferSizeMB="20"
-		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		timeToIdleSeconds="3000" timeToLiveSeconds="6000"
 		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
 		<persistence strategy="localTempSwap" />
 	</cache>
 
 	<cache name="EstadosCache" maxEntriesLocalHeap="10000"
 		maxEntriesLocalDisk="1000" eternal="false" diskSpoolBufferSizeMB="20"
-		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		timeToIdleSeconds="3000" timeToLiveSeconds="6000"
 		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
 		<persistence strategy="localTempSwap" />
 	</cache>
 
 	<cache name="CidadesCache" maxEntriesLocalHeap="10000"
 		maxEntriesLocalDisk="1000" eternal="false" diskSpoolBufferSizeMB="20"
-		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		timeToIdleSeconds="3000" timeToLiveSeconds="6000"
 		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
 		<persistence strategy="localTempSwap" />
 	</cache>
 
 	<cache name="usuarioCache" maxEntriesLocalHeap="10000"
 		maxEntriesLocalDisk="1000" eternal="false" diskSpoolBufferSizeMB="20"
-		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		timeToIdleSeconds="3000" timeToLiveSeconds="6000"
 		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
 		<persistence strategy="localTempSwap" />
 	</cache>
 	
 	<cache name="usuariosCache" maxEntriesLocalHeap="10000"
 		maxEntriesLocalDisk="1000" eternal="false" diskSpoolBufferSizeMB="20"
-		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		timeToIdleSeconds="3000" timeToLiveSeconds="6000"
 		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
 		<persistence strategy="localTempSwap" />
 	</cache>
 	
 	<cache name="usuarioByIdCache" maxEntriesLocalHeap="10000"
 		maxEntriesLocalDisk="1000" eternal="false" diskSpoolBufferSizeMB="20"
-		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		timeToIdleSeconds="3000" timeToLiveSeconds="6000"
 		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
 		<persistence strategy="localTempSwap" />
 	</cache>
 	
 	<cache name="usuarioQtdCache" maxEntriesLocalHeap="10000"
 		maxEntriesLocalDisk="1000" eternal="false" diskSpoolBufferSizeMB="20"
-		timeToIdleSeconds="300" timeToLiveSeconds="600"
+		timeToIdleSeconds="3000" timeToLiveSeconds="6000"
 		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
 		<persistence strategy="localTempSwap" />
 	</cache>

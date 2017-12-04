@@ -47,12 +47,12 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User findById(Integer id) {
-		return userRepository.findOne(id);
+		return usuarioCache.getById(id);
 	}
 
 	@Override
 	public Long count() {
-		return userRepository.count();
+		return usuarioCache.getQtd();
 	}
 
 }

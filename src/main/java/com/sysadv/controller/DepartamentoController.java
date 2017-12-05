@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.sysadv.model.Cliente;
+import com.sysadv.cache.DepartamentoCache;
 import com.sysadv.model.Departamento;
 import com.sysadv.service.DepartamentoService;
 
@@ -24,6 +24,9 @@ public class DepartamentoController {
 
 	@Autowired
 	private DepartamentoService departamentoRepository;
+	
+	@Autowired
+	private DepartamentoCache departamentoCache;
 
 	// Vai para tela de adição do departamento
 	@GetMapping("/departamentos/add")
@@ -36,30 +39,22 @@ public class DepartamentoController {
 	@PostMapping("/departamentos")
 	public String addDepartamento(@Valid Departamento departamento, BindingResult result, Model model,
 			RedirectAttributes redirect) {
-		if (result.hasErrors()) {
-			model.addAttribute("departamento", departamento);
-			model.addAttribute("acao", "/departamentos");
-			if (departamento.getIdMongo() == null) {
-				return "inserir-departamento";
-			} else {
-				return "editar-departamento";
-			}
-		}
 
 		if (departamento.getIdMongo() == null) {
 			departamentoRepository.save(departamento);
 			redirect.addFlashAttribute("mensagem", "Departamento cadastrado com sucesso!");
-		}else{
+		} else {
 			departamentoRepository.update(departamento);
 			redirect.addFlashAttribute("mensagem", "Departamento atualizado com sucesso!");
 		}
 
 		return "redirect:/departamentos";
+
 	}
 
 	@RequestMapping("/departamentos")
 	public String viewContatos(Model model) {
-		List<Departamento> lista = departamentoRepository.getLista();
+		List<Departamento> lista = departamentoCache.getAllDepartamentos();
 		model.addAttribute("departamentos", lista);
 		return "lista-departamentos";
 	}
@@ -75,7 +70,7 @@ public class DepartamentoController {
 	// Atualizar departamento
 	@RequestMapping("/departamentos/{id}/update")
 	public String alteraForm(@PathVariable String id, Model model) {
-		Departamento dept = departamentoRepository.findOne(id);
+		Departamento dept = departamentoCache.getDepartamento(id);
 		model.addAttribute("departamento", dept);
 		model.addAttribute("acao", "/departamentos");
 		return "editar-departamento";
@@ -83,6 +78,6 @@ public class DepartamentoController {
 
 	@RequestMapping("/qtdDepartamentos")
 	public @ResponseBody Long qtdContatos() {
-		return departamentoRepository.count();
+		return departamentoCache.qtdDepartamento();
 	}
 }

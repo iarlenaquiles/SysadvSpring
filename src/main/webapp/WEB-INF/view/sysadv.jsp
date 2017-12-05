@@ -11,6 +11,8 @@
 <link href="${url_base}css/modern-business.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="${url_base}font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="${url_base}font-awesome/css/estio-precos.css">
 <script src="${url_base}js/jquery.min.js"></script>
 <script src="https://use.fontawesome.com/d91313ced9.js"></script>
 </head>
@@ -76,10 +78,13 @@
 	</a> <a class="right carousel-control" href="#myCarousel" data-slide="next">
 		<span class="icon-next"></span>
 	</a> </header>
-<br>
+	<br>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12"><a href="/sysadv/contato" class="btn btn-primary btn-block">Comece hoje mesmo à gerenciar o seu escritório!</a></div>
+			<div class="col-lg-12">
+				<a href="/sysadv/contato" class="btn btn-primary btn-block">Comece
+					hoje mesmo à gerenciar o seu escritório!</a>
+			</div>
 		</div>
 	</div>
 	<div class="container">
@@ -177,7 +182,101 @@
 			</div>
 		</div>
 		<!-- /.row -->
-
+		<section id="main-content"> <section
+			class="wrapper site-min-height"> <!-- page start-->
+		<div class="row">
+			<!--price start-->
+			<div class="text-center feature-head">
+				<h1>30 dias grátis para todas as contas</h1>
+				<p>No risk. No hidden fees. Cancel at anytime.</p>
+			</div>
+			<div class="col-lg-3 col-sm-3">
+				<div class="pricing-table">
+					<div class="pricing-head">
+						<h1>Diamante</h1>
+						<h2>
+							<span class="note">$</span>4000
+						</h2>
+					</div>
+					<ul class="list-unstyled">
+						<li>8 hours coverage</li>
+						<li>500 digital images</li>
+						<li>100 A3 Hard Copy</li>
+						<li>Bridal portrait with 11X14</li>
+						<li>Engagement portrait with 11X14</li>
+						<li>Income Tax included</li>
+					</ul>
+					<div class="price-actions">
+						<a class="btn" href="javascript:;">Get Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-3">
+				<div class="pricing-table">
+					<div class="pricing-head">
+						<h1>Platina</h1>
+						<h2>
+							<span class="note">$</span>3000
+						</h2>
+					</div>
+					<ul class="list-unstyled">
+						<li>8 hours coverage</li>
+						<li>500 digital images</li>
+						<li>100 A3 Hard Copy</li>
+						<li>Bridal portrait with 11X14</li>
+						<li>Engagement portrait with 11X14</li>
+						<li>Income Tax included</li>
+					</ul>
+					<div class="price-actions">
+						<a class="btn" href="javascript:;">Get Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-3">
+				<div class="pricing-table most-popular">
+					<div class="pricing-head">
+						<h1>Ouro</h1>
+						<h2>
+							<span class="note">$</span>2000
+						</h2>
+					</div>
+					<ul class="list-unstyled">
+						<li>8 hours coverage</li>
+						<li>500 digital images</li>
+						<li>100 A3 Hard Copy</li>
+						<li>Bridal portrait with 11X14</li>
+						<li>Engagement portrait with 11X14</li>
+						<li>Income Tax included</li>
+					</ul>
+					<div class="price-actions">
+						<a class="btn" href="javascript:;">Get Now</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-3">
+				<div class="pricing-table">
+					<div class="pricing-head">
+						<h1>Prata</h1>
+						<h2>
+							<span class="note">$</span>1500
+						</h2>
+					</div>
+					<ul class="list-unstyled">
+						<li>8 hours coverage</li>
+						<li>500 digital images</li>
+						<li>100 A3 Hard Copy</li>
+						<li>Bridal portrait with 11X14</li>
+						<li>Engagement portrait with 11X14</li>
+						<li>Income Tax included</li>
+					</ul>
+					<div class="price-actions">
+						<a class="btn" href="javascript:;">Get Now</a>
+					</div>
+				</div>
+			</div>
+			<!--price end-->
+		</div>
+		<!-- page end--> </section> </section>
 		<hr>
 
 		<c:import url="footer-sysadv.jsp"></c:import>

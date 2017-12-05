@@ -71,6 +71,8 @@
 			</a>
 
 		</div>
+		
+		<div>teste</div>
 	</div>
 	<c:import url="footer.jsp"></c:import>
 	<script src="${url_base}js/bootstrap.min.js"></script>

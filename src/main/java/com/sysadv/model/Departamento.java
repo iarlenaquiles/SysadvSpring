@@ -1,8 +1,12 @@
 package com.sysadv.model;
 
+import java.io.Serializable;
+
 import org.bson.types.ObjectId;
 
-public class Departamento {
+public class Departamento implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	@Override
 	public String toString() {
@@ -10,6 +14,7 @@ public class Departamento {
 	}
 
 	private ObjectId idMongo;
+
 	private String nome;
 
 	public Departamento() {

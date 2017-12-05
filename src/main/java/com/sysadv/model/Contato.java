@@ -1,6 +1,6 @@
 package com.sysadv.model;
 
-import java.util.List;
+import java.io.Serializable;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -8,7 +8,9 @@ import javax.validation.constraints.Size;
 import org.bson.types.ObjectId;
 import org.hibernate.validator.constraints.NotEmpty;
 
-public class Contato {
+public class Contato implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private ObjectId idMongo;
 
@@ -18,7 +20,7 @@ public class Contato {
 
 	@NotNull
 	@NotEmpty
-	private List<String> telefone;
+	private String telefone;
 
 	@NotNull
 	@NotEmpty
@@ -52,7 +54,7 @@ public class Contato {
 	public Contato() {
 	}
 
-	public Contato(ObjectId idMongo, String nome, List<String> telefone, String email, String mensagem,
+	public Contato(ObjectId idMongo, String nome, String telefone, String email, String mensagem,
 			ObjectId idDepartamento, String nomeDept) {
 		this.idMongo = idMongo;
 		this.nome = nome;
@@ -79,16 +81,12 @@ public class Contato {
 		this.nome = nome;
 	}
 
-	public List<String> getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(List<String> telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
-	}
-
-	public void addTelefone(String tel) {
-		this.telefone.add(tel);
 	}
 
 	public String getEmail() {

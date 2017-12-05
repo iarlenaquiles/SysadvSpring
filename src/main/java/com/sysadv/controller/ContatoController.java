@@ -15,24 +15,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.sysadv.cache.ContatoCache;
+import com.sysadv.cache.DepartamentoCache;
 import com.sysadv.model.Contato;
 import com.sysadv.model.Departamento;
 import com.sysadv.service.ContatoService;
-import com.sysadv.service.DepartamentoService;
 
 @Controller
 public class ContatoController {
 	
 	@Autowired
 	private ContatoService contatoRepository;
+	
 	@Autowired
-	private DepartamentoService departamentoRepository;
+	private ContatoCache contatoCache;
+	
+	@Autowired
+	private DepartamentoCache departamentoCache;
 
 	@PostMapping("/contatos")
 	public String addContato(@Valid Contato contato, BindingResult result, Model model, RedirectAttributes redirect) {
 		if (result.hasErrors()) {
 			model.addAttribute("contato", contato);
-			List<Departamento> depts = departamentoRepository.getLista();
+			List<Departamento> depts = departamentoCache.getAllDepartamentos();
 			model.addAttribute("acao", "/contatos");
 			model.addAttribute("departamentos", depts);
 			return "contato";
@@ -48,7 +53,7 @@ public class ContatoController {
 
 	@RequestMapping("/contatos")
 	public String viewContatos(Model model) {
-		List<Contato> lista = contatoRepository.getLista();
+		List<Contato> lista = contatoCache.getAllContatos();
 		model.addAttribute("contatos", lista);
 		return "lista-contatos";
 	}
@@ -63,6 +68,6 @@ public class ContatoController {
 
 	@RequestMapping("/qtdContatos")
 	public @ResponseBody Long qtdContatos() {
-		return contatoRepository.count();
+		return contatoCache.qtdContato();
 	}
 }

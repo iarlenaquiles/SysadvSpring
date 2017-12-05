@@ -17,16 +17,16 @@ import com.sysadv.model.Departamento;
 public class ContatoServiceImpl implements ContatoService {
 
 	MongoClient mongoClient = new MongoClient();
-	MongoDatabase db = mongoClient.getDatabase("sysadv_contato");
-	MongoCollection<Document> collectionContato = db.getCollection("contato");
-	MongoCollection<Document> collectionDepartamento = db.getCollection("departamento");
+	MongoDatabase db = mongoClient.getDatabase("sysadv");
+	MongoCollection<Document> collectionContato = db.getCollection("contatos");
+	MongoCollection<Document> collectionDepartamento = db.getCollection("departamentos");
 
 	@Override
 	public void save(Contato contato) {
 		Document doc = new Document();
 		doc.append("nome", contato.getNome());
 		doc.append("email", contato.getEmail());
-		doc.append("telefones", contato.getTelefone());
+		doc.append("telefone", contato.getTelefone());
 		doc.append("mensagem", contato.getMensagem());
 		doc.append("id_departamento", contato.getIdDepartamento());
 
@@ -36,15 +36,14 @@ public class ContatoServiceImpl implements ContatoService {
 	@Override
 	public List<Contato> getLista() {
 		List<Contato> contatos = new ArrayList<Contato>();
-		List<String> telefones = new ArrayList<String>();
+				
 		for (Document doc : collectionContato.find()) {
 			Contato contato = new Contato();
 			contato.setNome(doc.getString("nome"));
 			contato.setEmail(doc.getString("email"));
 			contato.setMensagem(doc.getString("mensagem"));
 			contato.setIdMongo(doc.getObjectId("_id"));
-			telefones = (List<String>) doc.get("telefones");
-			contato.setTelefone(telefones);
+			contato.setTelefone(doc.getString("telefone"));
 			contato.setNomeDept(this.getNodeDepartamento(doc.getObjectId("id_departamento").toString()));
 
 			contatos.add(contato);

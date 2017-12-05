@@ -10,15 +10,14 @@ import org.springframework.stereotype.Service;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.model.Filters;
 import com.sysadv.model.Departamento;
 
 @Service
 public class DepartamentoServiceImpl implements DepartamentoService {
 
 	MongoClient mongoClient = new MongoClient();
-	MongoDatabase db = mongoClient.getDatabase("sysadv_contato");
-	MongoCollection<Document> collectionDepartamento = db.getCollection("departamento");
+	MongoDatabase db = mongoClient.getDatabase("sysadv");
+	MongoCollection<Document> collectionDepartamento = db.getCollection("departamentos");
 
 	@Override
 	public void save(Departamento departamento) {

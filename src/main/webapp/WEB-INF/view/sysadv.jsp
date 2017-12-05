@@ -31,7 +31,7 @@
 	<div class="carousel-inner">
 		<div class="item active">
 			<div class="fill">
-				<img src="img/item1.jpg" />
+				<img src="/img/item1.jpg" />
 			</div>
 			<div class="carousel-caption">
 				<h2>Tenha todas as informações no dia no julgamento.</h2>
@@ -39,7 +39,7 @@
 		</div>
 		<div class="item">
 			<div class="fill">
-				<img src="img/item2.jpg" />
+				<img src="/img/item2.jpg" />
 			</div>
 			<div class="carousel-caption">
 				<h2>Tenha as informações na mão.</h2>
@@ -47,7 +47,7 @@
 		</div>
 		<div class="item">
 			<div class="fill">
-				<img src="img/item3.jpg" />
+				<img src="/img/item3.jpg" />
 			</div>
 			<div class="carousel-caption">
 				<h2>Feche mais negócios.</h2>
@@ -56,7 +56,7 @@
 
 		<div class="item">
 			<div class="fill">
-				<img src="img/item4.jpg" />
+				<img src="/img/item4.jpg" />
 			</div>
 			<div class="carousel-caption">
 				<h2>Você sempre na frente.</h2>
@@ -65,7 +65,7 @@
 
 		<div class="item">
 			<div class="fill">
-				<img src="img/item5.jpg" />
+				<img src="/img/item5.jpg" />
 			</div>
 			<div class="carousel-caption">
 				<h2>Veja os resultados.</h2>
@@ -129,30 +129,30 @@
 			</div>
 			<div class="col-md-4 col-sm-6">
 				<a href="#"> <img class="img-responsive img-portfolio img-hover"
-					src="img/login.png" alt="">
+					src="/img/login.png" alt="">
 				</a>
 			</div>
 			<div class="col-md-4 col-sm-6">
 				<a href="#"> <img class="img-responsive img-portfolio img-hover"
-					src="img/painel.png" alt="">
+					src="/img/painel.png" alt="">
 				</a>
 			</div>
 			<div class="col-md-4 col-sm-6">
 				<a href="portfolio-item.html"> <img
 					class="img-responsive img-portfolio img-hover"
-					src="img/clientes.png" alt="">
+					src="/img/clientes.png" alt="">
 				</a>
 			</div>
 			<div class="col-md-6 col-sm-6">
 				<a href="portfolio-item.html"> <img
 					class="img-responsive img-portfolio img-hover"
-					src="img/processos.png" alt="">
+					src="/img/processos.png" alt="">
 				</a>
 			</div>
 			<div class="col-md-6 col-sm-6">
 				<a href="portfolio-item.html"> <img
 					class="img-responsive img-portfolio img-hover"
-					src="img/usuarios.png" alt="">
+					src="/img/usuarios.png" alt="">
 				</a>
 			</div>
 
@@ -178,10 +178,11 @@
 					quia dolorum ducimus unde.</p>
 			</div>
 			<div class="col-md-6">
-				<img class="img-responsive" src="img/gestao.jpg" alt="">
+				<img class="img-responsive" src="/img/gestao.jpg" alt="">
 			</div>
 		</div>
 		<!-- /.row -->
+		<br>
 		<section id="main-content"> <section
 			class="wrapper site-min-height"> <!-- page start-->
 		<div class="row">
